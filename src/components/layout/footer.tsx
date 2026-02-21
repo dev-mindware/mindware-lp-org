@@ -46,7 +46,7 @@ export function Footer() {
 
   return (
     <footer className="bg-card pt-16 b-0 relative overflow-hidden text-muted-foreground">
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 rounded-teste-full blur-3xl -translate-x-1/2 translate-y-1/2 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 rounded-test-test-full blur-3xl -translate-x-1/2 translate-y-1/2 pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
@@ -79,7 +79,7 @@ export function Footer() {
                 <Link
                   key={index}
                   href={href}
-                  className="w-10 h-10 rounded-teste-full bg-muted/50 hover:bg-primary/20 flex items-center justify-center text-muted-foreground hover:text-primary transition-all duration-300"
+                  className="w-10 h-10 rounded-test-test-full bg-muted/50 hover:bg-primary/20 flex items-center justify-center text-muted-foreground hover:text-primary transition-all duration-300"
                 >
                   <Icon className="h-4 w-4" />
                 </Link>
@@ -126,8 +126,9 @@ export function Footer() {
             strokeWidth="1"
             className="font-black text-[11rem] tracking-tighter fill-transparent stroke-primary"
             initial={{ strokeDasharray: "1000", strokeDashoffset: 1000 }}
-            animate={{ strokeDashoffset: 0 }}
-            transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+            whileInView={{ strokeDashoffset: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 5, ease: "easeOut" }}
           >
             Mindware
           </motion.text>

@@ -8,10 +8,10 @@ export function About() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative order-2 lg:order-1">
-            <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 rounded-teste-full blur-2xl opacity-50 pointer-events-none" />
-            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/10 rounded-teste-full blur-2xl opacity-50 pointer-events-none" />
+            <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/10 rounded-test-test-full blur-2xl opacity-50 pointer-events-none" />
+            <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/10 rounded-test-test-full blur-2xl opacity-50 pointer-events-none" />
 
-            <div className="relative rounded-teste-2xl overflow-hidden shadow-2xl border border-white/10 bg-muted">
+            <div className="relative rounded-test-test-2xl overflow-hidden shadow-2xl border border-white/10 bg-muted">
               <div className="absolute inset-0 bg-linear-to-tr from-primary/20 to-transparent z-10 mix-blend-overlay" />
               <img
                 src="/oficial.jpg"
@@ -51,7 +51,7 @@ export function About() {
 
             <div className="space-y-4 mb-8">
               <div className="flex items-start gap-4">
-                <div className="mt-1 w-6 h-6 rounded-teste-full bg-primary/20 flex items-center justify-center flex-shrink-0 text-primary">
+                <div className="mt-1 w-6 h-6 rounded-test-test-full bg-primary/20 flex items-center justify-center flex-shrink-0 text-primary">
                   <Star className="h-4 w-4" />
                 </div>
                 <div>
@@ -64,7 +64,7 @@ export function About() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="mt-1 w-6 h-6 rounded-teste-full bg-primary/20 flex items-center justify-center flex-shrink-0 text-primary">
+                <div className="mt-1 w-6 h-6 rounded-test-test-full bg-primary/20 flex items-center justify-center flex-shrink-0 text-primary">
                   <Users className="h-4 w-4" />
                 </div>
                 <div>

@@ -54,7 +54,7 @@ export function BrandingSection({ brandingScale, brandingOpacity }: BrandingSect
                             whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
                             transition={{ duration: 1, type: "spring" }}
                             viewport={{ once: true }}
-                            className="bg-card/40 backdrop-blur-xl p-6 rounded-teste-[2rem] border border-border/50 shadow-2xl relative overflow-hidden group min-h-[500px]"
+                            className="bg-card/40 backdrop-blur-xl p-6 rounded-test-test-[2rem] border border-border/50 shadow-2xl relative overflow-hidden group min-h-[500px]"
                         >
                             {/* Liquid Depth Layer */}
                             <div className="absolute inset-0 bg-linear-to-br from-muted/50 to-transparent opacity-50 pointer-events-none" />
@@ -62,15 +62,15 @@ export function BrandingSection({ brandingScale, brandingOpacity }: BrandingSect
                             <div className="grid grid-cols-2 gap-4 h-full relative z-10">
                                 {/* Palette Column */}
                                 <div className="space-y-4">
-                                    <div className="p-4 rounded-teste-2xl bg-[#9956f6] text-white flex flex-col justify-end aspect-square shadow-lg shadow-primary/20 group-hover:scale-[1.02] transition-transform duration-500">
+                                    <div className="p-4 rounded-test-test-2xl bg-[#9956f6] text-white flex flex-col justify-end aspect-square shadow-lg shadow-primary/20 group-hover:scale-[1.02] transition-transform duration-500">
                                         <span className="text-[10px] font-mono opacity-60 uppercase">Primary</span>
                                         <span className="font-bold">#9956f6</span>
                                     </div>
                                     <div className="grid grid-cols-2 gap-4">
-                                        <div className="h-24 rounded-teste-xl bg-black border border-white/10 flex flex-col justify-end p-3 shadow-inner">
+                                        <div className="h-24 rounded-test-test-xl bg-black border border-white/10 flex flex-col justify-end p-3 shadow-inner">
                                             <span className="text-[8px] font-mono opacity-50 text-white uppercase">Deep</span>
                                         </div>
-                                        <div className="h-24 rounded-teste-xl bg-white flex flex-col justify-end p-3 text-black shadow-inner">
+                                        <div className="h-24 rounded-test-test-xl bg-white flex flex-col justify-end p-3 text-black shadow-inner">
                                             <span className="text-[8px] font-mono opacity-50 uppercase">Light</span>
                                         </div>
                                     </div>
@@ -78,13 +78,13 @@ export function BrandingSection({ brandingScale, brandingOpacity }: BrandingSect
 
                                 {/* Brand Asset Column */}
                                 <div className="space-y-4">
-                                    <div className="h-full rounded-teste-2xl bg-linear-to-br from-primary/20 via-black to-black border border-border p-6 flex flex-col items-center justify-center text-center space-y-4 shadow-inner group-hover:shadow-[inset_0_0_20px_rgba(153,86,246,0.3)] transition-shadow duration-500">
-                                        <div className="w-16 h-16 rounded-teste-full bg-primary/20 border border-primary/40 flex items-center justify-center backdrop-blur-sm">
+                                    <div className="h-full rounded-test-test-2xl bg-linear-to-br from-primary/20 via-black to-black border border-border p-6 flex flex-col items-center justify-center text-center space-y-4 shadow-inner group-hover:shadow-[inset_0_0_20px_rgba(153,86,246,0.3)] transition-shadow duration-500">
+                                        <div className="w-16 h-16 rounded-test-test-full bg-primary/20 border border-primary/40 flex items-center justify-center backdrop-blur-sm">
                                             <Sparkles className="w-8 h-8 text-primary" />
                                         </div>
                                         <div className="space-y-2">
                                             <h4 className="text-sm font-bold tracking-widest uppercase">Visual Equity</h4>
-                                            <div className="h-1 w-12 bg-primary mx-auto rounded-teste-full shadow-[0_0_10px_#9956f6]" />
+                                            <div className="h-1 w-12 bg-primary mx-auto rounded-test-test-full shadow-[0_0_10px_#9956f6]" />
                                         </div>
                                         <p className="text-[10px] text-muted-foreground leading-tight">Mockup de Asset Visual <br /> Alta Resolução</p>
                                     </div>
@@ -95,10 +95,10 @@ export function BrandingSection({ brandingScale, brandingOpacity }: BrandingSect
                             <motion.div
                                 animate={{ y: [0, -10, 0] }}
                                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                                className="absolute bottom-6 right-6 w-32 aspect-square bg-black/40 backdrop-blur-2xl border border-white/20 rounded-teste-2xl shadow-2xl p-4 flex items-center justify-center z-20"
+                                className="absolute bottom-6 right-6 w-32 aspect-square bg-black/40 backdrop-blur-2xl border border-white/20 rounded-test-test-2xl shadow-2xl p-4 flex items-center justify-center z-20"
                             >
-                                <div className="absolute inset-0 rounded-teste-2xl bg-linear-to-br from-white/10 to-transparent pointer-events-none" />
-                                <div className="w-full h-full border border-dashed border-primary/30 rounded-teste-lg flex items-center justify-center">
+                                <div className="absolute inset-0 rounded-test-test-2xl bg-linear-to-br from-white/10 to-transparent pointer-events-none" />
+                                <div className="w-full h-full border border-dashed border-primary/30 rounded-test-test-lg flex items-center justify-center">
                                     <Palette className="w-8 h-8 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
                                 </div>
                             </motion.div>

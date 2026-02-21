@@ -23,9 +23,9 @@ export function HeroSection({ heroScale, heroOpacity }: HeroSectionProps) {
                     whileHover={{ scale: 1.05, rotate: 1 }}
                     className="mb-6 inline-block relative group"
                 >
-                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-teste-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <span className="relative z-10 px-6 py-2 rounded-teste-full bg-background/50 backdrop-blur-md text-primary text-xs font-bold uppercase tracking-widest border border-border/50 shadow-sm flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-teste-full bg-primary animate-pulse" />
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-test-test-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <span className="relative z-10 px-6 py-2 rounded-test-test-full bg-background/50 backdrop-blur-md text-primary text-xs font-bold uppercase tracking-widest border border-border/50 shadow-sm flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-test-test-full bg-primary animate-pulse" />
                         Serviço Premium
                     </span>
                 </motion.div>
@@ -56,7 +56,7 @@ export function HeroSection({ heroScale, heroOpacity }: HeroSectionProps) {
                     className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12 relative"
                 >
                     Onde a arte da identidade visual encontra a precisão da engenharia web.
-                    <div className="absolute -inset-4 bg-primary/5 blur-2xl -z-10 rounded-teste-full opacity-50" />
+                    <div className="absolute -inset-4 bg-primary/5 blur-2xl -z-10 rounded-test-test-full opacity-50" />
                 </motion.p>
 
                 <motion.div

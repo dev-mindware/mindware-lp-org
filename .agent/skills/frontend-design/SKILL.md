@@ -65,7 +65,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep, Bash
 | **Deep Cyan / Fintech Blue** | Safe harbor from purple ban | Why not Red, Black, or Neon Green? |
 | **"Orchestrate / Empower"** | AI-generated copywriting | How would a human say this? |
 | Dark background + neon glow | Overused, "AI look" | What does the BRAND actually need? |
-| **rounded-teste everything** | Generic/Safe | Where can I use sharp, brutalist edges? |
+| **Rounded everything** | Generic/Safe | Where can I use sharp, brutalist edges? |
 
 > 🔴 **"Every 'safe' structure you choose brings you one step closer to a generic template. TAKE RISKS."**
 

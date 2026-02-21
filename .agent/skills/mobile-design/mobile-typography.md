@@ -39,7 +39,7 @@ DESKTOP:                        MOBILE:
 San Francisco (SF) Family:
 ├── SF Pro Display: Large text (≥ 20pt)
 ├── SF Pro Text: Body text (< 20pt)
-├── SF Pro rounded-teste: Friendly contexts
+├── SF Pro Rounded: Friendly contexts
 ├── SF Mono: Monospace
 └── SF Compact: Apple Watch, compact UI
 

@@ -74,7 +74,7 @@ export function EmailServiceSection() {
         <section id="email-section" className="relative py-24 bg-muted/30 backdrop-blur-sm overflow-hidden">
             {/* Background Effects */}
             <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[120px] rounded-full" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 blur-[120px] rounded-test-test-full" />
             </div>
 
             <SectionWrapper className="container mx-auto px-4 relative z-10">
@@ -110,14 +110,14 @@ export function EmailServiceSection() {
                             whileHover={{ y: -10, transition: { duration: 0.2 } }}
                             className={cn(
                                 "relative p-8 border backdrop-blur-md min-h-[600px] shadow-sm flex flex-col",
-                                "rounded-none", // Explicitly NO ROUNDED CORNERS
+                                "rounded-test-test-none", // Explicitly NO rounded-test-test CORNERS
                                 plan.highlight
                                     ? "border-primary bg-primary/5 shadow-[0_0_30px_rgba(var(--primary),0.2)]"
                                     : "border-border/50 bg-card/30 hover:border-primary/50 transition-colors"
                             )}
                         >
                             {plan.highlight && (
-                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-bold uppercase tracking-widest py-1 px-4 rounded-none shadow-lg">
+                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-bold uppercase tracking-widest py-1 px-4 rounded-test-test-none shadow-lg">
                                     {plan.badge}
                                 </div>
                             )}
@@ -125,7 +125,7 @@ export function EmailServiceSection() {
                             <div className="mb-8">
                                 <div className={cn(
                                     "w-12 h-12 flex items-center justify-center mb-4 border border-white/10 bg-white/5",
-                                    "rounded-none"
+                                    "rounded-test-test-none"
                                 )}>
                                     <plan.icon className="w-6 h-6 text-primary" />
                                 </div>
@@ -155,7 +155,7 @@ export function EmailServiceSection() {
                                 <div>
                                     <div className="flex justify-between items-center mb-2">
                                         {plan.discount && (
-                                            <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-none uppercase tracking-wide">
+                                            <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-test-test-none uppercase tracking-wide">
                                                 {plan.discount}
                                             </span>
                                         )}
@@ -172,7 +172,7 @@ export function EmailServiceSection() {
                                     whileTap={{ scale: 0.98 }}
                                     className={cn(
                                         "w-full py-4 text-sm font-bold uppercase tracking-widest flex items-center justify-center gap-2 transition-all",
-                                        "rounded-none",
+                                        "rounded-test-test-none",
                                         plan.highlight
                                             ? "bg-primary text-primary-foreground hover:bg-primary/90"
                                             : "bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/50"

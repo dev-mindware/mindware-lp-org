@@ -1,115 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import {
   Check,
   ExternalLink,
-  Activity,
-  PieChart,
-  TrendingUp,
-  Share2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-
-const products = [
-  {
-    id: "finance",
-    label: "MindGest ERP",
-    title: {
-      line1: "Controle Financeiro",
-      highlight: "Reimaginado",
-    },
-    description:
-      "Diga adeus às planilhas espalhadas. O MindGest centraliza suas operações financeiras, dando a você uma visão cristalina da saúde da sua empresa. Experimente contabilidade automatizada, previsões precisas e gestão de conformidade perfeita.",
-    features: [
-      {
-        title: "Reconciliação Automatizada",
-        desc: "Conecte feeds bancários e deixe a IA cuidar da correspondência.",
-      },
-      {
-        title: "Suporte Multimoeda",
-        desc: "Negócios globais facilitados com taxas de câmbio em tempo real.",
-      },
-      {
-        title: "Faturamento Inteligente",
-        desc: "Crie, envie e rastreie faturas profissionais instantaneamente.",
-      },
-    ],
-    image: "/screen2.png",
-    imageAlt: "Dashboard Financeiro MindGest",
-    urlDisplay: "finance.mindgest.app",
-    cta: "Explorar Finanças",
-    color: "from-primary/20 to-blue-500/20",
-    dots: ["bg-red-500/80", "bg-yellow-500/80", "bg-green-500/80"],
-  },
-  {
-    id: "analytics",
-    label: "MindGest IA",
-    title: {
-      line1: "Dados em Tempo Real",
-      highlight: "Na Sua Mão",
-    },
-    description:
-      "Dados só são bons se gerarem insights. O Motor de Analytics do MindGest processa milhões de pontos de dados instantaneamente, apresentando inteligência acionável através de dashboards personalizáveis e interativos.",
-    gridFeatures: [
-      {
-        title: "Monitoramento ao Vivo",
-        desc: "KPIs atualizados em tempo real.",
-        icon: Activity,
-      },
-      {
-        title: "Relatórios Personalizados",
-        desc: "Construtor arrasta-e-solta.",
-        icon: PieChart,
-      },
-      {
-        title: "IA Preditiva",
-        desc: "Preveja tendências instantaneamente.",
-        icon: TrendingUp,
-      },
-      {
-        title: "Compartilhamento Fácil",
-        desc: "Compartilhe insights com segurança.",
-        icon: Share2,
-      },
-    ],
-    image: "/screen1.png",
-    imageAlt: "Dashboard Analytics MindGest",
-    urlDisplay: "analytics.mindgest.app",
-    cta: "Ver Demo Analytics",
-    color: "from-primary/20 to-cyan-500/20",
-    dots: ["bg-red-500/80", "bg-yellow-500/80", "bg-green-500/80"],
-    reverse: true, // Layout invertido para esta seção
-  },
-];
-
-const videoSection = {
-  label: "MindGest em Ação",
-  title: {
-    line1: "Veja o Software",
-    highlight: "ao Vivo",
-  },
-  description:
-    "Explore como a nossa plataforma funciona na prática. Interface intuitiva, fluxos de trabalho otimizados e recursos poderosos ao seu alcance.",
-  features: [
-    {
-      title: "Interface Intuitiva",
-      desc: "Design pensado para maximizar produtividade.",
-    },
-    {
-      title: "Fluxo Simplificado",
-      desc: "Processos otimizados para economia de tempo.",
-    },
-    {
-      title: "Recursos Avançados",
-      desc: "Ferramentas poderosas de forma acessível.",
-    },
-  ],
-  videoIn: "/screen3.mp4",
-  urlDisplay: "app.mindgest.app",
-  cta: "Solicitar Demo",
-  color: "from-primary/20 to-purple-500/20",
-};
+import NextImage from "next/image";
+import { products, videoSection } from "@/data";
 
 export function Products() {
   return (
@@ -124,71 +23,72 @@ export function Products() {
           <ProductSection key={product.id} data={product} index={index} />
         ))}
 
-        {/* Video Section */}
-        <div className="grid lg:grid-cols-2 gap-20 items-center mb-32">
+        {/* Video Section: Full-Width Vertical Layout */}
+        <div className="flex flex-col items-center mb-32 space-y-16">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="order-1"
+            transition={{ duration: 0.8, ease: "circOut" }}
+            className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center gap-2 mb-4">
+            <div className="inline-flex items-center gap-2 mb-6">
               <span className="h-px w-8 bg-primary"></span>
               <span className="text-primary font-bold uppercase tracking-widest text-sm">
                 {videoSection.label}
               </span>
+              <span className="h-px w-8 bg-primary"></span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-8 leading-none">
               {videoSection.title.line1} <br />
               <span className="text-primary">
                 {videoSection.title.highlight}
               </span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-2xl mx-auto">
               {videoSection.description}
             </p>
 
-            <ul className="space-y-5 mb-10">
+            <div className="flex flex-wrap justify-center gap-8 mb-12">
               {videoSection.features.map((item, i) => (
-                <li key={i} className="flex items-start gap-4">
-                  <div className="flex-shrink-0 mt-1 w-6 h-6 rounded-teste-full bg-primary/10 flex items-center justify-center text-primary">
-                    <Check className="h-4 w-4" />
+                <div key={i} className="flex items-center gap-3">
+                  <div className="shrink-0 w-8 h-8 bg-primary/10 flex items-center justify-center text-primary">
+                    <Check className="h-5 w-5" />
                   </div>
-                  <div>
-                    <h4 className="font-bold text-base">{item.title}</h4>
-                    <p className="text-sm text-muted-foreground mt-1">
+                  <div className="text-left">
+                    <h4 className="font-bold text-sm">{item.title}</h4>
+                    <p className="text-xs text-muted-foreground">
                       {item.desc}
                     </p>
                   </div>
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
 
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25"
+              className="bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/25 h-14 px-10 text-lg font-bold "
             >
               {videoSection.cta}
             </Button>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="order-2 relative group"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="w-full relative group"
           >
             <div
-              className={`absolute inset-0 bg-linear-to-r ${videoSection.color} rounded-teste-2xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-700`}
+              className={`absolute inset-0 bg-linear-to-r ${videoSection.color}  blur-[100px] opacity-40 group-hover:opacity-60 transition-opacity duration-1000`}
             />
-            <div className="relative rounded-teste-2xl overflow-hidden shadow-2xl border border-white/10 bg-card transform transition-transform duration-500 group-hover:scale-[1.01]">
-              <div className="absolute top-0 left-0 right-0 h-10 bg-muted/50 flex items-center px-4 space-x-2 border-b border-border z-20">
-                <div className="w-3 h-3 rounded-teste-full bg-red-500/80" />
-                <div className="w-3 h-3 rounded-teste-full bg-yellow-500/80" />
-                <div className="w-3 h-3 rounded-teste-full bg-green-500/80" />
-                <div className="ml-4 px-3 py-1 bg-background/50 rounded-teste text-[10px] text-muted-foreground font-mono">
+            <div className="relative overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] border border-white/10 bg-card/50 backdrop-blur-sm">
+              <div className="absolute top-0 left-0 right-0 h-12 bg-muted/40 backdrop-blur-md flex items-center px-6 space-x-3 border-b border-border/50 z-20">
+                <div className="w-3.5 h-3.5 rounded-test-full bg-red-500/60 shadow-inner" />
+                <div className="w-3.5 h-3.5 rounded-test-full bg-yellow-500/60 shadow-inner" />
+                <div className="w-3.5 h-3.5 rounded-test-full bg-green-500/60 shadow-inner" />
+                <div className="ml-6 px-4 py-1.5 bg-background/30 rounded-test-full text-[11px] text-muted-foreground font-mono tracking-wider border border-white/5">
                   {videoSection.urlDisplay}
                 </div>
               </div>
@@ -198,7 +98,7 @@ export function Products() {
                 muted
                 playsInline
                 preload="metadata"
-                className="w-full h-auto mt-10 opacity-95 hover:opacity-100 transition-opacity"
+                className="w-full h-auto mt-12 opacity-95 hover:opacity-100 transition-opacity"
               >
                 <source src={videoSection.videoIn} type="video/mp4" />
                 Seu navegador não suporta vídeos HTML5.
@@ -214,10 +114,10 @@ export function Products() {
           transition={{ duration: 0.8 }}
           className="mt-32 text-center"
         >
-          <div className="inline-block p-1 rounded-teste-full bg-linear-to-r from-primary/20 to-blue-500/20 backdrop-blur-sm border border-white/10">
+          <div className="inline-block p-1 rounded-test-full bg-linear-to-r from-primary/20 to-blue-500/20 backdrop-blur-sm border border-white/10">
             <Button
               size="lg"
-              className="rounded-teste-full px- h-14 text-lg font-bold bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/30"
+              className="rounded-test-full px- h-14 text-lg font-bold bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/30"
             >
               Visitar Site Oficial MindGest{" "}
               <ExternalLink className="ml-2 h-5 w-5" />
@@ -232,7 +132,7 @@ export function Products() {
   );
 }
 
-function ProductSection({ data, index }: { data: any; index: number }) {
+function ProductSection({ data }: { data: any; index: number }) {
   const isReverse = data.reverse;
 
   return (
@@ -262,7 +162,7 @@ function ProductSection({ data, index }: { data: any; index: number }) {
           <ul className="space-y-5 mb-10">
             {data.features.map((item: any, i: number) => (
               <li key={i} className="flex items-start gap-4">
-                <div className="flex-shrink-0 mt-1 w-6 h-6 rounded-teste-full bg-primary/10 flex items-center justify-center text-primary">
+                <div className="shrink-0 mt-1 w-6 h-6 rounded-test-full bg-primary/10 flex items-center justify-center text-primary">
                   <Check className="h-4 w-4" />
                 </div>
                 <div>
@@ -281,9 +181,9 @@ function ProductSection({ data, index }: { data: any; index: number }) {
             {data.gridFeatures.map((item: any, i: number) => (
               <div
                 key={i}
-                className="p-4 rounded-teste-xl bg-card border border-border"
+                className="p-4 rounded-test-xl bg-card border border-border"
               >
-                <div className="w-10 h-10 rounded-teste-lg bg-primary/10 flex items-center justify-center text-primary mb-3">
+                <div className="w-10 h-10 rounded-test-lg bg-primary/10 flex items-center justify-center text-primary mb-3">
                   <item.icon className="h-5 w-5" />
                 </div>
                 <h4 className="font-bold mb-1">{item.title}</h4>
@@ -306,29 +206,29 @@ function ProductSection({ data, index }: { data: any; index: number }) {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className={`order-1 lg:${
-          isReverse ? "order-1" : "order-2"
-        } relative group`}
+        className={`order-1 lg:${isReverse ? "order-1" : "order-2"
+          } relative group`}
       >
         <div
-          className={`absolute inset-0 bg-linear-to-r ${data.color} rounded-teste-2xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-700`}
+          className={`absolute inset-0 bg-linear-to-r ${data.color} rounded-test-2xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-700`}
         />
-        <div className="relative rounded-teste-2xl overflow-hidden shadow-2xl border border-white/10 bg-card transform transition-transform duration-500 group-hover:scale-[1.01]">
+        <div className="relative rounded-test-2xl overflow-hidden shadow-2xl border border-white/10 bg-card transform transition-transform duration-500 group-hover:scale-[1.01]">
           <div className="absolute top-0 left-0 right-0 h-10 bg-muted/50 flex items-center px-4 space-x-2 border-b border-border z-20">
             {data.dots.map((dotClass: string, i: number) => (
-              <div key={i} className={`w-3 h-3 rounded-teste-full ${dotClass}`} />
+              <div key={i} className={`w-3 h-3 rounded-test-full ${dotClass}`} />
             ))}
-            <div className="ml-4 px-3 py-1 bg-background/50 rounded-teste text-[10px] text-muted-foreground font-mono">
+            <div className="ml-4 px-3 py-1 bg-background/50 rounded-test text-[10px] text-muted-foreground font-mono">
               {data.urlDisplay}
             </div>
           </div>
-          <img
-            src={data.image}
-            alt={data.imageAlt}
-            className={`w-full h-auto mt-10 opacity-95 hover:opacity-100 transition-opacity ${
-              data.reverse ? "hue-rotate-30 saturate-150" : ""
-            }`}
-          />
+          <div className="relative aspect-video mt-10">
+            <img
+              src={data.image}
+              alt={data.imageAlt}
+              className={`w-full h-auto mt-10 opacity-95 hover:opacity-100 transition-opacity ${data.reverse ? "hue-rotate-30 saturate-150" : ""
+                }`}
+            />
+          </div>
         </div>
       </motion.div>
     </div>

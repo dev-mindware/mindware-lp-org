@@ -58,7 +58,7 @@ allowed-tools: Read, Write, Edit, Glob, Grep
 | Shape | Use Case |
 |-------|----------|
 | Box | Rectangular objects |
-| Circle | Balls, rounded-teste |
+| Circle | Balls, rounded |
 | Capsule | Characters |
 | Polygon | Complex shapes |
 

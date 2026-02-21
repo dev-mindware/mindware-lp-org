@@ -11,12 +11,13 @@ import { ModeToggle } from "@/components/mode-toggle";
 import Image from "next/image";
 
 const navItems = [
-  { name: "Inicio", href: "#home" },
-  { name: "Sobre", href: "#about" },
-  { name: "Serviços", href: "#services" },
-  { name: "Produtos", href: "#products" },
-  { name: "Testemunhos", href: "#testimonials" },
-  { name: "FAQs", href: "#faq" },
+  { name: "Inicio", href: "/#home" },
+  { name: "Sobre", href: "/#about" },
+  { name: "Serviços", href: "/#services" },
+  { name: "Produtos", href: "/#products" },
+  { name: "Testemunhos", href: "/#testimonials" },
+  { name: "FAQs", href: "/#faq" },
+  { name: "FYI", href: "/fyi" },
 ];
 
 export function Header() {
@@ -27,7 +28,10 @@ export function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
 
-      const sections = navItems.map((item) => item.href.substring(1));
+      const sections = navItems
+        .filter(item => item.href.includes("#"))
+        .map(item => item.href.split("#")[1]);
+
       const current = sections.find((section) => {
         const element = document.getElementById(section);
         if (element) {
@@ -49,9 +53,8 @@ export function Header() {
 
   return (
     <header
-      className={`fixed border-b top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/80 border-primary/10" : "bg-background"
-      }`}
+      className={`fixed border-b top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 border-primary/10" : "bg-background"
+        }`}
     >
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link
@@ -63,19 +66,26 @@ export function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className={`text-sm font-medium transition-colors ${
-                activeSection === item.href.substring(1)
+          {navItems.map((item) => {
+            const isAnchor = item.href.includes("#");
+            const sectionId = isAnchor ? item.href.split("#")[1] : null;
+            const isActive = isAnchor
+              ? activeSection === sectionId
+              : typeof window !== "undefined" && window.location.pathname === item.href;
+
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`text-sm font-medium transition-colors ${isActive
                   ? "text-primary"
                   : "text-muted-foreground hover:text-primary"
-              }`}
-            >
-              {item.name}
-            </Link>
-          ))}
+                  }`}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
@@ -108,32 +118,39 @@ export function Header() {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                  {navItems.map((item, i) => (
-                    <motion.div
-                      key={item.name}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: i * 0.1 }}
-                    >
-                      <Link
-                        href={item.href}
-                        className={`text-lg font-medium px-4 py-3 rounded-teste-lg transition-all flex items-center justify-between group ${
-                          activeSection === item.href.substring(1)
+                  {navItems.map((item, i) => {
+                    const isAnchor = item.href.includes("#");
+                    const sectionId = isAnchor ? item.href.split("#")[1] : null;
+                    const isActive = isAnchor
+                      ? activeSection === sectionId
+                      : typeof window !== "undefined" && window.location.pathname === item.href;
+
+                    return (
+                      <motion.div
+                        key={item.name}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: i * 0.1 }}
+                      >
+                        <Link
+                          href={item.href}
+                          className={`text-lg font-medium px-4 py-3 rounded-test-test-lg transition-all flex items-center justify-between group ${isActive
                             ? "bg-primary/10 text-primary"
                             : "hover:bg-muted text-muted-foreground hover:text-foreground"
-                        }`}
-                        onClick={() => setActiveSection(item.href.substring(1))}
-                      >
-                        {item.name}
-                        {activeSection === item.href.substring(1) && (
-                          <motion.div
-                            layoutId="active-indicator"
-                            className="w-1.5 h-1.5 rounded-teste-full bg-primary"
-                          />
-                        )}
-                      </Link>
-                    </motion.div>
-                  ))}
+                            }`}
+                          onClick={() => isAnchor && setActiveSection(sectionId as string)}
+                        >
+                          {item.name}
+                          {isActive && (
+                            <motion.div
+                              layoutId="active-indicator"
+                              className="w-1.5 h-1.5 rounded-test-test-full bg-primary"
+                            />
+                          )}
+                        </Link>
+                      </motion.div>
+                    );
+                  })}
                 </div>
 
                 <div className="mt-auto mb-8 space-y-4 px-4">

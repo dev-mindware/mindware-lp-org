@@ -10,7 +10,7 @@ No,Category,Guideline,Description,Do,Don't,Code Good,Code Bad,Severity,Docs URL
 9,Layout,Responsive padding,Adjust padding for different screen sizes,px-4 md:px-6 lg:px-8,Same padding all sizes,px-4 sm:px-6 lg:px-8,px-8 (same all sizes),Medium,
 10,Layout,Grid gaps,Use consistent gap utilities for spacing,gap-4 gap-6 gap-8,Margins on individual items,grid gap-6,grid with mb-4 on each item,Medium,https://tailwindcss.com/docs/gap
 11,Layout,Flexbox alignment,Use flex utilities for alignment,items-center justify-between,Multiple nested wrappers,flex items-center justify-between,Nested divs for alignment,Low,
-12,Images,Aspect ratio,Maintain consistent image aspect ratios,aspect-video aspect-square,No aspect ratio on containers,aspect-video rounded-teste-lg,No aspect control,Medium,https://tailwindcss.com/docs/aspect-ratio
+12,Images,Aspect ratio,Maintain consistent image aspect ratios,aspect-video aspect-square,No aspect ratio on containers,aspect-video rounded-lg,No aspect control,Medium,https://tailwindcss.com/docs/aspect-ratio
 13,Images,Object fit,Control image scaling within containers,object-cover object-contain,Stretched distorted images,object-cover w-full h-full,No object-fit,Medium,https://tailwindcss.com/docs/object-fit
 14,Images,Lazy loading,Defer loading of off-screen images,loading='lazy' on images,All images eager load,<img loading='lazy'>,<img> without lazy,High,
 15,Images,Responsive images,Serve appropriate image sizes,srcset and sizes attributes,Same large image all devices,srcset with multiple sizes,4000px image everywhere,High,
@@ -35,7 +35,7 @@ No,Category,Guideline,Description,Do,Don't,Code Good,Code Bad,Severity,Docs URL
 34,Buttons,Touch targets,Minimum 44px touch target on mobile,min-h-[44px] on mobile,Small buttons on mobile,min-h-[44px] min-w-[44px],h-8 w-8 on mobile,High,
 35,Buttons,Loading states,Show loading feedback,disabled + spinner icon,Clickable during loading,<Button disabled><Spinner/></Button>,Button without loading state,High,
 36,Buttons,Icon buttons,Accessible icon-only buttons,aria-label on icon buttons,Icon button without label,<button aria-label='Close'><XIcon/></button>,<button><XIcon/></button>,High,
-37,Cards,Card structure,Consistent card styling,rounded-teste-lg shadow-md p-6,Inconsistent card styles,rounded-teste-2xl shadow-lg p-6,Mixed card styling,Low,
+37,Cards,Card structure,Consistent card styling,rounded-lg shadow-md p-6,Inconsistent card styles,rounded-2xl shadow-lg p-6,Mixed card styling,Low,
 38,Cards,Card hover states,Interactive cards should have hover feedback,hover:shadow-lg transition-shadow,No hover on clickable cards,hover:shadow-xl transition-shadow,Static cards that are clickable,Medium,
 39,Cards,Card spacing,Consistent internal card spacing,space-y-4 for card content,Inconsistent internal spacing,space-y-4 or p-6,Mixed mb-2 mb-4 mb-6,Low,
 40,Accessibility,Screen reader text,Provide context for screen readers,sr-only for hidden labels,Missing context for icons,<span class='sr-only'>Close menu</span>,No label for icon button,High,https://tailwindcss.com/docs/screen-readers
@@ -43,7 +43,7 @@ No,Category,Guideline,Description,Do,Don't,Code Good,Code Bad,Severity,Docs URL
 42,Accessibility,Reduced motion,Respect user motion preferences,motion-reduce:animate-none,Ignore motion preferences,motion-reduce:transition-none,No reduced motion support,High,https://tailwindcss.com/docs/hover-focus-and-other-states#prefers-reduced-motion
 43,Performance,Configure content paths,Tailwind needs to know where classes are used,Use 'content' array in config,Use deprecated 'purge' option (v2),"content: ['./src/**/*.{js,ts,jsx,tsx}']",purge: [...],High,https://tailwindcss.com/docs/content-configuration
 44,Performance,JIT mode,Use JIT for faster builds and smaller bundles,JIT enabled (default in v3),Full CSS in development,Tailwind v3 defaults,Tailwind v2 without JIT,Medium,
-45,Performance,Avoid @apply bloat,Use @apply sparingly,Direct utilities in HTML,Heavy @apply usage,class='px-4 py-2 rounded-teste',@apply px-4 py-2 rounded-teste;,Low,https://tailwindcss.com/docs/reusing-styles
+45,Performance,Avoid @apply bloat,Use @apply sparingly,Direct utilities in HTML,Heavy @apply usage,class='px-4 py-2 rounded',@apply px-4 py-2 rounded;,Low,https://tailwindcss.com/docs/reusing-styles
 46,Plugins,Official plugins,Use official Tailwind plugins,@tailwindcss/forms typography aspect-ratio,Custom implementations,@tailwindcss/forms,Custom form reset CSS,Medium,https://tailwindcss.com/docs/plugins
 47,Plugins,Custom utilities,Create utilities for repeated patterns,Custom utility in config,Repeated arbitrary values,Custom shadow utility,"shadow-[0_4px_20px_rgba(0,0,0,0.1)] everywhere",Medium,
 48,Layout,Container Queries,Use @container for component-based responsiveness,Use @container and @lg: etc.,Media queries for component internals,@container @lg:grid-cols-2,@media (min-width: ...) inside component,Medium,https://github.com/tailwindlabs/tailwindcss-container-queries

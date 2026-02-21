@@ -20,7 +20,7 @@ export function PricingSection() {
                             viewport={{ once: true }}
                             className="space-y-4"
                         >
-                            <span className="inline-block px-4 py-1.5 rounded-teste-full bg-white/20 text-xs font-bold uppercase tracking-widest text-white">Oferta de Lançamento</span>
+                            <span className="inline-block px-4 py-1.5 rounded-test-test-full bg-white/20 text-xs font-bold uppercase tracking-widest text-white">Oferta de Lançamento</span>
                             <h2 className="text-2xl md:text-3xl uppercase tracking-[0.5em] font-black opacity-90 text-white">Investimento</h2>
                         </motion.div>
 
@@ -37,7 +37,7 @@ export function PricingSection() {
                                 viewport={{ once: true }}
                                 className="relative"
                             >
-                                <div className="absolute -top-8 -right-8 md:-top-10 md:-right-10 bg-white text-primary px-3 py-2 md:px-4 md:py-3 rounded-teste-full font-black text-xs md:text-base rotate-12 shadow-xl animate-pulse">
+                                <div className="absolute -top-8 -right-8 md:-top-10 md:-right-10 bg-white text-primary px-3 py-2 md:px-4 md:py-3 rounded-test-test-full font-black text-xs md:text-base rotate-12 shadow-xl animate-pulse">
                                     -23%
                                 </div>
                                 <span className="text-sm md:text-base uppercase tracking-widest font-black text-white/90">Promocional</span>
@@ -76,12 +76,12 @@ export function PricingSection() {
 
                     <div className="flex flex-col md:flex-row gap-4 justify-center">
                         <Link href="https://wa.me/seu-numero" target="_blank" className="w-full md:w-auto">
-                            <Button variant="secondary" size="lg" className="w-full px-10 py-6 text-lg font-black rounded-teste-full shadow-xl hover:scale-105 transition-transform bg-white text-primary">
+                            <Button variant="secondary" size="lg" className="w-full px-10 py-6 text-lg font-black rounded-test-test-full shadow-xl hover:scale-105 transition-transform bg-white text-primary">
                                 Quero Garantir a Promoção
                             </Button>
                         </Link>
                         <Link href="/" className="w-full md:w-auto">
-                            <Button variant="outline" size="lg" className="w-full px-10 py-6 text-lg font-bold rounded-teste-full border-2 border-white bg-transparent hover:bg-white hover:text-primary transition-all text-white">
+                            <Button variant="outline" size="lg" className="w-full px-10 py-6 text-lg font-bold rounded-test-test-full border-2 border-white bg-transparent hover:bg-white hover:text-primary transition-all text-white">
                                 Voltar ao Início
                             </Button>
                         </Link>
@@ -93,12 +93,12 @@ export function PricingSection() {
             <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute -top-1/2 -right-1/4 w-[1000px] h-[1000px] border-50 border-white/5 rounded-teste-full pointer-events-none"
+                className="absolute -top-1/2 -right-1/4 w-[1000px] h-[1000px] border-50 border-white/5 rounded-test-test-full pointer-events-none"
             />
             <motion.div
                 animate={{ rotate: -360 }}
                 transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                className="absolute -bottom-1/2 -left-1/4 w-[800px] h-[800px] border-30 border-white/5 rounded-teste-full pointer-events-none"
+                className="absolute -bottom-1/2 -left-1/4 w-[800px] h-[800px] border-30 border-white/5 rounded-test-test-full pointer-events-none"
             />
         </section>
     );

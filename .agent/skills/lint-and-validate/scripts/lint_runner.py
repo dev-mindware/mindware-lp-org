@@ -40,15 +40,24 @@ def detect_project_type(project_path: Path) -> dict:
             scripts = pkg.get("scripts", {})
             deps = {**pkg.get("dependencies", {}), **pkg.get("devDependencies", {})}
             
+            # Detect package manager
+            pm = "npm"
+            if (project_path / "pnpm-lock.yaml").exists():
+                pm = "pnpm"
+            elif (project_path / "yarn.lock").exists():
+                pm = "yarn"
+            
             # Check for lint script
             if "lint" in scripts:
-                result["linters"].append({"name": "npm lint", "cmd": ["npm", "run", "lint"]})
+                result["linters"].append({"name": f"{pm} lint", "cmd": [pm, "run", "lint"]})
             elif "eslint" in deps:
-                result["linters"].append({"name": "eslint", "cmd": ["npx", "eslint", "."]})
+                cmd = [pm, "eslint", "."] if pm == "pnpm" else ["npx", "eslint", "."]
+                result["linters"].append({"name": "eslint", "cmd": cmd})
             
             # Check for TypeScript
             if "typescript" in deps or (project_path / "tsconfig.json").exists():
-                result["linters"].append({"name": "tsc", "cmd": ["npx", "tsc", "--noEmit"]})
+                cmd = [pm, "tsc", "--noEmit"] if pm == "pnpm" else ["npx", "tsc", "--noEmit"]
+                result["linters"].append({"name": "tsc", "cmd": cmd})
                 
         except:
             pass
@@ -77,6 +86,9 @@ def run_linter(linter: dict, cwd: Path) -> dict:
     }
     
     try:
+        import os
+        is_windows = os.name == 'nt'
+        
         proc = subprocess.run(
             linter["cmd"],
             cwd=str(cwd),
@@ -84,7 +96,8 @@ def run_linter(linter: dict, cwd: Path) -> dict:
             text=True,
             encoding='utf-8',
             errors='replace',
-            timeout=120
+            timeout=120,
+            shell=is_windows  # Use shell for Windows to resolve commands like pnpm/npm
         )
         
         result["output"] = proc.stdout[:2000] if proc.stdout else ""

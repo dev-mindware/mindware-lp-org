@@ -257,16 +257,16 @@ Standard templates, typical layouts, common color schemes, overused patterns = *
 - ALWAYS create fresh, original designs for each project
 
 **📐 VISUAL STYLE VARIETY (CRITICAL):**
-- **STOP using "soft lines" (rounded-teste corners/shapes) by default for everything.**
+- **STOP using "soft lines" (rounded corners/shapes) by default for everything.**
 - Explore **SHARP, GEOMETRIC, and MINIMALIST** edges.
 - **🚫 AVOID THE "SAFE BOREDOM" ZONE (4px-8px):**
-  - Don't just slap `rounded-teste-md` (6-8px) on everything. It looks generic.
+  - Don't just slap `rounded-md` (6-8px) on everything. It looks generic.
   - **Go EXTREME:**
     - Use **0px - 2px** for Tech, Luxury, Brutalist (Sharp/Crisp).
     - Use **16px - 32px** for Social, Lifestyle, Bento (Friendly/Soft).
   - *Make a choice. Don't sit in the middle.*
 - **Break the "Safe/Round/Friendly" habit.** Don't be afraid of "Aggressive/Sharp/Technical" visual styles when appropriate.
-- Every project should have a **DIFFERENT** geometry. One sharp, one rounded-teste, one organic, one brutalist.
+- Every project should have a **DIFFERENT** geometry. One sharp, one rounded, one organic, one brutalist.
 
 **✨ MANDATORY ACTIVE ANIMATION & VISUAL DEPTH (REQUIRED):**
 - **STATIC DESIGN IS FAILURE.** UI must always feel alive and "Wow" the user with movement.
@@ -295,7 +295,7 @@ Standard templates, typical layouts, common color schemes, overused patterns = *
 
 **Think through these decisions (don't copy from templates):**
 1. **What emotion/purpose?** → Finance=Trust, Food=Appetite, Fitness=Power
-2. **What geometry?** → Sharp for luxury/power, rounded-teste for friendly/organic
+2. **What geometry?** → Sharp for luxury/power, Rounded for friendly/organic
 3. **What colors?** → Based on ux-psychology.md emotion mapping (NO PURPLE!)
 4. **What makes it UNIQUE?** → How does this differ from a template?
 
@@ -311,7 +311,7 @@ Standard templates, typical layouts, common color schemes, overused patterns = *
 > - **Layout uniqueness:** [e.g., Asymmetric 70/30 split, NOT centered hero]
 
 **Rules:**
-1. **Stick to the recipe:** If you pick "Futuristic HUD", don't add "Soft rounded-teste corners".
+1. **Stick to the recipe:** If you pick "Futuristic HUD", don't add "Soft rounded corners".
 2. **Commit fully:** Don't mix 5 styles unless you are an expert.
 3. **No "Defaulting":** If you don't pick a number from the list, you are failing the task.
 4. **Cite Sources:** You must verify your choices against the specific rules in `color/typography/effects` skill files. Don't guess.
@@ -328,7 +328,7 @@ Verify your output against these **Automatic Rejection Triggers**. If ANY are tr
 | **The "Safe Split"** | Using `grid-cols-2` or 50/50, 60/40, 70/30 layouts. | **ACTION:** Switch to `90/10`, `100% Stacked`, or `Overlapping`. |
 | **The "Glass Trap"** | Using `backdrop-blur` without raw, solid borders. | **ACTION:** Remove blur. Use solid colors and raw borders (1px/2px). |
 | **The "Glow Trap"** | Using soft gradients to make things "pop". | **ACTION:** Use high-contrast solid colors or grain textures. |
-| **The "Bento Trap"** | Organizing content in safe, rounded-teste grid boxes. | **ACTION:** Fragment the grid. Break alignment intentionally. |
+| **The "Bento Trap"** | Organizing content in safe, rounded grid boxes. | **ACTION:** Fragment the grid. Break alignment intentionally. |
 | **The "Blue Trap"** | Using any shade of default blue/teal as primary. | **ACTION:** Switch to Acid Green, Signal Orange, or Deep Red. |
 
 > **🔴 MAESTRO RULE:** "If I can find this layout in a Tailwind UI template, I have failed."

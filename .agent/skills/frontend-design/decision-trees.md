@@ -153,7 +153,7 @@ WHAT'S THE CONTENT TYPE?
           │   └── Priority: Sophistication, whitespace
           │
           └── Playful (Kids, Games, Casual)
-              ├── Style: rounded-teste, friendly fonts
+              ├── Style: Rounded, friendly fonts
               ├── Scale: Varied, expressive
               └── Priority: Fun, approachable, readable
 ```

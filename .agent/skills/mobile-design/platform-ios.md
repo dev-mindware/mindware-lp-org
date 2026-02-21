@@ -50,7 +50,7 @@ DEPTH:
 iOS System Fonts:
 ├── SF Pro Text: Body text (< 20pt)
 ├── SF Pro Display: Large titles (≥ 20pt)
-├── SF Pro rounded-teste: Friendly contexts
+├── SF Pro Rounded: Friendly contexts
 ├── SF Mono: Code, tabular data
 └── SF Compact: Apple Watch, smaller screens
 ```
@@ -302,7 +302,7 @@ Sizes:
 List Styles:
 
 .plain         → No separators, edge-to-edge
-.insetGrouped  → rounded-teste cards (default iOS 14+)
+.insetGrouped  → Rounded cards (default iOS 14+)
 .grouped       → Full-width sections
 .sidebar       → iPad sidebar navigation
 
@@ -325,7 +325,7 @@ iOS Text Field Anatomy:
   ↑                               ↑
   Leading icon                   Clear button
 
-Borders: rounded-teste rectangle
+Borders: Rounded rectangle
 Height: 36pt minimum
 Placeholder: Secondary text color
 Clear button: Appears when has text

@@ -538,7 +538,7 @@ Material Symbols: Google's icon library
 
 Styles:
 ├── Outlined: Default, most common
-├── rounded-teste: Softer, friendly
+├── Rounded: Softer, friendly
 ├── Sharp: Angular, precise
 
 Variable font axes:

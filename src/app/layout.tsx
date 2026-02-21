@@ -44,14 +44,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${satoshi.className} antialiased font-sans`}>
+      <body className={`${satoshi.className} antialiased font-sans flex min-h-screen flex-col`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <main className="grow">
+            {children}
+          </main>
           <Analytics />
           <ScrollToTop />
         </ThemeProvider>

@@ -11,9 +11,9 @@ export function Hero() {
 
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-background">
       <AnimatedLinesBackground />
-      <div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-primary/20 rounded-teste-full blur-3xl opacity-50 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-64 h-64 bg-primary/10 rounded-teste-full blur-3xl opacity-30 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 rounded-teste-full blur-3xl -translate-x-1/2 translate-y-1/2 pointer-events-none" />
+      <div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-primary/20 rounded-test-test-full blur-3xl opacity-50 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-64 h-64 bg-primary/10 rounded-test-test-full blur-3xl opacity-30 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 rounded-test-test-full blur-3xl -translate-x-1/2 translate-y-1/2 pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -22,10 +22,10 @@ export function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-4xl mx-auto text-center"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-teste-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-test-test-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold uppercase tracking-wider mb-6">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-teste-full bg-primary opacity-75"></span>
-              <span className="relative inline-flex rounded-teste-full h-2 w-2 bg-primary"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-test-test-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-test-test-full h-2 w-2 bg-primary"></span>
             </span>
             Parceiro de Inovação Digital
           </div>
@@ -46,14 +46,14 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center">
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-white rounded-teste-lg px-8 h-12 text-base shadow-lg shadow-primary/25 hover:shadow-primary/40"
+              className="bg-primary hover:bg-primary/90 text-white rounded-test-test-lg px-8 h-12 text-base shadow-lg shadow-primary/25 hover:shadow-primary/40"
             >
               Inicie Seu Projeto <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="rounded-teste-lg px-8 h-12 text-base border-input hover:bg-accent hover:text-accent-foreground"
+              className="rounded-test-test-lg px-8 h-12 text-base border-input hover:bg-accent hover:text-accent-foreground"
             >
               Ver Casos de Estudo
             </Button>

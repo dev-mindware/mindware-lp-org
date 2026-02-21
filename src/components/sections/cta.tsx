@@ -10,9 +10,9 @@ export function CTA() {
       className="py-24 bg-background relative overflow-hidden"
     >
       <div className="container mx-auto px-4 relative z-10 text-center">
-        <div className="bg-card border border-border rounded-teste-3xl p-12 md:p-20 relative overflow-hidden max-w-5xl mx-auto shadow-xl">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-teste-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-teste-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+        <div className="bg-card border border-border rounded-test-test-3xl p-12 md:p-20 relative overflow-hidden max-w-5xl mx-auto shadow-xl">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-test-test-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500/10 rounded-test-test-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none" />
 
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Pronto para Construir Algo <br />

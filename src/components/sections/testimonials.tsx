@@ -1,65 +1,35 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, ArrowLeft, ArrowRight, Quote } from "lucide-react";
+import { Star, ArrowLeft, ArrowRight, Quote, Play } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import { testimonials } from "@/data";
 
-const testimonials = [
-  {
-    name: "Alex Ferreira",
-    role: "CTO, FinTech Corp",
-    content:
-      "A Mindware transformou nosso sistema legado em uma plataforma moderna e elegante. A atenção aos detalhes na experiência do usuário é incomparável no setor.",
-    avatar: "https://i.pravatar.cc/150?u=alex",
-    initials: "AF",
-  },
-  {
-    name: "Sara Lima",
-    role: "Fundadora, StartUp Inc",
-    content:
-      "A velocidade de desenvolvimento foi incrível. Fomos do conceito ao MVP em menos de 3 meses sem sacrificar a qualidade do código.",
-    avatar: "https://i.pravatar.cc/150?u=sara",
-    initials: "SL",
-  },
-  {
-    name: "Marcos Torres",
-    role: "VP de Engenharia, ScaleUp",
-    content:
-      "A equipe de consultoria identificou gargalos que nem sabíamos que existiam. A estratégia de otimização implementada economizou 40% em custos de nuvem.",
-    avatar: "https://i.pravatar.cc/150?u=marcos",
-    initials: "MT",
-  },
-  {
-    name: "Emília Chen",
-    role: "Diretora de Produto, TechVentures",
-    content:
-      "Trabalhar com a Mindware foi como ter uma extensão da nossa própria equipe. A expertise em tecnologias web modernas acelerou nossa transformação digital.",
-    avatar: "https://i.pravatar.cc/150?u=emilia",
-    initials: "EC",
-  },
-  {
-    name: "Davi Rodrigues",
-    role: "CEO, NextGen Solutions",
-    content:
-      "O retorno sobre o investimento desde a parceria com a Mindware tem sido excepcional. Eles entregaram uma solução robusta e escalável que cresce com o nosso negócio.",
-    avatar: "https://i.pravatar.cc/150?u=davi",
-    initials: "DR",
-  },
-  {
-    name: "Raquel Kim",
-    role: "Head de Inovação, GlobalTech",
-    content:
-      "A Mindware não constrói apenas software — eles constroem soluções. A abordagem estratégica nos ajudou a repensar toda a nossa experiência de usuário para melhor.",
-    avatar: "https://i.pravatar.cc/150?u=raquel",
-    initials: "RK",
-  },
-];
+interface Testimonial {
+  name: string;
+  role: string;
+  content: string;
+  avatar: string;
+  initials: string;
+  video?: {
+    src: string;
+    description: string;
+  };
+}
 
 export function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [selectedTestimonial, setSelectedTestimonial] = useState<Testimonial | null>(null);
   const itemsPerPage = 3;
   const totalPages = Math.ceil(testimonials.length / itemsPerPage);
 
@@ -111,7 +81,7 @@ export function Testimonials() {
             <Button
               variant="outline"
               size="icon"
-              className="rounded-teste-full hover:bg-primary hover:text-white transition-colors"
+              className="rounded-test-test-full hover:bg-primary hover:text-white transition-colors"
               onClick={prevSlide}
               aria-label="Anterior"
             >
@@ -120,7 +90,7 @@ export function Testimonials() {
             <Button
               variant="outline"
               size="icon"
-              className="rounded-teste-full hover:bg-primary hover:text-white transition-colors"
+              className="rounded-test-test-full hover:bg-primary hover:text-white transition-colors"
               onClick={nextSlide}
               aria-label="Próximo"
             >
@@ -142,7 +112,8 @@ export function Testimonials() {
               {visibleTestimonials.map((testimonial, index) => (
                 <Card
                   key={`${currentIndex}-${index}`}
-                  className="bg-card border-border/50 shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col"
+                  className={`bg-card border-border/50 shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col group relative ${testimonial.video ? "cursor-pointer ring-primary/20 hover:ring-2" : ""}`}
+                  onClick={() => testimonial.video && setSelectedTestimonial(testimonial)}
                 >
                   <CardContent className="pt-8 flex-1 flex flex-col">
                     <div className="flex justify-between items-start mb-6">
@@ -151,11 +122,18 @@ export function Testimonials() {
                           <Star key={i} className="w-4 h-4 fill-current" />
                         ))}
                       </div>
-                      <Quote className="h-8 w-8 text-primary/20" />
+                      <div className="flex items-center gap-2">
+                        {testimonial.video && (
+                          <div className="bg-primary/10 p-2 rounded-test-test-full text-primary group-hover:scale-110 transition-transform">
+                            <Play className="w-4 h-4 fill-current" />
+                          </div>
+                        )}
+                        <Quote className="h-8 w-8 text-primary/20" />
+                      </div>
                     </div>
 
                     <p className="text-muted-foreground mb-8 text-base leading-relaxed flex-1 italic">
-                      "{testimonial.content}"
+                      &quot;{testimonial.content}&quot;
                     </p>
 
                     <div className="flex items-center gap-4 mt-auto border-t border-border/50 pt-6">
@@ -191,16 +169,55 @@ export function Testimonials() {
             <button
               key={idx}
               onClick={() => setCurrentIndex(idx)}
-              className={`h-2 rounded-teste-full transition-all duration-300 ${
-                idx === currentIndex
-                  ? "w-8 bg-primary"
-                  : "w-2 bg-primary/20 hover:bg-primary/40"
-              }`}
+              className={`h-2 rounded-test-test-full transition-all duration-300 ${idx === currentIndex
+                ? "w-8 bg-primary"
+                : "w-2 bg-primary/20 hover:bg-primary/40"
+                }`}
               aria-label={`Ir para página ${idx + 1}`}
             />
           ))}
         </div>
       </div>
+
+      <Dialog open={!!selectedTestimonial} onOpenChange={(open) => !open && setSelectedTestimonial(null)}>
+        <DialogContent className="max-w-4xl p-0 overflow-hidden bg-background border-border/50 rounded-test-test-2xl">
+          <div className="flex flex-col">
+            <div className="aspect-video relative bg-black">
+              {selectedTestimonial?.video && (
+                <video
+                  src={selectedTestimonial.video.src}
+                  className="w-full h-full"
+                  controls
+                  autoPlay
+                />
+              )}
+            </div>
+            <div className="p-8">
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-bold flex items-center gap-3">
+                  <Avatar className="h-10 w-10 ring-2 ring-primary/10">
+                    <AvatarImage
+                      src={selectedTestimonial?.avatar}
+                      alt={selectedTestimonial?.name}
+                      className="object-cover"
+                    />
+                    <AvatarFallback className="bg-primary/10 text-primary font-bold">
+                      {selectedTestimonial?.initials}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div className="flex flex-col items-start">
+                    <span>{selectedTestimonial?.name}</span>
+                    <span className="text-xs text-primary font-medium uppercase tracking-wide">{selectedTestimonial?.role}</span>
+                  </div>
+                </DialogTitle>
+              </DialogHeader>
+              <DialogDescription className="text-lg text-muted-foreground mt-4 leading-relaxed italic">
+                &quot;{selectedTestimonial?.video?.description || selectedTestimonial?.content}&quot;
+              </DialogDescription>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }

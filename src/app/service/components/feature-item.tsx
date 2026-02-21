@@ -18,10 +18,10 @@ export function FeatureItem({ icon: Icon, title, description, delay = 0 }: Featu
             whileHover={{ scale: 1.02, backgroundColor: "var(--muted)" }}
             transition={{ duration: 0.5, delay }}
             viewport={{ once: true }}
-            className="flex gap-4 p-6 rounded-teste-2xl bg-card/40 backdrop-blur-md border border-border/50 shadow-lg group cursor-default relative overflow-hidden"
+            className="flex gap-4 p-6 rounded-test-test-2xl bg-card/40 backdrop-blur-md border border-border/50 shadow-lg group cursor-default relative overflow-hidden"
         >
             <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="w-12 h-12 rounded-teste-xl bg-primary/10 flex items-center justify-center shrink-0 text-primary relative z-10 group-hover:scale-110 transition-transform duration-300">
+            <div className="w-12 h-12 rounded-test-test-xl bg-primary/10 flex items-center justify-center shrink-0 text-primary relative z-10 group-hover:scale-110 transition-transform duration-300">
                 <Icon className="w-6 h-6" />
             </div>
             <div className="relative z-10">
