@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 
 const satoshi = localFont({
   src: [
@@ -44,16 +44,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${satoshi.className} antialiased font-sans flex min-h-screen flex-col`}>
+      <head>
+        <meta
+          name="google-site-verification"
+          content="mIQkIZQqVY4KID4F5fVH2d6VQsDGWrOo0MTltCKSNUc"
+        />
+      </head>
+      <body
+        className={`${satoshi.className} antialiased font-sans flex min-h-screen flex-col`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <main className="grow">
-            {children}
-          </main>
+          <main className="grow">{children}</main>
           <Analytics />
           <ScrollToTop />
         </ThemeProvider>
