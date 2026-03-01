@@ -97,5 +97,6 @@ export const videoSection = {
   videoIn: "/screen3.mp4",
   urlDisplay: "mindgest.mindware.ao",
   cta: "Solicitar Demo",
+  ctaLink: "https://mindgest.mindware.ao/auth/register",
   color: "from-primary/20 to-purple-500/20",
 };

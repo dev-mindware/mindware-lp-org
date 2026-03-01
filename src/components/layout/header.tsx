@@ -53,7 +53,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed border-b top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 border-primary/10" : "bg-background"
+      className={`fixed backdrop-blur-sm border-b top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 border-primary/10" : "bg-background"
         }`}
     >
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
@@ -90,9 +90,11 @@ export function Header() {
 
         <div className="hidden md:flex items-center gap-4">
           <ModeToggle />
-          <Button className="bg-primary hover:bg-primary/90 text-white font-medium px-5 py-2 shadow-lg shadow-primary/20">
-            Começar
-          </Button>
+          <Link href="https://mindgest.mindware.ao/auth/register">
+            <Button className="bg-primary hover:bg-primary/90 text-white font-medium px-5 py-2 shadow-lg shadow-primary/20">
+              Começar
+            </Button>
+          </Link>
         </div>
 
         <div className="md:hidden flex items-center gap-4">

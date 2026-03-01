@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import NextImage from "next/image";
 import { products, videoSection } from "@/data";
+import Link from "next/link";
 
 export function Products() {
   return (
@@ -64,13 +65,14 @@ export function Products() {
                 </div>
               ))}
             </div>
-
+            <Link href={videoSection.ctaLink}>
             <Button
               size="lg"
               className="bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/25 h-14 px-10 text-lg font-bold "
             >
               {videoSection.cta}
             </Button>
+            </Link>
           </motion.div>
 
           <motion.div
@@ -115,6 +117,7 @@ export function Products() {
           className="mt-32 text-center"
         >
           <div className="inline-block p-1 rounded-test-full bg-linear-to-r from-primary/20 to-blue-500/20 backdrop-blur-sm border border-white/10">
+            <Link href="https://mindgest.mindware.ao">
             <Button
               size="lg"
               className="rounded-test-full px- h-14 text-lg font-bold bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/30"
@@ -122,6 +125,7 @@ export function Products() {
               Visitar Site Oficial MindGest{" "}
               <ExternalLink className="ml-2 h-5 w-5" />
             </Button>
+            </Link>
           </div>
           <p className="mt-4 text-muted-foreground text-sm">
             Experimente o futuro da gestão empresarial hoje.
