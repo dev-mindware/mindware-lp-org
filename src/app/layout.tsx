@@ -25,10 +25,10 @@ export const metadata: Metadata = {
   description:
     "A Mindware é uma empresa de desenvolvimento de software full-cycle especializada em desenvolvimento web, aplicações móveis e transformação digital.",
   keywords: [
-    "software development",
-    "web development",
-    "mobile apps",
-    "digital transformation",
+    "tecnologia",
+    "angola",
+    "mindware",
+    "desenvolvimento web",
   ],
   icons: {
     icon: "/icon_white.ico",
