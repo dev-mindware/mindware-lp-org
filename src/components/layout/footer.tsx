@@ -1,9 +1,7 @@
-"use client";
-
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { Facebook, Instagram, Linkedin, Phone } from "lucide-react";
 import Image from "next/image";
+import { FooterBrandAnimation } from "./footer-brand-animation";
 
 const footerSections = [
   {
@@ -128,20 +126,7 @@ export function Footer() {
       </div>
       <div className="w-full flex justify-center overflow-hidden pointer-events-none select-none mt-10 relative z-0">
         <svg viewBox="0 0 1000 200" className="w-full opacity-50">
-          <motion.text
-            x="50%"
-            y="50%"
-            textAnchor="middle"
-            dominantBaseline="middle"
-            strokeWidth="1"
-            className="font-black text-[11rem] tracking-tighter fill-transparent stroke-primary"
-            // initial={{ strokeDasharray: "1000", strokeDashoffset: 1000 }}
-            whileInView={{ strokeDashoffset: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 5, ease: "easeOut" }}
-          >
-            Mindware
-          </motion.text>
+          <FooterBrandAnimation />
         </svg>
       </div>
     </footer>

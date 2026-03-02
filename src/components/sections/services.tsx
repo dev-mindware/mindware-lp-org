@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import {
@@ -11,6 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { FadeUp } from "@/components/animations/fade-up";
 
 import { services } from "@/data";
 
@@ -23,22 +21,17 @@ export function Services() {
             Nossos Serviços
           </h2>
           <p className="text-lg text-muted-foreground">
-            Combinamos criatividade estratégica com engenharia de ponta para entregar
-            soluções que impulsionam o seu negócio.
+            Combinamos criatividade estratégica com engenharia de ponta para
+            entregar soluções que impulsionam o seu negócio.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="h-full"
-            >
-              <Card className={`h-full border-muted hover:border-primary/50 transition-all hover:shadow-lg bg-card group relative overflow-hidden flex flex-col ${service.highlight ? 'border-primary' : ''}`}>
+            <FadeUp key={index} delay={index * 0.1} className="h-full">
+              <Card
+                className={`h-full border-muted hover:border-primary/50 transition-all hover:shadow-lg bg-card group relative overflow-hidden flex flex-col ${service.highlight ? "border-primary" : ""}`}
+              >
                 <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
                   <service.icon className="w-32 h-32 text-primary transform rotate-12 translate-x-8 -translate-y-8" />
                 </div>
@@ -77,7 +70,7 @@ export function Services() {
                   )}
                 </CardContent>
               </Card>
-            </motion.div>
+            </FadeUp>
           ))}
         </div>
       </div>

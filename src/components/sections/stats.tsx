@@ -1,14 +1,12 @@
-"use client";
-import { motion } from "framer-motion";
 import { Manrope } from "next/font/google";
+import { FadeUp } from "@/components/animations/fade-up";
+import { stats } from "@/data";
 
 const manrope = Manrope({
   subsets: ["latin"],
   weight: ["500", "600", "700", "800"],
   display: "swap",
 });
-
-import { stats } from "@/data";
 
 export function Stats() {
   return (
@@ -17,14 +15,7 @@ export function Stats() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-x divide-white/20">
           {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="p-4"
-            >
+            <FadeUp key={index} delay={index * 0.1} className="p-4">
               <div
                 className={`${manrope.className} text-4xl md:text-5xl font-bold mb-2 tracking-tight`}
               >
@@ -35,7 +26,7 @@ export function Stats() {
               >
                 {stat.label}
               </div>
-            </motion.div>
+            </FadeUp>
           ))}
         </div>
       </div>
