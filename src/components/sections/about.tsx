@@ -1,7 +1,8 @@
 "use client";
 import { motion, Variants } from "framer-motion";
-import { ArrowRight, Target, Code2, Zap, ShieldCheck } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const staggerContainer: Variants = {
   hidden: { opacity: 0 },
@@ -35,18 +36,18 @@ export function About() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {/* Left Column - Images & Visuals */}
           <motion.div variants={fadeUp} className="relative order-2 lg:order-1">
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl opacity-60 pointer-events-none" />
             <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl opacity-60 pointer-events-none" />
 
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-muted group">
               <div className="absolute inset-0 bg-linear-to-tr from-primary/30 via-transparent to-transparent z-10 mix-blend-overlay transition-opacity duration-500 group-hover:opacity-75" />
-              <img
+         {/*      <Image
+                fill
                 src="/oficial.jpg"
                 alt="Mindware Team"
                 className="w-full h-full object-cover aspect-4/5 lg:aspect-square group-hover:scale-105 transition-transform duration-700 ease-out"
-              />
+              /> */}
               <div className="absolute bottom-6 left-6 right-6 z-20 bg-background/80 backdrop-blur-md border border-white/10 p-6 rounded-2xl shadow-xl transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                 <div className="flex items-center gap-4">
                   <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
@@ -65,7 +66,6 @@ export function About() {
             </div>
           </motion.div>
 
-          {/* Right Column - Text & Content */}
           <div className="order-1 lg:order-2 flex flex-col justify-center">
             <motion.div
               variants={fadeUp}
@@ -92,7 +92,7 @@ export function About() {
               variants={fadeUp}
               className="space-y-6 text-lg text-muted-foreground leading-relaxed"
             >
-              <p>
+              <p className="text-justify">
                 Na Mindware, não desenvolvemos apenas software. Acreditamos que
                 tecnologia sem propósito é desperdício de tempo e dinheiro. Por
                 isso, cada projecto nasce com um objectivo claro: gerar
@@ -100,7 +100,7 @@ export function About() {
                 clientes.
               </p>
 
-              <p>
+              <p className="text-justify">
                 O nosso diferencial está na combinação de visão técnica com
                 mentalidade de negócio. Não entregamos apenas código funcional;
                 entregamos sistemas pensados para escalar, operar offline quando
@@ -110,31 +110,6 @@ export function About() {
               </p>
             </motion.div>
 
-            <motion.div
-              variants={fadeUp}
-              className="grid sm:grid-cols-2 gap-6 mt-10 p-6 bg-muted/50 rounded-2xl border border-primary/10"
-            >
-              <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-3">
-                  <Target className="h-5 w-5 text-primary" />
-                  <h4 className="font-bold text-foreground">Transparência</h4>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  Comunicação clara e objectivos alinhados em cada fase.
-                </p>
-              </div>
-              <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-3">
-                  <Code2 className="h-5 w-5 text-primary" />
-                  <h4 className="font-bold text-foreground">
-                    Excelência Técnica
-                  </h4>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  Pilares inegociáveis na construção do seu software.
-                </p>
-              </div>
-            </motion.div>
 
             <motion.div variants={fadeUp} className="mt-10">
               <p className="font-medium text-foreground mb-6 text-lg border-l-4 border-primary pl-4">

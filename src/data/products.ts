@@ -1,33 +1,31 @@
-import { Activity, PieChart, TrendingUp, Share2 } from "lucide-react";
-
 export const products = [
   {
-    id: "finance",
+    id: "faturacao",
     label: "MindGest ERP",
     title: {
-      line1: "Controle Financeiro",
-      highlight: "Reimaginado",
+      line1: "Faturação Fácil",
+      highlight: "& Descomplicada",
     },
     description:
-      "Diga adeus às planilhas espalhadas. O MindGest centraliza suas operações financeiras, dando a você uma visão cristalina da saúde da sua empresa. Experimente contabilidade automatizada, previsões precisas e gestão de conformidade perfeita.",
+      "Diga adeus à burocracia na hora de faturar. O MindGest agiliza ao máximo a emissão de documentos. Seja uma Fatura, Fatura/Recibo, Proforma ou Nota de crédito, crie documentos profissionais e com total validade fiscal em questão de segundos.",
     features: [
       {
-        title: "Reconciliação Automatizada",
-        desc: "Conecte feeds bancários e deixe a IA cuidar da correspondência.",
+        title: "Diversidade de Documentos",
+        desc: "Emita Faturas, Faturas/Recibo, Proformas e muito mais.",
       },
       {
-        title: "Suporte Multimoeda",
-        desc: "Negócios globais facilitados com taxas de câmbio em tempo real.",
+        title: "Vários formatos",
+        desc: "Emita e baixe em formatos A4, talão e muito mais.",
       },
       {
-        title: "Faturamento Inteligente",
-        desc: "Crie, envie e rastreie faturas profissionais instantaneamente.",
+        title: "Gestão Simplificada",
+        desc: "Organização clara para que saiba rapidamente quem pagou ou falta pagar.",
       },
     ],
-    image: "/screen2.png",
-    imageAlt: "Dashboard Financeiro MindGest",
-    urlDisplay: "finance.mindgest.app",
-    cta: "Explorar Finanças",
+    image: "/docs.png",
+    imageAlt: "Gestão de Documentos no MindGest",
+    urlDisplay: "documents.mindgest.app",
+    cta: "Emitir Faturas Agora",
     color: "from-primary/20 to-blue-500/20",
     dots: ["bg-red-500/80", "bg-yellow-500/80", "bg-green-500/80"],
   },
@@ -40,32 +38,24 @@ export const products = [
     },
     description:
       "Dados só são bons se gerarem insights. O Motor de Analytics do MindGest processa milhões de pontos de dados instantaneamente, apresentando inteligência acionável através de dashboards personalizáveis e interativos.",
-    gridFeatures: [
+    features: [
       {
-        title: "Monitoramento ao Vivo",
-        desc: "KPIs atualizados em tempo real.",
-        icon: Activity,
+        title: "Monitoramento em Tempo Real",
+        desc: "KPIs operacionais atualizados ao segundo num ecrã limpo de fácil compreensão.",
       },
       {
-        title: "Relatórios Personalizados",
-        desc: "Construtor arrasta-e-solta.",
-        icon: PieChart,
+        title: "Relatórios Visuais",
+        desc: "Transforme dados analíticos intensos em gráficos dinâmicos práticos.",
       },
       {
-        title: "IA Preditiva",
-        desc: "Preveja tendências instantaneamente.",
-        icon: TrendingUp,
-      },
-      {
-        title: "Compartilhamento Fácil",
-        desc: "Compartilhe insights com segurança.",
-        icon: Share2,
+        title: "Exportação Simples",
+        desc: "Faça download da visão global e partilhe os relatórios em Excel/PDF para as equipas.",
       },
     ],
-    image: "/screen1.png",
+    image: "/dashboard.png",
     imageAlt: "Dashboard Analytics MindGest",
-    urlDisplay: "analytics.mindgest.app",
-    cta: "Ver Demo Analytics",
+    urlDisplay: "dashboard.mindgest.app",
+    cta: "Ver Demostração",
     color: "from-primary/20 to-cyan-500/20",
     dots: ["bg-red-500/80", "bg-yellow-500/80", "bg-green-500/80"],
     reverse: true,

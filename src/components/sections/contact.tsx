@@ -11,10 +11,10 @@ export function Contact() {
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 bg-card border rounded-test-test-3xl p-8 md:p-12 shadow-2xl">
           <div className="space-y-8">
             <div>
-              <h2 className="text-3xl font-bold mb-4">Let's Talk</h2>
+              <h2 className="text-3xl font-bold mb-4">Let&apos;s Talk</h2>
               <p className="text-muted-foreground">
                 Have a project in mind? Fill out the form or email us directly.
-                We're excited to hear from you.
+                We&apos;re excited to hear from you.
               </p>
             </div>
 

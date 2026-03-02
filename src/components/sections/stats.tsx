@@ -15,7 +15,7 @@ export function Stats() {
     <section className="py-12 bg-primary text-primary-foreground relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150"></div>
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-x divide-white/20">
           {stats.map((stat, index) => (
             <motion.div
               key={index}

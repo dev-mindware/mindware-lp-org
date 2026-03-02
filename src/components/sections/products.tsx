@@ -1,10 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import {
-  Check,
-  ExternalLink,
-} from "lucide-react";
+import { Check, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import NextImage from "next/image";
@@ -24,7 +21,6 @@ export function Products() {
           <ProductSection key={product.id} data={product} index={index} />
         ))}
 
-        {/* Video Section: Full-Width Vertical Layout */}
         <div className="flex flex-col items-center mb-32 space-y-16">
           <motion.div
             initial={{ opacity: 0, y: -30 }}
@@ -58,20 +54,18 @@ export function Products() {
                   </div>
                   <div className="text-left">
                     <h4 className="font-bold text-sm">{item.title}</h4>
-                    <p className="text-xs text-muted-foreground">
-                      {item.desc}
-                    </p>
+                    <p className="text-xs text-muted-foreground">{item.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
             <Link href={videoSection.ctaLink}>
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/25 h-14 px-10 text-lg font-bold "
-            >
-              {videoSection.cta}
-            </Button>
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/25 h-14 px-10 text-lg font-bold "
+              >
+                {videoSection.cta}
+              </Button>
             </Link>
           </motion.div>
 
@@ -118,13 +112,13 @@ export function Products() {
         >
           <div className="inline-block p-1 rounded-test-full bg-linear-to-r from-primary/20 to-blue-500/20 backdrop-blur-sm border border-white/10">
             <Link href="https://mindgest.mindware.ao">
-            <Button
-              size="lg"
-              className="rounded-test-full px- h-14 text-lg font-bold bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/30"
-            >
-              Visitar Site Oficial MindGest{" "}
-              <ExternalLink className="ml-2 h-5 w-5" />
-            </Button>
+              <Button
+                size="lg"
+                className="rounded-test-full px- h-14 text-lg font-bold bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/30"
+              >
+                Visitar Site Oficial MindGest{" "}
+                <ExternalLink className="ml-2 h-5 w-5" />
+              </Button>
             </Link>
           </div>
           <p className="mt-4 text-muted-foreground text-sm">
@@ -201,7 +195,9 @@ function ProductSection({ data }: { data: any; index: number }) {
           size="lg"
           className="bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25"
         >
-          {data.cta}
+          <Link href="https://mindgest.mindware.ao/auth/register">
+            {data.cta}
+          </Link>
         </Button>
       </motion.div>
 
@@ -210,8 +206,9 @@ function ProductSection({ data }: { data: any; index: number }) {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className={`order-1 lg:${isReverse ? "order-1" : "order-2"
-          } relative group`}
+        className={`order-1 lg:${
+          isReverse ? "order-1" : "order-2"
+        } relative group`}
       >
         <div
           className={`absolute inset-0 bg-linear-to-r ${data.color} rounded-test-2xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-700`}
@@ -219,18 +216,22 @@ function ProductSection({ data }: { data: any; index: number }) {
         <div className="relative rounded-test-2xl overflow-hidden shadow-2xl border border-white/10 bg-card transform transition-transform duration-500 group-hover:scale-[1.01]">
           <div className="absolute top-0 left-0 right-0 h-10 bg-muted/50 flex items-center px-4 space-x-2 border-b border-border z-20">
             {data.dots.map((dotClass: string, i: number) => (
-              <div key={i} className={`w-3 h-3 rounded-test-full ${dotClass}`} />
+              <div
+                key={i}
+                className={`w-3 h-3 rounded-test-full ${dotClass}`}
+              />
             ))}
             <div className="ml-4 px-3 py-1 bg-background/50 rounded-test text-[10px] text-muted-foreground font-mono">
               {data.urlDisplay}
             </div>
           </div>
-          <div className="relative aspect-video mt-10">
-            <img
+
+          <div className="relative aspect-video mt-10 bg-black/5">
+            <NextImage
               src={data.image}
               alt={data.imageAlt}
-              className={`w-full h-auto mt-10 opacity-95 hover:opacity-100 transition-opacity ${data.reverse ? "hue-rotate-30 saturate-150" : ""
-                }`}
+              fill
+              className="object-contain opacity-95 hover:opacity-100 transition-opacity"
             />
           </div>
         </div>

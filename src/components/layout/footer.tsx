@@ -2,43 +2,42 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Phone } from "lucide-react";
 import Image from "next/image";
 
 const footerSections = [
   {
     title: "Empresa",
     links: [
-      { name: "Sobre Nós", href: "#about" },
-      { name: "Carreiras", href: "#" },
-      { name: "Blog", href: "#" },
-      { name: "Contacto", href: "#contact" },
+      { name: "Sobre Nós", href: "/#about" },
+      { name: "Carreiras", href: "/careers" },
+      { name: "Blog", href: "/blog" },
+      { name: "Contacto", href: "/#contact" },
     ],
   },
   {
     title: "Serviços",
     links: [
-      { name: "Desenvolvimento Web", href: "#services" },
-      { name: "Apps Mobile", href: "#services" },
-      { name: "Soluções Cloud", href: "#services" },
-      { name: "Consultoria", href: "#services" },
+      { name: "Identidade Visual", href: "/service#branding-section" },
+      { name: "Desenvolvimento Web", href: "/service#website-section" },
+      { name: "Email Profissional", href: "/service#email-section" },
     ],
   },
   {
     title: "Legal",
     links: [
-      { name: "Política de Privacidade", href: "#" },
-      { name: "Termos de Serviço", href: "#" },
-      { name: "Política de Cookies", href: "#" },
+      { name: "Política de Privacidade", href: "/privacy-policy" },
+      { name: "Termos de Serviço", href: "/terms-of-service" },
+      { name: "Política de Cookies", href: "/cookie-policy" },
     ],
   },
 ];
 
 const socialLinks = [
-  { icon: Facebook, href: "#" },
-  { icon: Instagram, href: "#" },
-  { icon: Twitter, href: "#" },
-  { icon: Linkedin, href: "#" },
+  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61574905379786" },
+  { icon: Instagram, href: "https://www.instagram.com/mind.ware/" },
+  { icon: Phone, href: "https://api.whatsapp.com/send/?phone=926665793&text&type=phone_number&app_absent=0" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/mindware-ces" },
 ];
 
 export function Footer() {
@@ -87,7 +86,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Navigation Columns */}
           {footerSections.map((section) => (
             <div key={section.title}>
               <h4 className="font-bold mb-6 text-foreground">
@@ -112,12 +110,9 @@ export function Footer() {
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-center items-center gap-4 text-sm relative z-20">
           <p>© {currentYear} Mindware. Todos os direitos reservados.</p>
         </div>
-
-
       </div>
       <div className="w-full flex justify-center overflow-hidden pointer-events-none select-none mt-10 relative z-0">
         <svg viewBox="0 0 1000 200" className="w-full opacity-50">
-
           <motion.text
             x="50%"
             y="50%"
@@ -125,7 +120,7 @@ export function Footer() {
             dominantBaseline="middle"
             strokeWidth="1"
             className="font-black text-[11rem] tracking-tighter fill-transparent stroke-primary"
-            initial={{ strokeDasharray: "1000", strokeDashoffset: 1000 }}
+            // initial={{ strokeDasharray: "1000", strokeDashoffset: 1000 }}
             whileInView={{ strokeDashoffset: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 5, ease: "easeOut" }}

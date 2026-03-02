@@ -38,9 +38,9 @@ export function Hero() {
           </h1>
 
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Somos uma empresa de desenvolvimento de software full-cycle. Da
-            consultoria estratégica à execução de engenharia, construímos a
-            tecnologia que impulsiona o seu crescimento.
+            Somos uma empresa de Design e Desenvolvimento de software. Do
+            design à implementação, construímos a tecnologia que impulsiona
+            o seu crescimento.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center">
