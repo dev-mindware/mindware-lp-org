@@ -53,7 +53,7 @@ export function Products() {
                     <Check className="h-5 w-5" />
                   </div>
                   <div className="text-left">
-                    <h4 className="font-bold text-sm">{item.title}</h4>
+                    <h3 className="font-bold text-sm">{item.title}</h3>
                     <p className="text-xs text-muted-foreground">{item.desc}</p>
                   </div>
                 </div>
@@ -164,7 +164,7 @@ function ProductSection({ data }: { data: any; index: number }) {
                   <Check className="h-4 w-4" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-base">{item.title}</h4>
+                  <h3 className="font-bold text-base">{item.title}</h3>
                   <p className="text-sm text-muted-foreground mt-1">
                     {item.desc}
                   </p>
@@ -184,7 +184,7 @@ function ProductSection({ data }: { data: any; index: number }) {
                 <div className="w-10 h-10 rounded-test-lg bg-primary/10 flex items-center justify-center text-primary mb-3">
                   <item.icon className="h-5 w-5" />
                 </div>
-                <h4 className="font-bold mb-1">{item.title}</h4>
+                <h3 className="font-bold mb-1">{item.title}</h3>
                 <p className="text-xs text-muted-foreground">{item.desc}</p>
               </div>
             ))}

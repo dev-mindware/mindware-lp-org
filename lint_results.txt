@@ -1,0 +1,17 @@
+
+> mindware-lp@0.1.0 lint
+> eslint
+
+
+C:\Users\Mauro Twister\Documents\GitHub\mindware-lp-org\src\app\fyi\components\fyi-content.tsx
+   8:5  warning  'ArrowLeft' is defined but never used  @typescript-eslint/no-unused-vars
+  11:8  warning  'Link' is defined but never used       @typescript-eslint/no-unused-vars
+
+C:\Users\Mauro Twister\Documents\GitHub\mindware-lp-org\src\components\sections\about.tsx
+  5:8  warning  'Image' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Mauro Twister\Documents\GitHub\mindware-lp-org\src\components\sections\hero.tsx
+  4:35  warning  'Play' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 4 problems (0 errors, 4 warnings)
+

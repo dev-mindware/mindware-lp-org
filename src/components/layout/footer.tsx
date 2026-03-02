@@ -34,9 +34,15 @@ const footerSections = [
 ];
 
 const socialLinks = [
-  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61574905379786" },
+  {
+    icon: Facebook,
+    href: "https://www.facebook.com/profile.php?id=61574905379786",
+  },
   { icon: Instagram, href: "https://www.instagram.com/mind.ware/" },
-  { icon: Phone, href: "https://api.whatsapp.com/send/?phone=926665793&text&type=phone_number&app_absent=0" },
+  {
+    icon: Phone,
+    href: "https://api.whatsapp.com/send/?phone=926665793&text&type=phone_number&app_absent=0",
+  },
   { icon: Linkedin, href: "https://www.linkedin.com/company/mindware-ces" },
 ];
 
@@ -74,23 +80,32 @@ export function Footer() {
             </div>
 
             <div className="flex gap-3">
-              {socialLinks.map(({ icon: Icon, href }, index) => (
-                <Link
-                  key={index}
-                  href={href}
-                  className="w-10 h-10 rounded-test-test-full bg-muted/50 hover:bg-primary/20 flex items-center justify-center text-muted-foreground hover:text-primary transition-all duration-300"
-                >
-                  <Icon className="h-4 w-4" />
-                </Link>
-              ))}
+              {socialLinks.map(({ icon: Icon, href }, index) => {
+                const networkNames = [
+                  "Facebook",
+                  "Instagram",
+                  "WhatsApp",
+                  "LinkedIn",
+                ];
+                return (
+                  <Link
+                    key={index}
+                    href={href}
+                    aria-label={`Visite o nosso ${networkNames[index]}`}
+                    className="w-10 h-10 rounded-test-test-full bg-muted/50 hover:bg-primary/20 flex items-center justify-center text-muted-foreground hover:text-primary transition-all duration-300"
+                  >
+                    <Icon className="h-4 w-4" aria-hidden="true" />
+                  </Link>
+                );
+              })}
             </div>
           </div>
 
           {footerSections.map((section) => (
             <div key={section.title}>
-              <h4 className="font-bold mb-6 text-foreground">
+              <h3 className="font-bold mb-6 text-foreground text-lg">
                 {section.title}
-              </h4>
+              </h3>
               <ul className="space-y-4 text-sm">
                 {section.links.map((link) => (
                   <li key={link.name}>

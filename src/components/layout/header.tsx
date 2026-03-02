@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ModeToggle } from "@/components/mode-toggle";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   { name: "Inicio", href: "/#home" },
@@ -21,6 +22,7 @@ const navItems = [
 ];
 
 export function Header() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [activeSection, setActiveSection] = React.useState("");
 
@@ -29,8 +31,8 @@ export function Header() {
       setIsScrolled(window.scrollY > 100);
 
       const sections = navItems
-        .filter(item => item.href.includes("#"))
-        .map(item => item.href.split("#")[1]);
+        .filter((item) => item.href.includes("#"))
+        .map((item) => item.href.split("#")[1]);
 
       const current = sections.find((section) => {
         const element = document.getElementById(section);
@@ -53,8 +55,9 @@ export function Header() {
 
   return (
     <header
-      className={`fixed backdrop-blur-sm border-b top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/80 border-primary/10" : "bg-background"
-        }`}
+      className={`fixed backdrop-blur-sm border-b top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-background/80 border-primary/10" : "bg-background"
+      }`}
     >
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link
@@ -71,16 +74,17 @@ export function Header() {
             const sectionId = isAnchor ? item.href.split("#")[1] : null;
             const isActive = isAnchor
               ? activeSection === sectionId
-              : typeof window !== "undefined" && window.location.pathname === item.href;
+              : pathname === item.href;
 
             return (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium transition-colors ${isActive
-                  ? "text-primary"
-                  : "text-muted-foreground hover:text-primary"
-                  }`}
+                className={`text-sm font-medium transition-colors ${
+                  isActive
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-primary"
+                }`}
               >
                 {item.name}
               </Link>
@@ -104,9 +108,10 @@ export function Header() {
               <Button
                 variant="ghost"
                 size="icon"
+                aria-label="Abrir Menu"
                 className="hover:bg-transparent"
               >
-                <Menu className="h-6 w-6" />
+                <Menu className="h-6 w-6" aria-hidden="true" />
               </Button>
             </SheetTrigger>
             <SheetContent
@@ -125,7 +130,7 @@ export function Header() {
                     const sectionId = isAnchor ? item.href.split("#")[1] : null;
                     const isActive = isAnchor
                       ? activeSection === sectionId
-                      : typeof window !== "undefined" && window.location.pathname === item.href;
+                      : pathname === item.href;
 
                     return (
                       <motion.div
@@ -136,11 +141,14 @@ export function Header() {
                       >
                         <Link
                           href={item.href}
-                          className={`text-lg font-medium px-4 py-3 rounded-test-test-lg transition-all flex items-center justify-between group ${isActive
-                            ? "bg-primary/10 text-primary"
-                            : "hover:bg-muted text-muted-foreground hover:text-foreground"
-                            }`}
-                          onClick={() => isAnchor && setActiveSection(sectionId as string)}
+                          className={`text-lg font-medium px-4 py-3 rounded-test-test-lg transition-all flex items-center justify-between group ${
+                            isActive
+                              ? "bg-primary/10 text-primary"
+                              : "hover:bg-muted text-muted-foreground hover:text-foreground"
+                          }`}
+                          onClick={() =>
+                            isAnchor && setActiveSection(sectionId as string)
+                          }
                         >
                           {item.name}
                           {isActive && (
@@ -160,7 +168,8 @@ export function Header() {
                     Começar
                   </Button>
                   <p className="text-center text-xs text-muted-foreground">
-                    © {new Date().getFullYear()} Mindware. Todos os direitos reservados.
+                    © {new Date().getFullYear()} Mindware. Todos os direitos
+                    reservados.
                   </p>
                 </div>
               </div>

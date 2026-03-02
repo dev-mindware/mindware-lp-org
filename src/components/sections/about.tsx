@@ -42,7 +42,7 @@ export function About() {
 
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-muted group">
               <div className="absolute inset-0 bg-linear-to-tr from-primary/30 via-transparent to-transparent z-10 mix-blend-overlay transition-opacity duration-500 group-hover:opacity-75" />
-         {/*      <Image
+              {/*      <Image
                 fill
                 src="/oficial.jpg"
                 alt="Mindware Team"
@@ -54,9 +54,9 @@ export function About() {
                     <ShieldCheck className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-foreground">
+                    <h3 className="font-bold text-foreground text-lg">
                       Sólidas & Seguras
-                    </h4>
+                    </h3>
                     <p className="text-sm text-muted-foreground">
                       Soluções digitais prontas para o futuro.
                     </p>
@@ -109,7 +109,6 @@ export function About() {
                 orientadas a resultados.
               </p>
             </motion.div>
-
 
             <motion.div variants={fadeUp} className="mt-10">
               <p className="font-medium text-foreground mb-6 text-lg border-l-4 border-primary pl-4">

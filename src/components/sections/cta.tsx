@@ -32,7 +32,7 @@ export function CTA() {
             />
             <Button
               size="lg"
-              className="h-14 px-8 bg-primary hover:bg-primary/90 text-white font-bold text-base shadow-sm shadow-primary/25"
+              className="h-14 px-8 bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base shadow-sm shadow-primary/25"
             >
               Começar
             </Button>
