@@ -54,9 +54,9 @@ export function About() {
                     <ShieldCheck className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-foreground text-lg">
+                    <span className="block font-bold text-foreground text-lg">
                       Sólidas & Seguras
-                    </h3>
+                    </span>
                     <p className="text-sm text-muted-foreground">
                       Soluções digitais prontas para o futuro.
                     </p>

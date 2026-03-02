@@ -95,7 +95,7 @@ export function Header() {
         <div className="hidden md:flex items-center gap-4">
           <ModeToggle />
           <Link href="https://mindgest.mindware.ao/auth/register">
-            <Button className="bg-primary hover:bg-primary/90 text-white font-medium px-5 py-2 shadow-lg shadow-primary/20">
+            <Button className="bg-primary hover:bg-primary/90 text-zinc-950 font-bold px-5 py-2 shadow-lg shadow-primary/20">
               Começar
             </Button>
           </Link>
@@ -164,7 +164,7 @@ export function Header() {
                 </div>
 
                 <div className="mt-auto mb-8 space-y-4 px-4">
-                  <Button className="w-full h-12 text-lg font-bold bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20">
+                  <Button className="w-full h-12 text-lg font-bold text-zinc-950 bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20">
                     Começar
                   </Button>
                   <p className="text-center text-xs text-muted-foreground">

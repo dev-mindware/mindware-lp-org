@@ -46,7 +46,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center">
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-test-test-lg px-8 h-12 text-base shadow-lg shadow-primary/25 hover:shadow-primary/40"
+              className="bg-primary hover:bg-primary/90 text-zinc-950 font-bold rounded-test-test-lg px-8 h-12 text-base shadow-lg shadow-primary/25 hover:shadow-primary/40"
             >
               Inicie Seu Projeto <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
