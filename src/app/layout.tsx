@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     "desenvolvimento web",
   ],
   icons: {
-    icon: "/icon_white.ico",
-    shortcut: "/icon_white.ico",
-    apple: "/icon_white.ico",
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
   },
 };
 
