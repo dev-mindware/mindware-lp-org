@@ -3,6 +3,7 @@ import { motion, Variants } from "framer-motion";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const staggerContainer: Variants = {
   hidden: { opacity: 0 },
@@ -42,12 +43,12 @@ export function About() {
 
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-muted group">
               <div className="absolute inset-0 bg-linear-to-tr from-primary/30 via-transparent to-transparent z-10 mix-blend-overlay transition-opacity duration-500 group-hover:opacity-75" />
-              {/*      <Image
+              <Image
                 fill
                 src="/oficial.jpg"
                 alt="Mindware Team"
                 className="w-full h-full object-cover aspect-4/5 lg:aspect-square group-hover:scale-105 transition-transform duration-700 ease-out"
-              /> */}
+              />
               <div className="absolute bottom-6 left-6 right-6 z-20 bg-background/80 backdrop-blur-md border border-white/10 p-6 rounded-2xl shadow-xl transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                 <div className="flex items-center gap-4">
                   <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
@@ -119,7 +120,9 @@ export function About() {
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25 h-14 px-8 group"
               >
-                Fale Connosco
+                <Link href="https://api.whatsapp.com/send/?phone=926665793&text&type=phone_number&app_absent=0">
+                  Fale Connosco
+                </Link>
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </motion.div>

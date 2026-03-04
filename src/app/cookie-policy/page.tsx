@@ -1,15 +1,11 @@
-import { Header, Footer } from "@/components/layout";
-import { UnderConstruction } from "@/components/ui/under-construction";
+import { UnderDevelopment } from "@/components/ui/under-construction";
+import { Footer, SimpleHeader } from "@/components/layout";
 
 export default function CookiePolicyPage() {
   return (
     <>
-      <Header />
-      <UnderConstruction
-        title="Cookies"
-        subtitle="Em Revisão"
-        description="Estamos a otimizar a nossa política de cookies e gestão de estado local para assegurar a melhor performance e respeito pela privacidade."
-      />
+      <SimpleHeader />
+      <UnderDevelopment pageName="Cookies" />
       <Footer />
     </>
   );

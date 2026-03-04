@@ -1,4 +1,16 @@
-export const testimonials = [
+export interface Testimonial {
+  name: string;
+  role: string;
+  content: string;
+  avatar: string;
+  initials: string;
+  video?: {
+    src: string;
+    description: string;
+  };
+}
+
+export const testimonials: Testimonial[] = [
   {
     name: "Alex Ferreira",
     role: "CTO, FinTech Corp",

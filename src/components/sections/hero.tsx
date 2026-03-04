@@ -1,15 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle, Play } from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedLinesBackground } from "../ui/animated-bg";
 
 export function Hero() {
   return (
-    // <section className="relative z-[-50px] min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-background">
-
-    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-background">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-background"
+    >
       <AnimatedLinesBackground />
       <div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-primary/20 rounded-test-test-full blur-3xl opacity-50 pointer-events-none" />
       <div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-64 h-64 bg-primary/10 rounded-test-test-full blur-3xl opacity-30 pointer-events-none" />
@@ -46,7 +47,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center">
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-zinc-950 font-bold rounded-test-test-lg px-8 h-12 text-base shadow-lg shadow-primary/25 hover:shadow-primary/40"
+              className="bg-primary hover:bg-primary/90 text-white font-bold rounded-test-test-lg px-8 h-12 text-base shadow-lg shadow-primary/25 hover:shadow-primary/40"
             >
               Inicie Seu Projeto <ArrowRight className="ml-2 h-4 w-4" />
             </Button>

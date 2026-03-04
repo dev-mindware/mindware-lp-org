@@ -11,7 +11,7 @@ export function FooterBrandAnimation() {
       dominantBaseline="middle"
       strokeWidth="1"
       className="font-black text-[11rem] tracking-tighter fill-transparent stroke-primary"
-      initial={{ strokeDasharray: "1000", strokeDashoffset: 1000 }}
+      // initial={{ strokeDasharray: "1000", strokeDashoffset: 1000 }}
       whileInView={{ strokeDashoffset: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 5, ease: "easeOut" }}

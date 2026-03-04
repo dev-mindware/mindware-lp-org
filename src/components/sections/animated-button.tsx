@@ -6,7 +6,6 @@ import { ArrowRight } from "lucide-react";
 export function PremiumAnimatedButton() {
   return (
     <div className="relative inline-flex group">
-      {/* Animated Border Layer */}
       <span className="absolute inset-0 rounded-test-test-full p-[2px]">
         <span className="absolute inset-0 rounded-test-test-full border-anim" />
       </span>
