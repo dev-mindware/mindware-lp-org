@@ -23,12 +23,18 @@ const satoshi = localFont({
 export const metadata: Metadata = {
   title: "Mindware | Transformando Ideias em Realidade Digital",
   description:
-    "A Mindware é uma empresa de desenvolvimento de software full-cycle especializada em desenvolvimento web, aplicações móveis e transformação digital.",
+    "A Mindware é uma empresa de Tecnologia especializada em desenvolvimento web, aplicações móveis, design e transformação digital.",
   keywords: [
-    "tecnologia",
-    "angola",
-    "mindware",
-    "desenvolvimento web",
+    "empresa de tecnologia em Angola",
+    "desenvolvimento web em Angola",
+    "criação de sites profissionais em Luanda",
+    "desenvolvimento de aplicativos móveis em Angola",
+    "empresa de software em Angola",
+    "transformação digital para empresas",
+    "design UX/UI em Angola",
+    "agência digital em Luanda",
+    "desenvolvimento de sistemas sob medida",
+    "consultoria em tecnologia Angola",
   ],
   icons: {
     icon: "/icon.png",
