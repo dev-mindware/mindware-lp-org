@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { Analytics } from "@vercel/analytics/next";
+import { socialProfiles } from "./sitemap";
 
 const satoshi = localFont({
   src: [
@@ -48,12 +49,32 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // JSON-LD: tells Google which social profiles belong to this Organization
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Mindware",
+    url: "https://mindware.ao",
+    logo: "https://mindware.ao/icon.png",
+    sameAs: Object.values(socialProfiles),
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+244-926-665-793",
+      contactType: "customer support",
+      availableLanguage: ["Portuguese"],
+    },
+  };
+
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="pt" suppressHydrationWarning>
       <head>
         <meta
           name="google-site-verification"
           content="mIQkIZQqVY4KID4F5fVH2d6VQsDGWrOo0MTltCKSNUc"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
       </head>
       <body

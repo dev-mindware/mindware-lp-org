@@ -10,15 +10,17 @@ export function PremiumAnimatedButton() {
         <span className="absolute inset-0 rounded-test-test-full border-anim" />
       </span>
 
+      <a href="https://wa.me/956985628">
       <Button
         size="lg"
         className="relative z-10 rounded-test-test-full px-8 h-12 text-base 
         bg-background text-foreground border border-border 
         hover:bg-background"
-      >
+        >
         Inicie Seu Projeto
         <ArrowRight className="ml-2 h-4 w-4" />
       </Button>
+      </a>
     </div>
   );
 }

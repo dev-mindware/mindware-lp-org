@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedLinesBackground } from "../ui/animated-bg";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -45,19 +46,23 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center">
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-white font-bold rounded-test-test-lg px-8 h-12 text-base shadow-lg shadow-primary/25 hover:shadow-primary/40"
-            >
-              Inicie Seu Projeto <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="rounded-test-test-lg px-8 h-12 text-base border-input hover:bg-accent hover:text-accent-foreground"
-            >
-              Ver Casos de Estudo
-            </Button>
+            <a href="https://wa.me/956985628">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-white rounded-test-test-lg px-8 h-12 text-base shadow-lg shadow-primary/25 hover:shadow-primary/40"
+              >
+                Inicie Seu Projeto <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
+            <Link href="/blog">
+              <Button
+                variant="outline"
+                size="lg"
+                className="rounded-test-test-lg px-8 h-12 text-base border-input hover:bg-accent hover:text-accent-foreground"
+              >
+                Ver Casos de Estudo
+              </Button>
+            </Link>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-8 text-sm font-medium text-muted-foreground">
