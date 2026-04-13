@@ -178,7 +178,7 @@ export function EmailServiceSection() {
                                             : "bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/50"
                                     )}
                                 >
-                                    Começar Agor
+                                    Começar Agora
                                     <ArrowRight className="w-4 h-4" />
                                 </motion.button>
                                 </a>

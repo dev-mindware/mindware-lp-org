@@ -3,7 +3,39 @@ import { getFeaturedPosts, getPosts, mockCategories } from "@/data/blog";
 import { PostCard } from "@/components/blog/post-card";
 import Link from "next/link";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Blog & Recursos",
+  description: "Artigos, pensamentos e tutoriais da equipa Mindware sobre Engenharia de Software, Inteligência Artificial, Design de Interfaces e Negócios Digitais em Angola.",
+  keywords: [
+    "blog de tecnologia Angola",
+    "inteligência artificial Angola",
+    "tutoriais engenharia software luanda",
+    "front-end desenvolvimento",
+    "back-end arquitetura sistemas",
+    "soft skills tecnologia"
+  ],
+  openGraph: {
+    title: "Blog de Tecnologia & Inovação | Mindware Angola",
+    description: "Artigos, pensamentos e tutoriais da equipa Mindware sobre Engenharia de Software, IA e Design em Angola.",
+    url: "https://mindware.ao/blog",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Mindware Blog - Artigos e Tecnologia",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog de Tecnologia & Inovação | Mindware Angola",
+    description: "Artigos e pensamentos da equipa sobre desenvolvimento de software e inteligência artificial.",
+    images: ["/og-image.png"],
+  },
+};
 export default async function BlogPage() {
   const featuredPosts = await getFeaturedPosts();
   const allPosts = await getPosts();

@@ -22,9 +22,13 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Mindware | Transformando Ideias em Realidade Digital",
+  metadataBase: new URL("https://mindware.ao"),
+  title: {
+    default: "Mindware | Empresa de Tecnologia em Angola",
+    template: "%s | Mindware",
+  },
   description:
-    "A Mindware é uma empresa de Tecnologia especializada em desenvolvimento web, aplicações móveis, design e transformação digital.",
+    "Mindware: empresa de tecnologia em Angola especializada em desenvolvimento web, apps móveis, branding e email profissional. Soluções digitais para empresas em Luanda.",
   keywords: [
     "empresa de tecnologia em Angola",
     "desenvolvimento web em Angola",
@@ -37,10 +41,48 @@ export const metadata: Metadata = {
     "desenvolvimento de sistemas sob medida",
     "consultoria em tecnologia Angola",
   ],
+  authors: [{ name: "Mindware", url: "https://mindware.ao" }],
+  creator: "Mindware",
+  publisher: "Mindware",
   icons: {
     icon: "/icon.png",
     shortcut: "/icon.png",
     apple: "/icon.png",
+  },
+  openGraph: {
+    type: "website",
+    locale: "pt_AO",
+    url: "https://mindware.ao",
+    siteName: "Mindware",
+    title: "Mindware | Empresa de Tecnologia em Angola",
+    description:
+      "Mindware: empresa de tecnologia em Angola especializada em desenvolvimento web, apps móveis, branding e email profissional. Soluções digitais para empresas em Luanda.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Mindware — Transformando Ideias em Realidade Digital",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mindware | Empresa de Tecnologia em Angola",
+    description:
+      "Soluções digitais premium: websites, apps, branding e email profissional para empresas em Angola.",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 

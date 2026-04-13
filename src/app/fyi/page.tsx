@@ -4,8 +4,8 @@ import { Header, Footer } from "@/components/layout";
 import { FYIContent } from "./components/fyi-content";
 
 export const metadata: Metadata = {
-    title: "FYI | Guia de Facturação em Angola - MindGest",
-    description: "Conheça tudo sobre o regime de facturação electrónica em Angola, software certificado pela AGT e os melhores softwares de facturação em Angola para o seu negócio.",
+    title: "FYI: Guia Completo de Facturação em Angola",
+    description: "Conheça tudo sobre o regime de facturação electrónica em Angola, software certificado pela AGT e as notas de crédito necessárias para o seu negócio estar legal.",
     keywords: [
         "Software de Facturação Angola",
         "Melhor Software de Facturação em Angola",
@@ -17,13 +17,24 @@ export const metadata: Metadata = {
         "Facturação Electrónica Angola"
     ],
     openGraph: {
-        title: "Guia Completo de Facturação em Angola | MindWare",
-        description: "Referência completa sobre conformidade fiscal e software certificado em Angola.",
+        title: "Guia Completo de Facturação em Angola | Mindware",
+        description: "Referência completa sobre conformidade fiscal, processos AGT e implementação de software certificado em Angola.",
         url: "https://mindware.ao/fyi",
-        siteName: "MindWare",
-        locale: "pt_AO",
-        type: "website",
-    }
+        images: [
+            {
+                url: "/og-image.png",
+                width: 1200,
+                height: 630,
+                alt: "FYI Mindware - Facturação e Impostos em Angola",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Guia Completo de Facturação em Angola | Mindware",
+        description: "Referência completa sobre conformidade fiscal, processos AGT e software certificado em Angola.",
+        images: ["/og-image.png"],
+    },
 };
 
 export default function FYIPage() {
