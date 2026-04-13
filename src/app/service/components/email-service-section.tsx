@@ -166,7 +166,7 @@ export function EmailServiceSection() {
                                     </div>
                                     <p className="text-xs text-muted-foreground mt-2">Renovação: {plan.renewal}</p>
                                 </div>
-                                <a href="https://wa.me/956985628">
+                                <a target="_blank" href="https://wa.me/956985628">
                                 <motion.button
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
@@ -178,7 +178,7 @@ export function EmailServiceSection() {
                                             : "bg-white/5 border border-white/10 hover:bg-white/10 hover:border-primary/50"
                                     )}
                                 >
-                                    Começar Agora
+                                    Começar Agor
                                     <ArrowRight className="w-4 h-4" />
                                 </motion.button>
                                 </a>

@@ -120,7 +120,7 @@ export function About() {
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25 h-14 px-8 group"
               >
-                <Link href="https://api.whatsapp.com/send/?phone=926665793&text&type=phone_number&app_absent=0">
+                <Link href="https://api.whatsapp.com/send/?phone=956985628&text&type=phone_number&app_absent=0">
                   Fale Connosco
                 </Link>
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

@@ -75,7 +75,7 @@ export function PricingSection() {
                     </div>
 
                     <div className="flex flex-col md:flex-row gap-4 justify-center">
-                        <Link href="https://wa.me/seu-numero" target="_blank" className="w-full md:w-auto">
+                        <Link href="https://wa.me/956985628" target="_blank" className="w-full md:w-auto">
                             <Button variant="secondary" size="lg" className="w-full px-10 py-6 text-lg font-black rounded-test-test-full shadow-xl hover:scale-105 transition-transform bg-white text-primary">
                                 Quero Garantir a Promoção
                             </Button>

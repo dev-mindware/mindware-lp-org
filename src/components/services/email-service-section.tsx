@@ -187,12 +187,12 @@ export function EmailServiceSection() {
                     Renovação: {plan.renewal}
                   </p>
                 </div>
-
+                <a href="https://wa.me/956985628" target="_blank">
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className={cn(
-                    "w-full py-4 text-sm font-bold uppercase tracking-widest flex items-center justify-center gap-2 transition-all",
+                    "w-full py-4 text-sm font-bold uppercase cursor-pointer tracking-widest flex items-center justify-center gap-2 transition-all",
                     "rounded-test-test-none",
                     plan.highlight
                       ? "bg-primary text-primary-foreground hover:bg-primary/90"
@@ -202,6 +202,7 @@ export function EmailServiceSection() {
                   Começar Agora
                   <ArrowRight className="w-4 h-4" />
                 </motion.button>
+                </a>
               </div>
             </motion.div>
           ))}
