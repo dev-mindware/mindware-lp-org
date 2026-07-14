@@ -48,16 +48,18 @@ export function HeroSection() {
           </motion.h1>
         </div>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
           className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12 relative"
         >
-          Onde a arte da identidade visual encontra a precisão da engenharia
-          web.
+          <p>
+            Onde a arte da identidade visual encontra a precisão da engenharia
+            web.
+          </p>
           <div className="absolute -inset-4 bg-primary/5 blur-2xl -z-10 rounded-test-test-full opacity-50" />
-        </motion.p>
+        </motion.div>
 
         <motion.div
           animate={{ y: [0, 10, 0] }}

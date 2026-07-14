@@ -213,7 +213,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // ─── Homepage Section Anchors ────────────────────────────────────────────
     {
-      url: `${BASE_URL}/#about`,
+      url: `${BASE_URL}/about`,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.6,

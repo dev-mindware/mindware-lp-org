@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SmoothScrollProvider } from "@/components/smooth-scroll-provider";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { Analytics } from "@vercel/analytics/next";
 import { socialProfiles } from "./sitemap";
@@ -128,9 +129,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="grow">{children}</main>
-          <Analytics />
-          <ScrollToTop />
+          <SmoothScrollProvider>
+            <main className="grow">{children}</main>
+            <Analytics />
+            <ScrollToTop />
+          </SmoothScrollProvider>
         </ThemeProvider>
       </body>
     </html>

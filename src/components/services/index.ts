@@ -1,7 +1,6 @@
 export * from "./pricing-section";
 export * from "./branding-section";
 export * from "./website-section";
-export * from "./email-service-section";
 export * from "./mockup-placeholder";
 export * from "./back-button";
 export * from "./feature-item";

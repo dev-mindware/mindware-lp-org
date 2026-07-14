@@ -21,7 +21,6 @@ export function Header() {
         .filter((item) => item.href.includes("#"))
         .map((item) => item.href.split("#")[1]);
 
-      // Fallback para quando o usuário estiver no topo absoluto
       if (window.scrollY < 50) {
         const firstSection = sections[0];
         if (firstSection) {
@@ -45,7 +44,7 @@ export function Header() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Check on mount
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 

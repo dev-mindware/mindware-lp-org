@@ -4,7 +4,7 @@ export const footerSections = [
   {
     title: "Empresa",
     links: [
-      { name: "Sobre Nós", href: "/#about" },
+      { name: "Sobre Nós", href: "/about" },
       { name: "Carreiras", href: "/careers" },
       { name: "Blog", href: "/blog" },
       { name: "Contacto", href: "/#contact" },
@@ -15,7 +15,6 @@ export const footerSections = [
     links: [
       { name: "Identidade Visual", href: "/service#branding-section" },
       { name: "Desenvolvimento Web", href: "/service#website-section" },
-      { name: "Email Profissional", href: "/service#email-section" },
     ],
   },
   {

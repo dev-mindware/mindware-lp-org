@@ -1,4 +1,7 @@
-import { Link, Menu } from "lucide-react";
+"use client";
+
+import { Menu } from "lucide-react";
+import Link from "next/link";
 import { ModeToggle } from "../mode-toggle";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
@@ -15,7 +18,7 @@ interface HeaderProps {
 export function MobileHeader({
   activeSection,
   setActiveSection,
-  pathname
+  pathname,
 }: HeaderProps) {
   return (
     <div className="md:hidden flex items-center gap-4">
@@ -58,7 +61,7 @@ export function MobileHeader({
                   >
                     <Link
                       href={item.href}
-                      className={`text-lg font-medium px-4 py-3 rounded-test-test-lg transition-all flex items-center justify-between group ${
+                      className={`text-lg font-medium px-4 py-3 transition-all flex items-center justify-between group ${
                         isActive
                           ? "bg-primary/10 text-primary"
                           : "hover:bg-muted text-muted-foreground hover:text-foreground"
@@ -71,7 +74,7 @@ export function MobileHeader({
                       {isActive && (
                         <motion.div
                           layoutId="active-indicator"
-                          className="w-1.5 h-1.5 rounded-test-test-full bg-primary"
+                          className="w-1.5 h-1.5 bg-primary"
                         />
                       )}
                     </Link>
@@ -81,9 +84,11 @@ export function MobileHeader({
             </div>
 
             <div className="mt-auto mb-8 space-y-4 px-4">
-              <Button className="w-full h-12 text-lg font-bold text-foreground bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20">
-                Começar
-              </Button>
+              <Link href="https://mindgest.mindware.ao/auth/register">
+                <Button className="w-full h-12 text-lg font-bold text-white bg-primary hover:bg-primary/90 shadow-lg shadow-primary/20">
+                  Começar
+                </Button>
+              </Link>
               <p className="text-center text-xs text-muted-foreground">
                 © {new Date().getFullYear()} Mindware. Todos os direitos
                 reservados.

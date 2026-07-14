@@ -48,6 +48,44 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+
+  /* Mindgest section tokens */
+  --color-paper: #fcfcfc;
+  --color-ink: #0f0f0f;
+  --color-ink-soft: #161616;
+  --color-ink-line: #2b2b2b;
+  --color-primary-50: #f3eeff;
+  --color-primary-100: #e7ddff;
+  --color-primary-200: #d0bbff;
+  --color-primary-300: #b899ff;
+  --color-primary-400: #a177ff;
+  --color-primary-500: #9956f6;
+  --color-primary-600: #8b44e8;
+  --color-primary-700: #7c3aed;
+  --color-primary-800: #6d28d9;
+  --color-primary-900: #5b21b6;
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 :root {
@@ -126,5 +164,42 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Mindgest: textura de grão para as secções escuras */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Mindgest: revelação ao rolar */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-marquee,
+  .animate-fade-up {
+    animation: none !important;
   }
 }

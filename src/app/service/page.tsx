@@ -3,7 +3,6 @@ import { Footer } from "@/components/layout";
 import {
   BackButton,
   BrandingSection,
-  EmailServiceSection,
   HeroSection,
   PricingSection,
   WebsiteSection,
@@ -57,7 +56,6 @@ export default function ServicePage() {
       <BrandingSection />
       <WebsiteSection />
       <PricingSection />
-      <EmailServiceSection />
       <Footer />
     </div>
   );

@@ -5,7 +5,7 @@ import { Check, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import NextImage from "next/image";
-import { products, videoSection } from "@/data";
+import { videoSection } from "@/data/products";
 import Link from "next/link";
 
 export function Products() {
@@ -15,12 +15,17 @@ export function Products() {
       className="py-24 bg-background overflow-hidden relative"
     >
       <div className="absolute top-0 left-0 w-full h-full bg-primary/5 pointer-events-none" />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)",
+          backgroundSize: "72px 72px",
+        }}
+      />
 
       <div className="container mx-auto px-4 relative z-10">
-        {products.map((product, index) => (
-          <ProductSection key={product.id} data={product} index={index} />
-        ))}
-
         <div className="flex flex-col items-center mb-32 space-y-16">
           <motion.div
             initial={{ opacity: 0, y: -30 }}

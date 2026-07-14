@@ -33,7 +33,7 @@ export function Footer() {
 
             <div className="space-y-2 text-sm">
               <p>Luanda - Vila Alice, Angola</p>
-              <p>+244 926 665 793</p>
+              <p>+244 943 100 922</p>
             </div>
 
             <div className="flex gap-3">
