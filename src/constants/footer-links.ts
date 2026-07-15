@@ -15,6 +15,7 @@ export const footerSections = [
     links: [
       { name: "Identidade Visual", href: "/service#branding-section" },
       { name: "Desenvolvimento Web", href: "/service#website-section" },
+      { name: "Programa de Afiliados", href: "/affiliate" },
     ],
   },
   {

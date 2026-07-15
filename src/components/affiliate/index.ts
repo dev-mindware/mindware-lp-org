@@ -1,0 +1,10 @@
+export { AffiliateHero } from "./hero";
+export { AffiliateCommissions } from "./commissions";
+export { AffiliateTiers } from "./tiers";
+export { AffiliatePlans } from "./plans";
+export { AffiliateWallet } from "./wallet";
+export { AffiliateWithdrawal } from "./withdrawal";
+export { AffiliateCertification } from "./certification";
+export { AffiliateFaq } from "./faq";
+export { AffiliateFinalCta } from "./final-cta";
+export { SoftwareFrame } from "./software-frame";
