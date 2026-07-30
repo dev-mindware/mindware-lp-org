@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Check, Sparkles } from "lucide-react";
-import { Reveal } from "@/components/mindgest/reveal";
-import { SectionHeading } from "@/components/mindgest/section-heading";
+import { Reveal } from "@/components/ui/reveal";
+import { SectionHeading } from "@/components/ui/section-heading";
 
 const CAPABILITIES = [
   "Respostas com base nos dados reais das suas lojas",
@@ -24,7 +24,7 @@ export function MindIA() {
         }}
       />
 
-      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="relative mx-auto max-w-6xl px-6 sm:px-10">
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <Reveal>
             <div>

@@ -7,7 +7,7 @@ export function Contact() {
   return (
     <section id="contact" className="py-20">
       <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 bg-card border rounded-test-test-3xl p-8 md:p-12 shadow-2xl">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 bg-card border p-8 md:p-12 shadow-2xl">
           <div className="space-y-8">
             <div>
               <h2 className="text-3xl font-bold mb-4">Let&apos;s Talk</h2>
@@ -19,7 +19,7 @@ export function Contact() {
 
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-test-test-full bg-primary/10 flex items-center justify-center text-primary">
+                <div className="w-10 h-10 bg-primary/10 flex items-center justify-center text-primary">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
@@ -34,7 +34,7 @@ export function Contact() {
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-test-test-full bg-primary/10 flex items-center justify-center text-primary">
+                <div className="w-10 h-10 bg-primary/10 flex items-center justify-center text-primary">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
@@ -49,7 +49,7 @@ export function Contact() {
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-test-test-full bg-primary/10 flex items-center justify-center text-primary">
+                <div className="w-10 h-10 bg-primary/10 flex items-center justify-center text-primary">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>

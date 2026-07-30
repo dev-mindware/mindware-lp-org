@@ -7,8 +7,8 @@ import {
   Package,
   Store,
 } from "lucide-react";
-import { Reveal } from "@/components/mindgest/reveal";
-import { SectionHeading } from "@/components/mindgest/section-heading";
+import { Reveal } from "@/components/ui/reveal";
+import { SectionHeading } from "@/components/ui/section-heading";
 
 const DOC_CHIPS = [
   "Fatura Normal",
@@ -51,11 +51,12 @@ export function Features() {
       id="funcionalidades"
       className="scroll-mt-20 bg-background py-24 text-foreground sm:py-32"
     >
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="mx-auto max-w-6xl px-6 sm:px-10">
         <Reveal>
           <SectionHeading
             index="01"
             label="Funcionalidades"
+            align="center"
             title={
               <>
                 Tudo o que o seu negócio precisa,{" "}

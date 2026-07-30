@@ -59,7 +59,7 @@ export default function AdminLoginPage() {
 
       <Card className="w-full max-w-md border-border/50 bg-card/60 backdrop-blur-xl shadow-2xl">
         <CardHeader className="text-center space-y-4">
-          <div className="mx-auto w-12 h-12 bg-primary/10 rounded-test-test-full flex items-center justify-center mb-2">
+          <div className="mx-auto w-12 h-12 bg-primary/10 flex items-center justify-center mb-2">
             <Lock className="w-6 h-6 text-primary" />
           </div>
           <CardTitle className="text-2xl font-black uppercase tracking-widest">
@@ -88,7 +88,7 @@ export default function AdminLoginPage() {
             </div>
 
             {error && (
-              <div className="text-sm text-destructive font-medium text-center p-2 bg-destructive/10 rounded-test-test-md">
+              <div className="text-sm text-destructive font-medium text-center p-2 bg-destructive/10">
                 {error}
               </div>
             )}

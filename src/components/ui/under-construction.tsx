@@ -17,8 +17,8 @@ export function UnderDevelopment({ pageName }: UnderDevelopmentProps) {
           {pageName}
         </span>
       </div>
-      <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-primary/10 rounded-test-full blur-3xl -translate-x-1/2 translate-y-1/2 pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-blue-500/10 rounded-test-full blur-3xl -translate-x-1/2 translate-y-1/2 pointer-events-none" />
+      <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-primary/10 blur-3xl -translate-x-1/2 translate-y-1/2 pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-blue-500/10 blur-3xl -translate-x-1/2 translate-y-1/2 pointer-events-none" />
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -38,7 +38,7 @@ export function UnderDevelopment({ pageName }: UnderDevelopmentProps) {
               damping: 20,
             }}
           >
-            <div className="relative w-24 h-24  rounded-none border border-primary/30 bg-card flex items-center justify-center transform hover:rotate-6 transition-transform duration-500 ease-out shadow-2xl group">
+            <div className="relative w-24 h-24 rounded-none border border-primary/30 bg-card flex items-center justify-center transform hover:rotate-6 transition-transform duration-500 ease-out shadow-2xl group">
               <Hammer className="w-12 h-12 text-primary opacity-80 group-hover:scale-110 transition-transform duration-300" />
               {/* <Hammer className="w-12 h-12 text-primary" /> */}
 
@@ -77,7 +77,7 @@ export function UnderDevelopment({ pageName }: UnderDevelopmentProps) {
           <Button
             size="lg"
             variant="outline"
-            className="h-14 px-8 text-lg font-bold rounded-test-full border-white/20 hover:bg-white/5 backdrop-blur-sm"
+            className="h-14 px-8 text-lg font-bold border-white/20 hover:bg-white/5 backdrop-blur-sm"
           >
             <ArrowLeft className="mr-2 w-5 h-5" />
             Voltar ao Início

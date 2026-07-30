@@ -74,7 +74,7 @@ export default function EditorPage() {
       </div>
 
       {/* Meta e Capa (Hero) */}
-      <div className="space-y-6 bg-card/50 p-6 rounded-test-test-2xl border border-border/50">
+      <div className="space-y-6 bg-card/50 p-6 border border-border/50">
         <div className="space-y-4">
           <Input
             value={title}
@@ -105,7 +105,7 @@ export default function EditorPage() {
               <select
                 value={categoryId}
                 onChange={(e) => setCategoryId(e.target.value)}
-                className="w-full h-10 rounded-test-test-md border border-input bg-background/50 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                className="w-full h-10 border border-input bg-background/50 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
               >
                 {mockCategories.map((cat) => (
                   <option key={cat.id} value={cat.id}>
@@ -119,7 +119,7 @@ export default function EditorPage() {
 
         {/* Live Preview da Capa */}
         {coverImage && (
-          <div className="mt-6 aspect-video w-full max-h-[400px] overflow-hidden rounded-test-test-xl border border-border/50 relative">
+          <div className="mt-6 aspect-video w-full max-h-[400px] overflow-hidden border border-border/50 relative">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={coverImage}

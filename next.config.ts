@@ -15,6 +15,18 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+
+  async redirects() {
+    return [
+      // A política de cookies passou a ser uma secção da política de
+      // privacidade — mantém os links antigos válidos.
+      {
+        source: "/cookie-policy",
+        destination: "/privacy-policy#cookies",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

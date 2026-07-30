@@ -48,7 +48,7 @@ export function FYIContent() {
       <SectionWrapper className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-primary/20 bg-primary/10 backdrop-blur-md text-primary text-xs font-bold uppercase tracking-widest mb-6 shadow-sm rounded-test-test-none">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-primary/20 bg-primary/10 backdrop-blur-md text-primary text-xs font-bold uppercase tracking-widest mb-6 shadow-sm">
               <ShieldCheck className="w-4 h-4" />
               Guia de Facturação de Angola - AGT
             </div>
@@ -69,7 +69,7 @@ export function FYIContent() {
           {/* FAQ Section */}
           <div className="space-y-12 mb-24">
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-10 h-10 bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary border border-primary/30 shadow-inner rounded-test-test-none">
+              <div className="w-10 h-10 bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary border border-primary/30 shadow-inner">
                 <HelpCircle className="w-6 h-6" />
               </div>
               <h2 className="text-3xl font-black uppercase tracking-tight">
@@ -82,7 +82,7 @@ export function FYIContent() {
                 <AccordionItem
                   key={i}
                   value={`item-${i}`}
-                  className="border border-border/50 bg-card/50 dark:bg-white/3 backdrop-blur-xl px-8 transition-all hover:bg-card/80 dark:hover:bg-white/6 hover:border-primary/40 shadow-sm hover:shadow-md overflow-hidden rounded-test-test-none"
+                  className="border border-border/50 bg-card/50 dark:bg-white/3 backdrop-blur-xl px-8 transition-all hover:bg-card/80 dark:hover:bg-white/6 hover:border-primary/40 shadow-sm hover:shadow-md overflow-hidden"
                 >
                   <AccordionTrigger className="text-left py-7 hover:no-underline font-bold text-lg md:text-xl">
                     {item.question}
@@ -95,7 +95,7 @@ export function FYIContent() {
                         {item.highlights.map((h, idx) => (
                           <div
                             key={idx}
-                            className="flex items-center gap-3 text-sm bg-primary/3 dark:bg-primary/5 p-3 border border-primary/10 dark:border-primary/20 backdrop-blur-sm rounded-test-test-none"
+                            className="flex items-center gap-3 text-sm bg-primary/3 dark:bg-primary/5 p-3 border border-primary/10 dark:border-primary/20 backdrop-blur-sm"
                           >
                             <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
                             <span className="font-semibold text-foreground/80">
@@ -111,7 +111,7 @@ export function FYIContent() {
                         {item.details.map((d, idx) => (
                           <div
                             key={idx}
-                            className="bg-muted/50 dark:bg-muted/30 p-5 border-l-4 border-primary/50 rounded-test-test-none"
+                            className="bg-muted/50 dark:bg-muted/30 p-5 border-l-4 border-primary/50"
                           >
                             <h5 className="font-black text-foreground text-xs uppercase tracking-[0.2em] mb-2">
                               {d.sub}
@@ -123,7 +123,7 @@ export function FYIContent() {
                     )}
 
                     {item.subText && (
-                      <div className="mt-8 bg-linear-to-r from-primary/10 to-transparent p-6 border border-primary/10 italic text-base rounded-test-test-none">
+                      <div className="mt-8 bg-linear-to-r from-primary/10 to-transparent p-6 border border-primary/10 italic text-base">
                         {item.subText}
                       </div>
                     )}
@@ -136,7 +136,7 @@ export function FYIContent() {
           {/* Document Types Grid */}
           <div className="space-y-12 mb-24">
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-10 h-10 bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary border border-primary/30 shadow-inner rounded-test-test-none">
+              <div className="w-10 h-10 bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary border border-primary/30 shadow-inner">
                 <FileText className="w-6 h-6" />
               </div>
               <h2 className="text-3xl font-black uppercase tracking-tight">
@@ -148,7 +148,7 @@ export function FYIContent() {
               {docTypes.map((doc, i) => (
                 <div
                   key={i}
-                  className="p-10 border border-border/50 bg-card/50 dark:bg-white/2 backdrop-blur-2xl relative overflow-hidden group hover:border-primary/40 transition-all hover:shadow-xl rounded-test-test-none"
+                  className="p-10 border border-border/50 bg-card/50 dark:bg-white/2 backdrop-blur-2xl relative overflow-hidden group hover:border-primary/40 transition-all hover:shadow-xl"
                 >
                   <div className="absolute top-0 right-0 p-6 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity rotate-12">
                     <FileText size={120} />
@@ -218,8 +218,8 @@ export function FYIContent() {
           </div>
 
           {/* Comparison Table */}
-          <div className="p-1 bg-linear-to-br from-primary/20 via-border to-primary/20 shadow-xl mb-24 rounded-test-test-none">
-            <div className="bg-card/80 dark:bg-card/40 backdrop-blur-3xl p-10 md:p-16 overflow-x-auto border border-border/50 rounded-test-test-none">
+          <div className="p-1 bg-linear-to-br from-primary/20 via-border to-primary/20 shadow-xl mb-24">
+            <div className="bg-card/80 dark:bg-card/40 backdrop-blur-3xl p-10 md:p-16 overflow-x-auto border border-border/50">
               <h3 className="text-4xl font-black mb-12 text-center uppercase tracking-tighter drop-shadow-md">
                 Tabela <span className="text-primary italic">Comparativa</span>
               </h3>
@@ -257,7 +257,7 @@ export function FYIContent() {
                       </td>
                       <td className="py-7 px-4 text-center">
                         <span
-                          className={`px-4 py-1.5 text-[10px] font-black uppercase tracking-widest rounded-test-test-none ${
+                          className={`px-4 py-1.5 text-[10px] font-black uppercase tracking-widest ${
                             row.fiscal === "Sim"
                               ? "bg-green-500/10 text-green-600 dark:text-green-500 border border-green-500/30"
                               : row.fiscal === "Não"
@@ -280,10 +280,10 @@ export function FYIContent() {
               Pronto para modernizar a sua facturação?
             </h4>
             <div className="flex flex-wrap justify-center gap-6">
-              <Button size="lg" className="rounded-test-none">
+              <Button size="lg" className="">
                 Pedir Demonstração MindGest
               </Button>
-              <Button size="lg" variant="outline" className="rounded-test-none">
+              <Button size="lg" variant="outline" className="">
                 Saiba Mais
               </Button>
             </div>

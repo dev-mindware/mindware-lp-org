@@ -6,6 +6,7 @@ import { SmoothScrollProvider } from "@/components/smooth-scroll-provider";
 import { ScrollToTop } from "@/components/ui/scroll-to-top";
 import { Analytics } from "@vercel/analytics/next";
 import { socialProfiles } from "./sitemap";
+import { PHONE_JSON_LD } from "@/constants/site";
 
 const satoshi = localFont({
   src: [
@@ -102,7 +103,7 @@ export default function RootLayout({
     sameAs: Object.values(socialProfiles),
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+244-926-665-793",
+      telephone: PHONE_JSON_LD,
       contactType: "customer support",
       availableLanguage: ["Portuguese"],
     },

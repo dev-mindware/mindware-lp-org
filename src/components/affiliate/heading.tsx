@@ -43,14 +43,14 @@ export function AffiliateHeading({
       </StaggerItem>
 
       <StaggerItem variants={fadeUpSoft}>
-        <h2 className="mt-5 text-4xl font-black tracking-tight text-balance text-foreground sm:text-5xl">
+        <h2 className="mt-4 text-3xl font-black tracking-tight text-balance text-foreground sm:text-4xl">
           {title}
         </h2>
       </StaggerItem>
 
       {description ? (
         <StaggerItem variants={fadeUpSoft}>
-          <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
             {description}
           </p>
         </StaggerItem>

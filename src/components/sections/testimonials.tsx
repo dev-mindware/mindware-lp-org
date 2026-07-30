@@ -9,7 +9,7 @@ export function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="py-24 bg-muted/30 overflow-hidden relative"
+      className="relative scroll-mt-20 overflow-hidden bg-muted/30 py-24 sm:py-32"
     >
       <TestimonialsCarousel testimonials={testimonials} />
     </section>

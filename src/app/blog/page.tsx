@@ -60,10 +60,10 @@ export default async function BlogPage() {
                   e design.
                 </p>
               </div>
-              <div className="flex bg-muted/50 p-1 rounded-test-test-lg overflow-x-auto scrollbar-hide">
+              <div className="flex bg-muted/50 p-1 overflow-x-auto scrollbar-hide">
                 <Link
                   href="/blog"
-                  className="px-4 py-2 text-sm font-semibold bg-background rounded-test-test-md shadow-sm whitespace-nowrap"
+                  className="px-4 py-2 text-sm font-semibold bg-background shadow-sm whitespace-nowrap"
                 >
                   Últimos Artigos
                 </Link>
@@ -83,7 +83,7 @@ export default async function BlogPage() {
           {/* Destaques (Featured) */}
           <section>
             <h2 className="text-2xl font-bold mb-8 uppercase tracking-widest text-primary flex items-center gap-3">
-              <span className="w-2 h-2 rounded-test-test-full bg-primary animate-pulse" />
+              <span className="w-2 h-2 bg-primary animate-pulse" />
               Conteúdo em Destaque
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

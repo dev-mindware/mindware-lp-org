@@ -53,7 +53,7 @@ export default async function DashboardIndexPage() {
                   >
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-3">
-                        <div className="relative w-10 h-10 rounded-test-test-md overflow-hidden bg-muted shrink-0">
+                        <div className="relative w-10 h-10 overflow-hidden bg-muted shrink-0">
                           <Image
                             src={post.coverImage}
                             alt={post.title}
@@ -67,7 +67,7 @@ export default async function DashboardIndexPage() {
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <span className="inline-flex items-center px-2 py-0.5 rounded-test-test-full text-xs font-semibold bg-primary/10 text-primary">
+                      <span className="inline-flex items-center px-2 py-0.5 text-xs font-semibold bg-primary/10 text-primary">
                         {post.category.name}
                       </span>
                     </td>
@@ -75,8 +75,8 @@ export default async function DashboardIndexPage() {
                       {post.author.name}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <span className="inline-flex items-center gap-1.5 px-2 py-1 rounded-test-test-md text-xs font-medium bg-green-500/10 text-green-500 border border-green-500/20">
-                        <span className="w-1.5 h-1.5 rounded-test-test-full bg-green-500 animate-pulse" />
+                      <span className="inline-flex items-center gap-1.5 px-2 py-1 text-xs font-medium bg-green-500/10 text-green-500 border border-green-500/20">
+                        <span className="w-1.5 h-1.5 bg-green-500 animate-pulse" />
                         Público
                       </span>
                     </td>

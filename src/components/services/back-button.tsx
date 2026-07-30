@@ -12,7 +12,7 @@ export function BackButton({ className }: { className?: string }) {
         <Button
           variant="outline"
           size="sm"
-          className="bg-black/20 backdrop-blur-md border-white/10 hover:bg-white/10 text-white rounded-test-test-full px-4"
+          className="bg-black/20 backdrop-blur-md border-white/10 hover:bg-white/10 text-white px-4"
         >
           <ArrowLeft className="w-4 h-4 mr-2" />
           Voltar

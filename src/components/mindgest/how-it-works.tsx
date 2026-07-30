@@ -1,5 +1,5 @@
-import { Reveal } from "@/components/mindgest/reveal";
-import { SectionHeading } from "@/components/mindgest/section-heading";
+import { Reveal } from "@/components/ui/reveal";
+import { SectionHeading } from "@/components/ui/section-heading";
 import { REGISTER_URL } from "@/data/mindgest/site";
 
 const STEPS = [
@@ -29,11 +29,12 @@ export function HowItWorks() {
       id="como-funciona"
       className="scroll-mt-20 border-t border-border bg-background py-24 text-foreground sm:py-32"
     >
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="mx-auto max-w-6xl px-6 sm:px-10">
         <Reveal>
           <SectionHeading
             index="03"
             label="Como funciona"
+            align="center"
             title={
               <>
                 A funcionar <span className="text-primary">hoje</span>, não

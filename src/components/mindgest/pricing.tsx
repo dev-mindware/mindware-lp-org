@@ -1,6 +1,6 @@
 import { Check } from "lucide-react";
-import { Reveal } from "@/components/mindgest/reveal";
-import { SectionHeading } from "@/components/mindgest/section-heading";
+import { Reveal } from "@/components/ui/reveal";
+import { SectionHeading } from "@/components/ui/section-heading";
 import { NEGOTIATION_EMAIL, PLANS } from "@/data/mindgest/plans";
 import { REGISTER_URL } from "@/data/mindgest/site";
 
@@ -10,7 +10,7 @@ export function Pricing() {
       id="planos"
       className="scroll-mt-20 bg-background py-24 text-foreground sm:py-32"
     >
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="mx-auto max-w-6xl px-6 sm:px-10">
         <Reveal>
           <SectionHeading
             align="center"

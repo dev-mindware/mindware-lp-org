@@ -10,3 +10,6 @@ export * from "./under-construction";
 export * from "./textarea";
 export * from "./animated-bg";
 export * from "./input";
+export * from "./reveal";
+export * from "./section-heading";
+export * from "./count-up-number";

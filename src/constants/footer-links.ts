@@ -1,21 +1,33 @@
 import { Facebook, Instagram, Linkedin, Phone } from "lucide-react";
+import { WHATSAPP_URL } from "./site";
+import { APP_URL, REGISTER_URL } from "@/data/mindgest/site";
 
 export const footerSections = [
   {
+    title: "Produto",
+    links: [
+      { name: "Mindgest", href: "/mindgest" },
+      { name: "Funcionalidades", href: "/mindgest#funcionalidades" },
+      { name: "Planos", href: "/mindgest#planos" },
+      { name: "Criar conta", href: REGISTER_URL },
+      { name: "Entrar", href: APP_URL },
+    ],
+  },
+  {
     title: "Empresa",
     links: [
-      { name: "Sobre Nós", href: "/about" },
-      { name: "Carreiras", href: "/careers" },
-      { name: "Blog", href: "/blog" },
+      { name: "Sobre Nós", href: "/#about" },
+      { name: "Serviços", href: "/service" },
+      { name: "Programa de Afiliados", href: "/affiliate" },
       { name: "Contacto", href: "/#contact" },
     ],
   },
   {
-    title: "Serviços",
+    title: "Recursos",
     links: [
-      { name: "Identidade Visual", href: "/service#branding-section" },
-      { name: "Desenvolvimento Web", href: "/service#website-section" },
-      { name: "Programa de Afiliados", href: "/affiliate" },
+      { name: "Blog", href: "/blog" },
+      { name: "FYI — Facturação em Angola", href: "/fyi" },
+      { name: "Guia Fiscal Angola (PDF)", href: "/Guia Fiscal Angola.pdf" },
     ],
   },
   {
@@ -23,20 +35,26 @@ export const footerSections = [
     links: [
       { name: "Política de Privacidade", href: "/privacy-policy" },
       { name: "Termos de Serviço", href: "/terms-of-service" },
-      { name: "Política de Cookies", href: "/cookie-policy" },
+      { name: "Cookies", href: "/privacy-policy#cookies" },
     ],
   },
 ];
 
 export const socialLinks = [
   {
+    name: "Facebook",
     icon: Facebook,
     href: "https://www.facebook.com/profile.php?id=61574905379786",
   },
-  { icon: Instagram, href: "https://www.instagram.com/mind.ware/" },
   {
-    icon: Phone,
-    href: "https://api.whatsapp.com/send/?phone=926665793&text&type=phone_number&app_absent=0",
+    name: "Instagram",
+    icon: Instagram,
+    href: "https://www.instagram.com/mind.ware/",
   },
-  { icon: Linkedin, href: "https://www.linkedin.com/company/mindware-ces" },
+  { name: "WhatsApp", icon: Phone, href: WHATSAPP_URL },
+  {
+    name: "LinkedIn",
+    icon: Linkedin,
+    href: "https://www.linkedin.com/company/mindware-ces",
+  },
 ];
