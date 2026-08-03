@@ -56,7 +56,7 @@ export default async function CategoryPage({ params }: { params: Params }) {
               ))}
             </div>
           ) : (
-            <div className="py-20 text-center border border-dashed rounded-test-test-xl border-border/50 bg-muted/20">
+            <div className="py-20 text-center border border-dashed border-border/50 bg-muted/20">
               <p className="text-muted-foreground">
                 Nenhum artigo publicado sob esta categoria ainda.
               </p>

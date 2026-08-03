@@ -18,7 +18,7 @@ export function PostCard({ post, featured = false }: PostCardProps) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="block h-full outline-offset-4 rounded-test-test-xl focus-visible:outline-primary group"
+      className="block h-full outline-offset-4 focus-visible:outline-primary group"
     >
       <Card
         className={cn(
@@ -47,7 +47,7 @@ export function PostCard({ post, featured = false }: PostCardProps) {
           />
           {/* Tag Categoria Drop-in */}
           <div className="absolute top-4 left-4 z-10">
-            <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary/90 backdrop-blur-md rounded-test-test-none shadow-sm shadow-primary/20">
+            <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary/90 backdrop-blur-md shadow-sm shadow-primary/20">
               {post.category.name}
             </span>
           </div>
@@ -80,7 +80,7 @@ export function PostCard({ post, featured = false }: PostCardProps) {
             </p>
           </CardContent>
           <CardFooter className="border-t border-border/30 mt-auto flex items-center gap-3 pt-4">
-            <div className="relative w-8 h-8 rounded-test-test-full overflow-hidden bg-muted border border-border">
+            <div className="relative w-8 h-8 overflow-hidden bg-muted border border-border">
               <Image
                 src={post.author.avatarUrl}
                 alt={post.author.name}
@@ -94,7 +94,7 @@ export function PostCard({ post, featured = false }: PostCardProps) {
               </span>
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
                 <time dateTime={post.createdAt}>
-                  {new Intl.DateTimeFormat("pt-BR", {
+                  {new Intl.DateTimeFormat("pt-PT", {
                     day: "numeric",
                     month: "short",
                     year: "numeric",

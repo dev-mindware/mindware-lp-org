@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
+import { SITE_URL, WHATSAPP_URL } from "@/constants/site";
 
-const BASE_URL = "https://mindware.ao";
+const BASE_URL = SITE_URL;
 
 // ─── Social Media Profiles ────────────────────────────────────────────────────
 // Listed separately – not part of the XML sitemap (Google ignores external URLs)
@@ -9,8 +10,7 @@ export const socialProfiles = {
   facebook: "https://www.facebook.com/profile.php?id=61574905379786",
   instagram: "https://www.instagram.com/mind.ware/",
   linkedin: "https://www.linkedin.com/company/mindware-ces",
-  whatsapp:
-    "https://api.whatsapp.com/send/?phone=926665793&text&type=phone_number&app_absent=0",
+  whatsapp: WHATSAPP_URL,
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -23,6 +23,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "weekly",
       priority: 1.0,
+    },
+    {
+      url: `${BASE_URL}/mindgest`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.95,
     },
     {
       url: `${BASE_URL}/service`,
@@ -47,12 +53,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.82,
-    },
-    {
-      url: `${BASE_URL}/careers`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.75,
     },
 
     // ─── Blog Categories ────────────────────────────────────────────────────
@@ -114,11 +114,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.4,
     },
+    // A política de cookies vive dentro da política de privacidade.
     {
-      url: `${BASE_URL}/cookie-policy`,
+      url: `${BASE_URL}/privacy-policy#cookies`,
       lastModified: now,
       changeFrequency: "yearly",
-      priority: 0.4,
+      priority: 0.35,
     },
 
     // ─── Service Page Anchors ────────────────────────────────────────────────
@@ -217,21 +218,53 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.68,
     },
 
+    // ─── Mindgest Section Anchors ────────────────────────────────────────────
+    {
+      url: `${BASE_URL}/mindgest#funcionalidades`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/mindgest#planos`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/mindgest#como-funciona`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/mindgest#MindIA`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/mindgest#faq`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+
     // ─── Homepage Section Anchors ────────────────────────────────────────────
     {
-      url: `${BASE_URL}/about`,
+      url: `${BASE_URL}/#about`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/#mindgest`,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
       url: `${BASE_URL}/#services`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${BASE_URL}/#products`,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.6,

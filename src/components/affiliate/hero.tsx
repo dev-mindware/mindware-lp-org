@@ -42,7 +42,7 @@ export function AffiliateHero() {
 
       <motion.div
         style={{ scale: heroScale, opacity: heroOpacity }}
-        className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-16"
+        className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 sm:px-10 lg:grid-cols-2 lg:gap-16"
       >
         <div>
           <motion.div
@@ -59,7 +59,7 @@ export function AffiliateHero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="text-5xl leading-[1.02] font-black tracking-tight sm:text-6xl lg:text-7xl"
+            className="text-4xl leading-[1.05] font-black tracking-tight sm:text-5xl lg:text-6xl"
           >
             {AFFILIATE_HERO.title.line1}
             <br />

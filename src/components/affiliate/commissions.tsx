@@ -22,10 +22,11 @@ export function AffiliateCommissions() {
       id="comissoes"
       className="relative z-10 scroll-mt-24 border-t border-border bg-background py-24 text-foreground sm:py-32"
     >
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="mx-auto max-w-6xl px-6 sm:px-10">
         <AffiliateHeading
           index="01"
           label="Modelo de comissões"
+          align="center"
           title={
             <>
               Incentivos recorrentes{" "}

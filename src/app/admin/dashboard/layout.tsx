@@ -59,7 +59,7 @@ export default function AdminDashboardLayout({
             <Link
               key={link.href}
               href={link.href}
-              className={`flex items-center gap-3 px-3 py-2.5 rounded-test-test-md font-medium transition-all ${
+              className={`flex items-center gap-3 px-3 py-2.5 font-medium transition-all ${
                 isActive
                   ? "bg-primary text-primary-foreground shadow-sm shadow-primary/20"
                   : "text-muted-foreground hover:bg-muted hover:text-foreground"
@@ -121,7 +121,7 @@ export default function AdminDashboardLayout({
 
           <div className="flex items-center gap-4">
             <ModeToggle />
-            <div className="w-8 h-8 rounded-test-test-full bg-primary/20 border border-primary/30 flex items-center justify-center font-bold text-xs text-primary">
+            <div className="w-8 h-8 bg-primary/20 border border-primary/30 flex items-center justify-center font-bold text-xs text-primary">
               A
             </div>
           </div>

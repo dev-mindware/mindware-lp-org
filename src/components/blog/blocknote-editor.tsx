@@ -32,7 +32,7 @@ export default function BlockNoteEditorComponent({
   };
 
   return (
-    <div className="min-h-[500px] border border-border/50 rounded-test-test-xl bg-card overflow-hidden">
+    <div className="min-h-[500px] border border-border/50 bg-card overflow-hidden">
       <BlockNoteView
         editor={editor}
         theme={resolvedTheme === "dark" ? "dark" : "light"}

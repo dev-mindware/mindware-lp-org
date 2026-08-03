@@ -37,7 +37,7 @@ export function Hero() {
           </div>
 
           <h1
-            className="animate-fade-up mt-7 text-5xl leading-[1.02] font-black tracking-tight text-foreground sm:text-7xl"
+            className="animate-fade-up mt-7 text-4xl leading-[1.05] font-black tracking-tight text-foreground sm:text-5xl lg:text-6xl"
             style={{ animationDelay: "100ms" }}
           >
             Venda. Facture.{" "}

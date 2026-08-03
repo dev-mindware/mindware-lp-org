@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { Reveal } from "@/components/mindgest/reveal";
+import { Reveal } from "@/components/ui/reveal";
 import { LOGIN_URL, REGISTER_URL } from "@/data/mindgest/site";
 
 export function FinalCta() {
@@ -16,7 +16,7 @@ export function FinalCta() {
 
       <div className="relative mx-auto max-w-3xl px-5 text-center sm:px-8">
         <Reveal>
-          <h2 className="text-4xl leading-[1.05] font-black tracking-tight text-balance text-foreground sm:text-6xl">
+          <h2 className="text-3xl leading-[1.05] font-black tracking-tight text-balance text-foreground sm:text-4xl lg:text-5xl">
             Pronto para pôr o seu negócio{" "}
             <em className="text-primary not-italic sm:italic">em ordem?</em>
           </h2>

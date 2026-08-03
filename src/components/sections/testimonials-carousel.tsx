@@ -7,6 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Testimonial } from "@/data/testimonials";
+import { SectionHeading } from "@/components/ui/section-heading";
 import dynamic from "next/dynamic";
 
 const TestimonialDialog = dynamic(() => import("./testimonial-dialog"), {
@@ -56,25 +57,26 @@ export default function TestimonialsCarousel({
 
   return (
     <div
-      className="container mx-auto px-4"
+      className="mx-auto max-w-6xl px-6 sm:px-10"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
-      <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
-        <div className="max-w-xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Confiado pelas pessoas
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Veja o que nossos clientes dizem sobre construir o futuro com a
-            Mindware.
-          </p>
-        </div>
-        <div className="flex gap-2">
+      <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <SectionHeading
+          index="05"
+          label="Depoimentos"
+          title={
+            <>
+              Confiado pelas <span className="text-primary">pessoas</span>
+            </>
+          }
+          description="Veja o que os nossos clientes dizem sobre construir o futuro com a Mindware."
+        />
+        <div className="flex shrink-0 gap-2">
           <Button
             variant="outline"
             size="icon"
-            className="rounded-test-test-full hover:bg-primary hover:text-white transition-colors"
+            className="hover:bg-primary hover:text-primary-foreground transition-colors"
             onClick={prevSlide}
             aria-label="Anterior"
           >
@@ -83,7 +85,7 @@ export default function TestimonialsCarousel({
           <Button
             variant="outline"
             size="icon"
-            className="rounded-test-test-full hover:bg-primary hover:text-white transition-colors"
+            className="hover:bg-primary hover:text-primary-foreground transition-colors"
             onClick={nextSlide}
             aria-label="Próximo"
           >
@@ -92,7 +94,7 @@ export default function TestimonialsCarousel({
         </div>
       </div>
 
-      <div className="relative min-h-[400px]">
+      <div className="relative min-h-100">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -123,7 +125,7 @@ export default function TestimonialsCarousel({
                     </div>
                     <div className="flex items-center gap-2">
                       {testimonial.video && (
-                        <div className="bg-primary/10 p-2 rounded-test-test-full text-primary group-hover:scale-110 transition-transform">
+                        <div className="bg-primary/10 p-2 text-primary group-hover:scale-110 transition-transform">
                           <Play className="w-4 h-4 fill-current" />
                         </div>
                       )}
@@ -167,7 +169,7 @@ export default function TestimonialsCarousel({
           <button
             key={idx}
             onClick={() => setCurrentIndex(idx)}
-            className={`h-2 rounded-test-test-full transition-all duration-300 ${
+            className={`h-2 transition-all duration-300 ${
               idx === currentIndex
                 ? "w-8 bg-primary"
                 : "w-2 bg-primary/20 hover:bg-primary/40"

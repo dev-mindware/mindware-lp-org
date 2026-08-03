@@ -43,7 +43,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
           </Link>
 
           <div className="mb-6 flex items-center gap-3">
-            <span className="px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary rounded-test-test-none">
+            <span className="px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary-foreground bg-primary">
               {post.category.name}
             </span>
           </div>
@@ -58,7 +58,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
 
           <div className="flex items-center gap-6 py-6 border-y border-border/50">
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 rounded-test-test-full overflow-hidden bg-muted">
+              <div className="relative w-12 h-12 overflow-hidden bg-muted">
                 <Image
                   src={post.author.avatarUrl}
                   alt={post.author.name}
@@ -84,7 +84,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
 
         {/* Cover Image */}
         <div className="container mx-auto px-4 max-w-5xl mb-16">
-          <div className="relative aspect-video w-full overflow-hidden rounded-test-test-2xl bg-muted border border-border/50">
+          <div className="relative aspect-video w-full overflow-hidden bg-muted border border-border/50">
             <Image
               src={post.coverImage}
               alt={post.title}
@@ -98,7 +98,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
         {/* Post Content */}
         <div className="container mx-auto px-4 max-w-3xl">
           <article
-            className="prose prose-lg dark:prose-invert prose-headings:font-black prose-headings:uppercase prose-headings:tracking-tight prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-test-test-xl max-w-none"
+            className="prose prose-lg dark:prose-invert prose-headings:font-black prose-headings:uppercase prose-headings:tracking-tight prose-a:text-primary hover:prose-a:text-primary/80 prose-img: max-w-none"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </div>

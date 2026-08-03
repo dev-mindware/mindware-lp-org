@@ -21,7 +21,7 @@ export default function TestimonialDialog({
 }: TestimonialDialogProps) {
   return (
     <Dialog open={!!selectedTestimonial} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-4xl p-0 overflow-hidden bg-background border-border/50 rounded-test-test-2xl">
+      <DialogContent className="max-w-4xl p-0 overflow-hidden bg-background border-border/50">
         <div className="flex flex-col">
           <div className="aspect-video relative bg-black">
             {selectedTestimonial?.video && (

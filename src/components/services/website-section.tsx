@@ -58,7 +58,7 @@ export function WebsiteSection() {
                 stiffness: 200,
               }}
               viewport={{ once: true }}
-              className="bg-card/40 backdrop-blur-lg p-10 rounded-test-test-[2rem] border border-border/50 hover:border-primary/50 shadow-lg hover:shadow-[0_8px_32px_rgba(153,86,246,0.2)] transition-all group relative overflow-hidden"
+              className="bg-card/40 backdrop-blur-lg p-10 [2rem] border border-border/50 hover:border-primary/50 shadow-lg hover:shadow-[0_8px_32px_rgba(153,86,246,0.2)] transition-all group relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-linear-to-b from-muted to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <card.icon className="w-12 h-12 text-primary mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform relative z-10" />
@@ -100,7 +100,7 @@ export function WebsiteSection() {
             style={{ x: useTransform(scrollYProgress, [0.3, 0.6], [-100, 0]) }}
             className="lg:col-span-4 relative h-[600px] flex items-center justify-center pl-8"
           >
-            <div className="absolute inset-0 bg-primary/5 rounded-test-test-[3rem] blur-3xl" />
+            <div className="absolute inset-0 bg-primary/5 [3rem] blur-3xl" />
 
             {/* Mockup 1: Portfolio Example 1 */}
             <motion.div
@@ -117,7 +117,7 @@ export function WebsiteSection() {
                   alt="Projeto Mobile Portfolio 1"
                   width={500}
                   height={1000}
-                  className="rounded-test-test-[2.5rem]"
+                  className="[2.5rem]"
                 />
               </div>
             </motion.div>

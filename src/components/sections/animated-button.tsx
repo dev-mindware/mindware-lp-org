@@ -6,14 +6,14 @@ import { ArrowRight } from "lucide-react";
 export function PremiumAnimatedButton() {
   return (
     <div className="relative inline-flex group">
-      <span className="absolute inset-0 rounded-test-test-full p-[2px]">
-        <span className="absolute inset-0 rounded-test-test-full border-anim" />
+      <span className="absolute inset-0 p-[2px]">
+        <span className="absolute inset-0 border-anim" />
       </span>
 
       <a href="https://wa.me/956985628">
       <Button
         size="lg"
-        className="relative z-10 rounded-test-test-full px-8 h-12 text-base 
+        className="relative z-10 px-8 h-12 text-base 
         bg-background text-foreground border border-border 
         hover:bg-background"
         >

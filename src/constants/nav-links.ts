@@ -1,11 +1,29 @@
-export const navItems = [
+export type NavItem = {
+  name: string;
+  href: string;
+  children?: { name: string; href: string; description?: string }[];
+};
+
+export const navItems: NavItem[] = [
   { name: "Início", href: "/#home" },
-  { name: "Funcionalidades", href: "/#funcionalidades" },
-  { name: "Planos", href: "/#planos" },
-  { name: "Produtos", href: "/#products" },
-  { name: "Afiliados", href: "/affiliate" },
-  { name: "Testemunhos", href: "/#testimonials" },
-  { name: "FAQs", href: "/#faq" },
+  { name: "Mindgest", href: "/mindgest" },
   { name: "Serviços", href: "/service" },
-  { name: "FYI", href: "/fyi" },
+  { name: "Afiliados", href: "/affiliate" },
+  { name: "Sobre", href: "/#about" },
+  {
+    name: "Recursos",
+    href: "/blog",
+    children: [
+      {
+        name: "Blog",
+        href: "/blog",
+        description: "Artigos sobre tecnologia e desenvolvimento",
+      },
+      {
+        name: "FYI",
+        href: "/fyi",
+        description: "Guia de facturação e fiscalidade em Angola",
+      },
+    ],
+  },
 ];
