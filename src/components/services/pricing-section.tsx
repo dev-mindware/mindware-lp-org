@@ -5,11 +5,15 @@ import { motion } from "framer-motion";
 import { CheckCircle2, Timer } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { WHATSAPP_URL } from "@/constants/site";
 import { CountdownTimer } from "./countdown-timer";
 
 export function PricingSection() {
     return (
-        <section className="relative z-30 bg-primary dark:bg-primary/60 text-primary-foreground overflow-hidden">
+        <section
+            id="precos"
+            className="relative z-30 scroll-mt-20 bg-primary dark:bg-primary/60 text-primary-foreground overflow-hidden"
+        >
             <div className="container mx-auto px-4 py-32 relative z-10">
                 <div className="max-w-4xl mx-auto text-center space-y-16">
                     <div className="space-y-8">
@@ -75,7 +79,7 @@ export function PricingSection() {
                     </div>
 
                     <div className="flex flex-col md:flex-row gap-4 justify-center">
-                        <Link href="https://wa.me/956985628" target="_blank" className="w-full md:w-auto">
+                        <Link href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="w-full md:w-auto">
                             <Button variant="secondary" size="lg" className="w-full px-10 py-6 text-lg font-black shadow-xl hover:scale-105 transition-transform bg-white text-primary">
                                 Quero Garantir a Promoção
                             </Button>

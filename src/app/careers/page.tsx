@@ -4,7 +4,7 @@ import { UnderDevelopment } from "@/components/ui/under-construction";
 export default function CareersPage() {
   return (
     <>
-      <SimpleHeader />
+      <SimpleHeader badge="Carreiras" />
       <UnderDevelopment pageName="Carreiras" />
       <Footer />
     </>

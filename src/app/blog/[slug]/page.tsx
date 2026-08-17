@@ -30,7 +30,7 @@ export default async function BlogPostPage({ params }: { params: Params }) {
 
   return (
     <>
-      <SimpleHeader />
+      <SimpleHeader badge="Blog" />
       <main className="min-h-screen pt-24 pb-20 bg-background">
         {/* Post Header Hero */}
         <div className="container mx-auto px-4 max-w-4xl mb-12">

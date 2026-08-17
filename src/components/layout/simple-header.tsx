@@ -1,25 +1,26 @@
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ModeToggle } from "@/components/mode-toggle";
+import { HeaderLockup } from "./header-lockup";
+import { HeaderShell } from "./header-shell";
 
-export function SimpleHeader() {
+export type SimpleHeaderProps = {
+  /**
+   * Zona do site — "Blog", "Legal", "Sobre"… Aparece como selo ao lado da
+   * marca para quem chega por link directo saber onde está.
+   */
+  badge?: string;
+};
+
+/**
+ * Header das páginas de leitura (blog, documentos legais, sobre, carreiras).
+ *
+ * Sem navegação e sem CTA: o conteúdo manda. O caminho de volta vive no
+ * lockup à esquerda, igual ao dos headers global e de produto.
+ */
+export function SimpleHeader({ badge }: SimpleHeaderProps) {
   return (
-    <header
-      className={`fixed backdrop-blur-sm border-b top-0 left-0 right-0 z-50 transition-all duration-300 bg-background`}
-    >
-      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <Link
-          href="/"
-          className="flex items-center space-x-2 text-foreground font-semibold text-lg"
-        >
-          <Image src="/logo.png" alt="Logo" width={32} height={32} />
-          <span>Mindware</span>
-        </Link>
-        <Link href="/" className="text-foreground flex items-center gap-2 hover:text-primary transition-colors">
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          Voltar
-        </Link>
-      </div>
-    </header> 
+    <HeaderShell>
+      <HeaderLockup back badge={badge} />
+      <ModeToggle />
+    </HeaderShell>
   );
 }

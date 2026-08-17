@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
-import { Header, Footer } from "@/components/layout";
+import { ProductHeader, Footer } from "@/components/layout";
 import { ServicePageBackground } from "@/components/services";
+import {
+  AFFILIATE_LOGIN_URL,
+  AFFILIATE_NAV,
+  AFFILIATE_REGISTER_URL,
+} from "@/data/affiliate";
 import {
   AffiliateCertification,
   AffiliateCommissions,
@@ -44,7 +49,13 @@ export default function AffiliatePage() {
   return (
     <div className="relative bg-transparent text-foreground selection:bg-primary selection:text-primary-foreground overflow-x-hidden">
       <ServicePageBackground />
-      <Header />
+      <ProductHeader
+        product="Partners"
+        basePath="/affiliate"
+        items={AFFILIATE_NAV}
+        secondary={{ label: "Entrar", href: AFFILIATE_LOGIN_URL }}
+        cta={{ label: "Ser parceiro", href: AFFILIATE_REGISTER_URL }}
+      />
       <AffiliateHero />
       <AffiliateCommissions />
       <AffiliateTiers />

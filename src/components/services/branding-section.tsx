@@ -10,7 +10,7 @@ export function BrandingSection() {
   return (
     <section
       id="branding-section"
-      className="relative z-20 bg-muted/30 backdrop-blur-sm border-t border-border"
+      className="relative z-20 scroll-mt-20 bg-muted/30 backdrop-blur-sm border-t border-border"
     >
       <SectionWrapper className="py-32 container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">

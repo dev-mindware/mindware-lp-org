@@ -2,7 +2,19 @@ import { Facebook, Instagram, Linkedin, Phone } from "lucide-react";
 import { WHATSAPP_URL } from "./site";
 import { APP_URL, REGISTER_URL } from "@/data/mindgest/site";
 
-export const footerSections = [
+export type FooterLink = {
+  name: string;
+  href: string;
+  /** Abre em novo separador — usar para PDFs e destinos fora do site. */
+  external?: boolean;
+};
+
+export type FooterSection = {
+  title: string;
+  links: FooterLink[];
+};
+
+export const footerSections: FooterSection[] = [
   {
     title: "Produto",
     links: [
@@ -27,7 +39,11 @@ export const footerSections = [
     links: [
       { name: "Blog", href: "/blog" },
       { name: "FYI — Facturação em Angola", href: "/fyi" },
-      { name: "Guia Fiscal Angola (PDF)", href: "/Guia Fiscal Angola.pdf" },
+      {
+        name: "Guia Fiscal Angola (PDF)",
+        href: "/Guia%20Fiscal%20Angola.pdf",
+        external: true,
+      },
     ],
   },
   {

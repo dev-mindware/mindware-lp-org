@@ -1,6 +1,16 @@
-export const AFFILIATE_PORTAL_URL = "https://partners.mindware.ao";
+export const AFFILIATE_PORTAL_URL = "https://parceiros.mindware.ao";
+export const AFFILIATE_PORTAL_DOMAIN = "parceiros.mindware.ao";
 export const AFFILIATE_REGISTER_URL = `${AFFILIATE_PORTAL_URL}/auth/register`;
 export const AFFILIATE_LOGIN_URL = `${AFFILIATE_PORTAL_URL}/auth/login`;
+
+/** Secções navegáveis do header contextual dos Afiliados. */
+export const AFFILIATE_NAV = [
+  { name: "Comissões", hash: "comissoes" },
+  { name: "Níveis", hash: "niveis" },
+  { name: "Planos", hash: "planos-afiliado" },
+  { name: "Carteira", hash: "carteira" },
+  { name: "FAQ", hash: "faq-afiliado" },
+];
 
 export const AFFILIATE_HERO = {
   eyebrow: "Mindgest Partners Program",
@@ -124,7 +134,7 @@ export const AFFILIATE_PLANS = [
   {
     id: "pro",
     name: "PRO",
-    price: "14.899,22 Kz",
+    price: "19.998,22 Kz",
     period: "/mês",
     description: "Plano corporativo de alto desempenho.",
     note: "Apenas parceiros com Certificação Comercial activa.",
@@ -234,28 +244,28 @@ export const SOFTWARE_SHOTS: SoftwareShot[] = [
   {
     id: "login",
     label: "Portal — Login",
-    urlDisplay: "partners.mindware.ao",
+    urlDisplay: AFFILIATE_PORTAL_DOMAIN,
     src: "/affiliate-login.png",
     alt: "Ecrã de login do portal de afiliados Mindware com formulário de acesso e destaque do programa",
   },
   {
     id: "wallet",
     label: "Carteira digital",
-    urlDisplay: "partners.mindware.ao/wallet",
+    urlDisplay: `${AFFILIATE_PORTAL_DOMAIN}/wallet`,
     src: null,
     alt: "Vista da carteira digital do afiliado (imagem em breve)",
   },
   {
     id: "ranking",
     label: "Ranking & níveis",
-    urlDisplay: "partners.mindware.ao/ranking",
+    urlDisplay: `${AFFILIATE_PORTAL_DOMAIN}/ranking`,
     src: null,
     alt: "Painel de ranking e níveis de parceiro (imagem em breve)",
   },
   {
     id: "withdraw",
     label: "Levantamentos",
-    urlDisplay: "partners.mindware.ao/withdrawals",
+    urlDisplay: `${AFFILIATE_PORTAL_DOMAIN}/withdrawals`,
     src: null,
     alt: "Fluxo de solicitação de levantamento (imagem em breve)",
   },

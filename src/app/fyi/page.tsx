@@ -1,6 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
-import { Header, Footer } from "@/components/layout";
+import { SimpleHeader, Footer } from "@/components/layout";
 import { FYIContent } from "./components/fyi-content";
 
 export const metadata: Metadata = {
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 export default function FYIPage() {
     return (
         <>
-            <Header />
+            <SimpleHeader badge="FYI" />
             <FYIContent />
             <Footer />
         </>

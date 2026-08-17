@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 import { FooterBrandAnimation } from "./footer-brand-animation";
 import { footerSections, socialLinks } from "@/constants/footer-links";
 import { PHONE_DISPLAY, PHONE_E164 } from "@/constants/site";
@@ -68,9 +69,18 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="hover:text-primary transition-colors"
+                      {...(link.external
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
+                      className="group inline-flex items-center gap-1.5 transition-colors hover:text-primary"
                     >
                       {link.name}
+                      {link.external ? (
+                        <ArrowUpRight
+                          aria-hidden="true"
+                          className="h-3.5 w-3.5 opacity-50 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100"
+                        />
+                      ) : null}
                     </Link>
                   </li>
                 ))}

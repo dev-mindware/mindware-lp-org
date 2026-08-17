@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <SimpleHeader />
+      <SimpleHeader badge="Legal" />
       <LegalDocument
         doc={privacyPolicy}
         related={[{ label: "Termos de Serviço", href: "/terms-of-service" }]}

@@ -1,5 +1,12 @@
 import { Palette, Layout, Mail } from "lucide-react";
 
+/** Secções navegáveis do header contextual dos Serviços. */
+export const SERVICE_NAV = [
+  { name: "Branding", hash: "branding-section" },
+  { name: "Websites", hash: "website-section" },
+  { name: "Preços", hash: "precos" },
+];
+
 export const services = [
   {
     title: "Identidade Visual",

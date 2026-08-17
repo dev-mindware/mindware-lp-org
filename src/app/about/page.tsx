@@ -4,7 +4,7 @@ import { UnderDevelopment } from "@/components/ui/under-construction";
 export default function AboutPage() {
   return (
     <>
-      <SimpleHeader />
+      <SimpleHeader badge="Sobre" />
       <UnderDevelopment pageName="Sobre Nós" />
       <Footer />
     </>

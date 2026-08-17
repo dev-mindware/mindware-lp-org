@@ -1,4 +1,7 @@
 export * from "./footer"
 export * from "./header"
+export * from "./header-lockup"
+export * from "./header-shell"
+export * from "./product-header"
 export * from "./simple-header"
 export * from "./mobile-header"
