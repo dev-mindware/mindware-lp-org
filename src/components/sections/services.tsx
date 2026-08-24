@@ -38,7 +38,7 @@ export function Services() {
           />
         </Reveal>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-7">
+        <div className="mx-auto mt-16 grid max-w-4xl gap-6 md:grid-cols-2 lg:gap-7">
           {services.map((service, index) => (
             <Reveal
               key={service.title}

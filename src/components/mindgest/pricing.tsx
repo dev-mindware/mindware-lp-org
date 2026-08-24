@@ -53,13 +53,13 @@ export function Pricing() {
 
                   <div className="mt-6">
                     {plan.price === null ? (
-                      <p className="text-4xl font-black tracking-tight text-primary">
+                      <p className="text-3xl font-black tracking-tight text-primary sm:text-4xl">
                         Personalizável
                       </p>
                     ) : (
-                      <p className="text-4xl font-black tracking-tight text-foreground">
-                        {plan.price}
-                        <span className="ml-1 text-base font-semibold text-muted-foreground">
+                      <p className="flex flex-wrap items-baseline gap-x-1 text-2xl font-black tracking-tight text-foreground sm:text-3xl lg:text-2xl xl:text-3xl">
+                        <span className="whitespace-nowrap">{plan.price}</span>
+                        <span className="text-base font-semibold text-muted-foreground">
                           /mês
                         </span>
                       </p>
