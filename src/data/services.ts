@@ -1,4 +1,11 @@
-import { Palette, Layout, Mail } from "lucide-react";
+import { Palette, Layout } from "lucide-react";
+
+/** Secções navegáveis do header contextual dos Serviços. */
+export const SERVICE_NAV = [
+  { name: "Branding", hash: "branding-section" },
+  { name: "Websites", hash: "website-section" },
+  { name: "Preços", hash: "precos" },
+];
 
 export const services = [
   {
@@ -25,17 +32,5 @@ export const services = [
     ],
     highlight: true,
     link: "/service#website-section",
-  },
-  {
-    title: "Email Profissional",
-    description:
-      "Segurança e profissionalismo em cada envio. Email corporativo com seu domínio, proteção avançada e recursos de IA.",
-    icon: Mail,
-    features: [
-      "Email com Domínio Próprio",
-      "Recursos de IA Integrados",
-      "Segurança Anti-spam & Vírus",
-    ],
-    link: "/service#email-section",
   },
 ];

@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Footer } from "@/components/layout";
+import { Footer, ProductHeader } from "@/components/layout";
 import {
-  BackButton,
   BrandingSection,
   HeroSection,
   PricingSection,
   WebsiteSection,
   ServicePageBackground,
 } from "@/components/services";
+import { SERVICE_NAV } from "@/data/services";
+import { WHATSAPP_URL } from "@/constants/site";
 
 export const metadata: Metadata = {
   title: "Serviços de Tecnologia em Angola",
@@ -50,7 +51,12 @@ export default function ServicePage() {
   return (
     <div className="relative bg-background text-foreground selection:bg-primary selection:text-primary-foreground overflow-x-hidden">
       <ServicePageBackground />
-      <BackButton />
+      <ProductHeader
+        product="Serviços"
+        basePath="/service"
+        items={SERVICE_NAV}
+        cta={{ label: "Pedir orçamento", href: WHATSAPP_URL }}
+      />
 
       <HeroSection />
       <BrandingSection />

@@ -31,9 +31,9 @@ export function AffiliatePlans() {
                 <p className="text-xs font-black tracking-[0.25em] text-primary uppercase">
                   {plan.name}
                 </p>
-                <p className="mt-4 text-3xl font-black tracking-tight">
-                  {plan.price}
-                  <span className="ml-1 text-sm font-semibold text-muted-foreground">
+                <p className="mt-4 flex flex-wrap items-baseline gap-x-1 text-2xl font-black tracking-tight sm:text-3xl">
+                  <span className="whitespace-nowrap">{plan.price}</span>
+                  <span className="text-sm font-semibold text-muted-foreground">
                     {plan.period}
                   </span>
                 </p>

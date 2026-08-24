@@ -136,12 +136,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/service#email-section`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.65,
-    },
-    {
       url: `${BASE_URL}/service#pricing-section`,
       lastModified: now,
       changeFrequency: "monthly",

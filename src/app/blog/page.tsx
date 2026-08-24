@@ -45,7 +45,7 @@ export default async function BlogPage() {
 
   return (
     <>
-      <SimpleHeader />
+      <SimpleHeader badge="Blog" />
       <main className="min-h-screen pt-24 pb-20 bg-background">
         <SectionWrapper className="container mx-auto px-4 space-y-24">
           {/* Header do Blog & Categorias */}

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function TermsOfServicePage() {
   return (
     <>
-      <SimpleHeader />
+      <SimpleHeader badge="Legal" />
       <LegalDocument
         doc={termsOfService}
         related={[

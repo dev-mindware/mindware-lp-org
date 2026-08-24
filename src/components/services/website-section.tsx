@@ -12,7 +12,7 @@ export function WebsiteSection() {
   return (
     <section
       id="website-section"
-      className="relative z-20 bg-muted/30 backdrop-blur-sm"
+      className="relative z-20 scroll-mt-20 bg-muted/30 backdrop-blur-sm"
     >
       <SectionWrapper className="py-32 container mx-auto px-4">
         <motion.div

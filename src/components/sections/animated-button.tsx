@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { WHATSAPP_URL } from "@/constants/site";
 
 export function PremiumAnimatedButton() {
   return (
@@ -10,7 +11,7 @@ export function PremiumAnimatedButton() {
         <span className="absolute inset-0 border-anim" />
       </span>
 
-      <a href="https://wa.me/956985628">
+      <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
       <Button
         size="lg"
         className="relative z-10 px-8 h-12 text-base 

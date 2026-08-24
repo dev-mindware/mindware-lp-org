@@ -1,10 +1,8 @@
 import Image from "next/image";
 import {
-  BarChart3,
   Bell,
   FileText,
   MonitorSmartphone,
-  Package,
   Store,
 } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
@@ -19,18 +17,6 @@ const DOC_CHIPS = [
 ];
 
 const SMALL_FEATURES = [
-  {
-    icon: Package,
-    title: "Items e stock",
-    description:
-      "Produtos e serviços com preços, categorias, código de barras e controlo de quantidades em cada loja.",
-  },
-  {
-    icon: BarChart3,
-    title: "Relatórios que falam claro",
-    description:
-      "Evolução de facturação, distribuição de vendas e desempenho por loja, sem folhas de cálculo.",
-  },
   {
     icon: Bell,
     title: "Notificações em tempo real",
@@ -198,6 +184,54 @@ export function Features() {
                   Personalize a cor, a tipografia e o tema (claro, escuro ou
                   automático) para que o sistema fique com a cara do seu
                   negócio.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal>
+            <div className="group h-full overflow-hidden border border-border bg-card text-foreground transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_20px_50px_-20px_rgba(153,86,246,0.25)]">
+              <div className="overflow-hidden border-b border-border">
+                <Image
+                  src="/mindgest/stock_n_itens.png"
+                  alt="Gestão de itens e stock do Mindgest com listagem de produtos, categorias, código de barras e controlo de quantidades"
+                  width={1680}
+                  height={900}
+                  sizes="(min-width: 768px) 512px, 100vw"
+                  className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
+              <div className="p-8">
+                <h3 className="text-xl font-black tracking-tight text-foreground">
+                  Items e stock
+                </h3>
+                <p className="mt-2.5 leading-relaxed text-muted-foreground">
+                  Produtos e serviços com preços, categorias, código de barras e
+                  controlo de quantidades em cada loja.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={120}>
+            <div className="group h-full overflow-hidden border border-border bg-card text-foreground transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_20px_50px_-20px_rgba(153,86,246,0.25)]">
+              <div className="overflow-hidden border-b border-border">
+                <Image
+                  src="/mindgest/relatorios.png"
+                  alt="Relatórios de vendas e desempenho do Mindgest com gráficos, facturação e métricas do negócio"
+                  width={1680}
+                  height={900}
+                  sizes="(min-width: 768px) 512px, 100vw"
+                  className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
+              <div className="p-8">
+                <h3 className="text-xl font-black tracking-tight text-foreground">
+                  Relatórios que falam claro
+                </h3>
+                <p className="mt-2.5 leading-relaxed text-muted-foreground">
+                  Evolução de facturação, distribuição de vendas e desempenho
+                  por loja, sem folhas de cálculo.
                 </p>
               </div>
             </div>

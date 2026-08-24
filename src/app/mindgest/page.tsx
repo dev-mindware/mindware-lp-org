@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Header, Footer } from "@/components/layout";
+import { ProductHeader, Footer } from "@/components/layout";
+import { LOGIN_URL, MINDGEST_NAV, REGISTER_URL } from "@/data/mindgest/site";
 import {
   Faq,
   Features,
@@ -48,7 +49,13 @@ export const metadata: Metadata = {
 export default function MindgestPage() {
   return (
     <>
-      <Header />
+      <ProductHeader
+        product="Mindgest"
+        basePath="/mindgest"
+        items={MINDGEST_NAV}
+        secondary={{ label: "Entrar", href: LOGIN_URL }}
+        cta={{ label: "Criar conta", href: REGISTER_URL }}
+      />
       <Hero />
       <Marquee />
       <Features />
