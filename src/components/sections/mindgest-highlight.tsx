@@ -87,18 +87,20 @@ export function MindgestHighlight() {
                 {mindgestHighlight.urlDisplay}
               </span>
             </div>
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="metadata"
-              aria-label="Demonstração do ponto de venda do Mindgest"
-              className="h-auto w-full"
-            >
-              <source src={mindgestHighlight.video} type="video/mp4" />
-              O seu navegador não suporta vídeos HTML5.
-            </video>
+            <div className="relative aspect-[16/9] w-full bg-muted/20">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                aria-label="Demonstração do ponto de venda do Mindgest"
+                className="h-full w-full object-cover"
+              >
+                <source src={mindgestHighlight.video} type="video/mp4" />
+                O seu navegador não suporta vídeos HTML5.
+              </video>
+            </div>
           </div>
         </Reveal>
       </div>

@@ -21,6 +21,8 @@ const satoshi = localFont({
   ],
   variable: "--font-satoshi",
   display: "swap",
+  preload: true,
+  adjustFontFallback: "Arial",
 });
 
 export const metadata: Metadata = {
@@ -93,20 +95,48 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // JSON-LD: tells Google which social profiles belong to this Organization
+  // JSON-LD: tells Google which social profiles and entity details belong to this Organization
   const organizationJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Mindware",
-    url: "https://mindware.ao",
-    logo: "https://mindware.ao/icon.png",
-    sameAs: Object.values(socialProfiles),
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: PHONE_JSON_LD,
-      contactType: "customer support",
-      availableLanguage: ["Portuguese"],
-    },
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://mindware.ao/#organization",
+        name: "Mindware",
+        url: "https://mindware.ao",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://mindware.ao/icon.png",
+          width: 512,
+          height: 512,
+        },
+        description:
+          "Empresa de tecnologia, software de facturação certificado pela AGT (Mindgest), desenvolvimento web e soluções digitais em Angola.",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Luanda",
+          addressCountry: "AO",
+        },
+        sameAs: Object.values(socialProfiles),
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: PHONE_JSON_LD,
+          contactType: "customer support",
+          areaServed: "AO",
+          availableLanguage: ["Portuguese", "English"],
+        },
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://mindware.ao/#website",
+        url: "https://mindware.ao",
+        name: "Mindware",
+        publisher: {
+          "@id": "https://mindware.ao/#organization",
+        },
+        inLanguage: "pt-AO",
+      },
+    ],
   };
 
   return (
@@ -116,6 +146,8 @@ export default function RootLayout({
           name="google-site-verification"
           content="mIQkIZQqVY4KID4F5fVH2d6VQsDGWrOo0MTltCKSNUc"
         />
+        <meta name="geo.region" content="AO" />
+        <meta name="geo.placename" content="Luanda" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}

@@ -11,6 +11,8 @@ import { FAQ } from "@/components/sections/faq";
 import { CTA } from "@/components/sections/cta";
 import { LegacyHashRedirect } from "@/components/sections/legacy-hash-redirect";
 
+import { faqs } from "@/data/faqs";
+
 export const metadata: Metadata = {
   alternates: {
     canonical: "/",
@@ -18,8 +20,25 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const homeJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
+      />
       <LegacyHashRedirect />
       <Header />
       <Hero />

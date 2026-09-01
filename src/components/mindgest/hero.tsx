@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Zap } from "lucide-react";
 import { DashboardShot } from "@/components/mindgest/dashboard-shot";
 import { REGISTER_URL } from "@/data/mindgest/site";
 
@@ -32,7 +32,7 @@ export function Hero() {
             className="animate-fade-up inline-flex items-center gap-2 border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold text-primary"
             style={{ animationDelay: "0ms" }}
           >
-            <Sparkles className="size-3.5" />
+            <Zap className="size-3.5" />
             Gestão e facturação para empresas e profissionais
           </div>
 

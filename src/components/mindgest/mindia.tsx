@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Check, Sparkles } from "lucide-react";
+import { Check, Zap } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 
@@ -50,7 +50,7 @@ export function MindIA() {
                 ))}
               </ul>
               <p className="mt-8 inline-flex items-center gap-2 border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-bold text-primary">
-                <Sparkles className="size-4" />
+                <Zap className="size-4" />
                 Incluída em todos os planos
               </p>
             </div>
