@@ -20,12 +20,12 @@ export function ServicePageBackground() {
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <motion.div
           style={{ y: bgY, rotate }}
-          className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,var(--primary),transparent_70%)] opacity-10 dark:opacity-20"
+          className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,var(--primary),transparent_70%)] opacity-5 dark:opacity-20"
         />
 
         <motion.div
           style={{ y: textY1 }}
-          className="absolute top-1/3 left-20 w-full opacity-10 dark:opacity-20"
+          className="absolute top-1/3 left-20 w-full opacity-[0.03] dark:opacity-20"
         >
           <h2 className="text-[18vw] font-black leading-none uppercase tracking-tighter select-none whitespace-nowrap text-primary blur-[2px]">
             MINDWARE

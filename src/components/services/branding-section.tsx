@@ -100,7 +100,7 @@ export function BrandingSection() {
 
           {/* Right Column: Interactive Brand Studio with Palette Switcher */}
           <div className="lg:col-span-6">
-            <div className="border border-border bg-card p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+            <div className="border border-border bg-card p-6 sm:p-8 shadow-md relative overflow-hidden">
               {/* Studio Top Control */}
               <div className="flex items-center justify-between border-b border-border pb-5 mb-6">
                 <div className="flex items-center gap-2">
@@ -127,8 +127,8 @@ export function BrandingSection() {
                       onClick={() => setSelectedTheme(theme)}
                       className={`p-2 text-left border text-xs font-bold transition-all cursor-pointer ${
                         selectedTheme.name === theme.name
-                          ? "border-primary bg-primary/10 text-primary shadow-sm"
-                          : "border-border bg-muted/30 text-muted-foreground hover:text-foreground"
+                          ? "border-primary bg-primary/10 text-primary shadow-xs"
+                          : "border-border bg-card text-stone-700 dark:text-muted-foreground hover:text-foreground hover:border-primary/40 shadow-xs"
                       }`}
                     >
                       <div className="flex items-center gap-1.5 mb-1.5">
@@ -153,7 +153,7 @@ export function BrandingSection() {
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.35 }}
-                className="border border-border/80 p-6 space-y-6 bg-muted/20"
+                className="border border-border p-6 space-y-6 bg-card dark:bg-muted/20 shadow-xs"
               >
                 {/* Brand Visual Card */}
                 <div

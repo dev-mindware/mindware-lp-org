@@ -15,10 +15,9 @@ export function FeatureItem({ icon: Icon, title, description, delay = 0 }: Featu
         <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            whileHover={{ scale: 1.02, backgroundColor: "var(--muted)" }}
             transition={{ duration: 0.5, delay }}
             viewport={{ once: true }}
-            className="flex gap-4 p-6 bg-card/40 backdrop-blur-md border border-border/50 shadow-lg group cursor-default relative overflow-hidden"
+            className="flex gap-4 p-6 bg-card border border-border shadow-xs group cursor-default relative overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-md hover:-translate-y-0.5"
         >
             <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="w-12 h-12 bg-primary/10 flex items-center justify-center shrink-0 text-primary relative z-10 group-hover:scale-110 transition-transform duration-300">

@@ -71,7 +71,7 @@ export function WebsiteSection() {
         </div>
 
         {/* Interactive Showcase with Native Mockup Assets */}
-        <div className="mb-24 border border-border bg-card p-6 sm:p-10 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.08)] relative overflow-hidden">
+        <div className="mb-24 border border-border bg-card p-6 sm:p-10 shadow-md relative overflow-hidden">
           {/* Controls Bar */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pb-6 border-b border-border mb-10">
             <div className="flex items-center gap-2">
@@ -82,14 +82,14 @@ export function WebsiteSection() {
             </div>
 
             {/* View Mode Selector */}
-            <div className="flex items-center bg-muted/60 p-1 border border-border">
+            <div className="flex items-center bg-stone-100 dark:bg-muted/60 p-1 border border-border">
               <button
                 type="button"
                 onClick={() => setViewMode("combined")}
                 className={`flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                   viewMode === "combined"
-                    ? "bg-primary text-primary-foreground shadow-sm"
-                    : "text-muted-foreground hover:text-foreground"
+                    ? "bg-primary text-primary-foreground shadow-xs"
+                    : "text-stone-700 dark:text-muted-foreground hover:text-foreground"
                 }`}
               >
                 <Layers className="size-3.5" />
@@ -101,8 +101,8 @@ export function WebsiteSection() {
                 onClick={() => setViewMode("desktop")}
                 className={`flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                   viewMode === "desktop"
-                    ? "bg-primary text-primary-foreground shadow-sm"
-                    : "text-muted-foreground hover:text-foreground"
+                    ? "bg-primary text-primary-foreground shadow-xs"
+                    : "text-stone-700 dark:text-muted-foreground hover:text-foreground"
                 }`}
               >
                 <Monitor className="size-3.5" />
@@ -114,8 +114,8 @@ export function WebsiteSection() {
                 onClick={() => setViewMode("mobile")}
                 className={`flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider transition-all cursor-pointer ${
                   viewMode === "mobile"
-                    ? "bg-primary text-primary-foreground shadow-sm"
-                    : "text-muted-foreground hover:text-foreground"
+                    ? "bg-primary text-primary-foreground shadow-xs"
+                    : "text-stone-700 dark:text-muted-foreground hover:text-foreground"
                 }`}
               >
                 <Smartphone className="size-3.5" />
@@ -125,8 +125,8 @@ export function WebsiteSection() {
           </div>
 
           {/* Viewport Display Area */}
-          <div className="relative min-h-[460px] sm:min-h-[620px] flex items-center justify-center p-4 sm:p-8 bg-muted/20 border border-border/60 overflow-hidden">
-            <div className="absolute inset-0 bg-radial from-primary/10 via-transparent to-transparent opacity-50 pointer-events-none" />
+          <div className="relative min-h-[460px] sm:min-h-[620px] flex items-center justify-center p-4 sm:p-8 bg-stone-50/70 dark:bg-muted/20 border border-border overflow-hidden">
+            <div className="absolute inset-0 bg-radial from-primary/10 via-transparent to-transparent opacity-30 pointer-events-none" />
 
             <AnimatePresence mode="wait">
               {viewMode === "combined" && (
@@ -244,19 +244,19 @@ export function WebsiteSection() {
 
           {/* Quick Mockup Metrics Bar */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 pt-6 border-t border-border text-center">
-            <div className="p-3 bg-muted/40 border border-border/60">
+            <div className="p-3 bg-card border border-border shadow-xs">
               <span className="text-[10px] font-mono uppercase text-muted-foreground block">Velocidade</span>
               <span className="text-sm font-black text-primary">Ultra Rápido</span>
             </div>
-            <div className="p-3 bg-muted/40 border border-border/60">
+            <div className="p-3 bg-card border border-border shadow-xs">
               <span className="text-[10px] font-mono uppercase text-muted-foreground block">Responsividade</span>
               <span className="text-sm font-black text-foreground">100% Fluido</span>
             </div>
-            <div className="p-3 bg-muted/40 border border-border/60">
+            <div className="p-3 bg-card border border-border shadow-xs">
               <span className="text-[10px] font-mono uppercase text-muted-foreground block">SEO Google</span>
               <span className="text-sm font-black text-primary">100 / 100</span>
             </div>
-            <div className="p-3 bg-muted/40 border border-border/60">
+            <div className="p-3 bg-card border border-border shadow-xs">
               <span className="text-[10px] font-mono uppercase text-muted-foreground block">Segurança</span>
               <span className="text-sm font-black text-foreground">SSL HTTPS</span>
             </div>
@@ -273,14 +273,14 @@ export function WebsiteSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               whileHover={{ y: -5 }}
-              className="group relative flex flex-col justify-between border border-border bg-card p-8 transition-all duration-300 hover:border-primary/60 hover:shadow-[0_16px_36px_-12px_rgba(153,86,246,0.2)]"
+              className="group relative flex flex-col justify-between border border-border bg-card p-8 shadow-xs transition-all duration-300 hover:border-primary/60 hover:shadow-md dark:hover:shadow-[0_16px_36px_-12px_rgba(153,86,246,0.2)]"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <span className="flex size-12 items-center justify-center bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                     <feature.icon className="size-6" />
                   </span>
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider bg-muted px-2.5 py-1 text-muted-foreground group-hover:text-primary transition-colors">
+                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider bg-stone-100 text-stone-700 dark:bg-muted dark:text-muted-foreground border border-border/50 px-2.5 py-1 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
                     {feature.stat}
                   </span>
                 </div>

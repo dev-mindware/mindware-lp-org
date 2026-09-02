@@ -39,7 +39,7 @@ export function ProcessSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
                 whileHover={{ y: -6 }}
-                className="group relative flex flex-col justify-between border border-border bg-card p-7 transition-all duration-300 hover:border-primary/60 hover:shadow-[0_20px_40px_-15px_rgba(153,86,246,0.25)]"
+                className="group relative flex flex-col justify-between border border-border bg-card p-7 shadow-xs transition-all duration-300 hover:border-primary/60 hover:shadow-md dark:hover:shadow-[0_20px_40px_-15px_rgba(153,86,246,0.25)]"
               >
                 {/* Top accent bar */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-transparent group-hover:bg-primary transition-colors duration-300" />
@@ -50,7 +50,7 @@ export function ProcessSection() {
                     <span className="font-mono text-3xl font-black text-primary/80 group-hover:text-primary transition-colors">
                       {step.step}
                     </span>
-                    <span className="text-[11px] font-mono font-bold uppercase tracking-widest bg-muted px-2.5 py-1 text-muted-foreground group-hover:bg-primary/10 group-hover:text-primary transition-colors">
+                    <span className="text-[11px] font-mono font-bold uppercase tracking-widest bg-stone-100 text-stone-700 dark:bg-muted dark:text-muted-foreground border border-border/50 px-2.5 py-1 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
                       {step.duration}
                     </span>
                   </div>
@@ -80,7 +80,7 @@ export function ProcessSection() {
         </div>
 
         {/* Bottom guarantee */}
-        <div className="mt-16 border border-border/80 bg-card p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="mt-16 border border-border bg-card p-6 sm:p-8 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-center sm:text-left">
             <h4 className="font-bold text-foreground">
               Acompanhamento contínuo em cada fase
@@ -89,7 +89,7 @@ export function ProcessSection() {
               Apresentamos prévias interativas e alinhamos feedback antes de avançar para a fase seguinte.
             </p>
           </div>
-          <div className="shrink-0 font-mono text-xs uppercase tracking-wider font-bold text-primary bg-primary/10 px-4 py-2">
+          <div className="shrink-0 font-mono text-xs uppercase tracking-wider font-bold text-primary bg-primary/10 px-4 py-2 border border-primary/20">
             Tempo Médio: 28 a 31 dias
           </div>
         </div>

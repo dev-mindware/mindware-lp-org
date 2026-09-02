@@ -64,8 +64,8 @@ export function PricingSection() {
         </div>
 
         {/* Main Pricing Box */}
-        <div className="max-w-5xl mx-auto border-2 border-primary/40 bg-card p-8 sm:p-12 lg:p-16 shadow-[0_30px_90px_-30px_rgba(153,86,246,0.3)] relative overflow-hidden mb-20">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-3xl pointer-events-none" />
+        <div className="max-w-5xl mx-auto border-2 border-primary/40 bg-card p-8 sm:p-12 lg:p-16 shadow-xl shadow-stone-900/5 dark:shadow-[0_30px_90px_-30px_rgba(153,86,246,0.3)] relative overflow-hidden mb-20">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-3xl pointer-events-none opacity-30 dark:opacity-100" />
 
           {/* Top Audience Badge */}
           <div className="flex flex-wrap items-center justify-between gap-4 pb-8 border-b border-border">
@@ -149,7 +149,7 @@ export function PricingSection() {
               {PACKAGE_INCLUDED.map((item, idx) => (
                 <div
                   key={idx}
-                  className="flex items-start gap-3.5 p-4 border border-border/80 bg-muted/20 hover:border-primary/40 transition-colors"
+                  className="flex items-start gap-3.5 p-4 border border-border bg-stone-50/70 dark:bg-muted/20 hover:border-primary/40 transition-colors shadow-xs"
                 >
                   <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center bg-primary/10 text-primary">
                     <CheckCircle2 className="size-3.5" />
@@ -181,10 +181,10 @@ export function PricingSection() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             {/* Domínio Card */}
-            <div className="flex flex-col justify-between border border-border bg-card p-6 sm:p-8 hover:border-primary/50 transition-all">
+            <div className="flex flex-col justify-between border border-border bg-card p-6 sm:p-8 hover:border-primary/50 transition-all shadow-xs hover:shadow-md">
               <div className="space-y-5">
                 <div className="flex items-center justify-between">
-                  <span className="text-[11px] font-mono font-bold uppercase tracking-widest px-2.5 py-1 bg-muted text-muted-foreground">
+                  <span className="text-[11px] font-mono font-bold uppercase tracking-widest px-2.5 py-1 bg-stone-100 text-stone-700 dark:bg-muted dark:text-muted-foreground border border-border/50">
                     {DOMAIN_ADDON.badge}
                   </span>
                   <Globe className="size-5 text-primary" />
@@ -221,7 +221,7 @@ export function PricingSection() {
                 >
                   <Button
                     variant="outline"
-                    className="w-full font-bold text-xs uppercase tracking-wider border-border hover:border-primary hover:bg-primary/10 hover:text-primary"
+                    className="w-full font-bold text-xs uppercase tracking-wider border-border bg-card hover:border-primary hover:bg-primary/10 hover:text-primary shadow-xs"
                   >
                     Adicionar Domínio
                   </Button>
@@ -230,10 +230,10 @@ export function PricingSection() {
             </div>
 
             {/* Email Start Card */}
-            <div className="flex flex-col justify-between border border-border bg-card p-6 sm:p-8 hover:border-primary/50 transition-all">
+            <div className="flex flex-col justify-between border border-border bg-card p-6 sm:p-8 hover:border-primary/50 transition-all shadow-xs hover:shadow-md">
               <div className="space-y-5">
                 <div className="flex items-center justify-between">
-                  <span className="text-[11px] font-mono font-bold uppercase tracking-widest px-2.5 py-1 bg-muted text-muted-foreground">
+                  <span className="text-[11px] font-mono font-bold uppercase tracking-widest px-2.5 py-1 bg-stone-100 text-stone-700 dark:bg-muted dark:text-muted-foreground border border-border/50">
                     {EMAIL_ADDONS[0].badge}
                   </span>
                   <Mail className="size-5 text-primary" />
@@ -270,7 +270,7 @@ export function PricingSection() {
                 >
                   <Button
                     variant="outline"
-                    className="w-full font-bold text-xs uppercase tracking-wider border-border hover:border-primary hover:bg-primary/10 hover:text-primary"
+                    className="w-full font-bold text-xs uppercase tracking-wider border-border bg-card hover:border-primary hover:bg-primary/10 hover:text-primary shadow-xs"
                   >
                     Adicionar Email Start
                   </Button>
@@ -279,7 +279,7 @@ export function PricingSection() {
             </div>
 
             {/* Email Standard Card (Highlighted) */}
-            <div className="flex flex-col justify-between border-2 border-primary/60 bg-card p-6 sm:p-8 relative shadow-[0_16px_36px_-16px_rgba(153,86,246,0.25)]">
+            <div className="flex flex-col justify-between border-2 border-primary bg-card p-6 sm:p-8 relative shadow-lg shadow-stone-900/5 dark:shadow-[0_16px_36px_-16px_rgba(153,86,246,0.25)]">
               <div className="absolute -top-3 right-6 bg-primary text-primary-foreground text-[10px] font-mono font-bold uppercase tracking-widest px-3 py-0.5">
                 Mais Escolhido
               </div>
@@ -331,7 +331,7 @@ export function PricingSection() {
           </div>
 
           {/* Helper Note about Extra Mailboxes */}
-          <div className="mt-6 p-4 border border-border/70 bg-muted/20 text-xs text-muted-foreground flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+          <div className="mt-6 p-4 border border-border bg-card shadow-xs text-xs text-muted-foreground flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
             <span>
               <strong className="text-foreground">Nota:</strong> Cada plano inclui 1 caixa de correio principal. Precisa de mais caixas para a sua equipa? Configuramos caixas adicionais sob medida no momento da ativação.
             </span>
@@ -366,7 +366,7 @@ export function PricingSection() {
               return (
                 <div
                   key={index}
-                  className="border border-border bg-card transition-colors hover:border-primary/40"
+                  className="border border-border bg-card transition-colors hover:border-primary/40 shadow-xs"
                 >
                   <button
                     type="button"
@@ -390,7 +390,7 @@ export function PricingSection() {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-xs sm:text-sm text-muted-foreground leading-relaxed border-t border-border/60 pt-4">
+                        <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-xs sm:text-sm text-foreground/80 leading-relaxed border-t border-border pt-4">
                           {faq.a}
                         </div>
                       </motion.div>

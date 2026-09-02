@@ -48,8 +48,8 @@ export function AudienceSection() {
                 onClick={() => setActiveId(audience.id)}
                 type="button"
                 className={`relative flex items-center gap-2.5 px-5 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-300 ${isSelected
-                    ? "bg-primary text-primary-foreground shadow-[0_8px_24px_-8px_rgba(153,86,246,0.5)] scale-[1.02]"
-                    : "border border-border bg-card text-muted-foreground hover:text-foreground hover:border-primary/40"
+                    ? "bg-primary text-primary-foreground shadow-md scale-[1.02]"
+                    : "border border-border bg-card text-stone-700 dark:text-muted-foreground hover:text-foreground hover:border-primary/40 shadow-xs"
                   }`}
               >
                 <TabIcon className="size-4" />
@@ -77,7 +77,7 @@ export function AudienceSection() {
             className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch"
           >
             {/* Left Card: Context & Pain Points */}
-            <div className="lg:col-span-7 border border-border bg-card p-8 sm:p-10 flex flex-col justify-between space-y-8 relative overflow-hidden">
+            <div className="lg:col-span-7 border border-border bg-card p-8 sm:p-10 flex flex-col justify-between space-y-8 relative overflow-hidden shadow-xs">
               <div className="space-y-6">
                 <div className="flex items-center justify-between gap-4 border-b border-border/80 pb-6">
                   <div className="flex items-center gap-3">
@@ -93,7 +93,7 @@ export function AudienceSection() {
                       </h3>
                     </div>
                   </div>
-                  <span className="hidden sm:inline-block text-xs font-mono bg-muted px-3 py-1 text-muted-foreground">
+                  <span className="hidden sm:inline-block text-xs font-mono bg-stone-100 text-stone-700 dark:bg-muted dark:text-muted-foreground border border-border/50 px-3 py-1">
                     Solução Dedicada
                   </span>
                 </div>
@@ -116,7 +116,7 @@ export function AudienceSection() {
                     {activeAudience.painPoints.map((point, idx) => (
                       <div
                         key={idx}
-                        className="flex items-start gap-3 text-xs sm:text-sm text-foreground bg-muted/40 p-3 border border-border/60"
+                        className="flex items-start gap-3 text-xs sm:text-sm text-foreground bg-stone-50/80 dark:bg-muted/40 p-3.5 border border-border"
                       >
                         <span className="text-primary font-bold font-mono">0{idx + 1}.</span>
                         <span>{point}</span>
@@ -127,7 +127,7 @@ export function AudienceSection() {
               </div>
 
               {/* Bottom Result Box */}
-              <div className="bg-primary/5 border border-primary/20 p-4 sm:p-5">
+              <div className="bg-primary/10 dark:bg-primary/5 border border-primary/25 p-4 sm:p-5">
                 <p className="text-xs sm:text-sm font-semibold text-foreground">
                   <span className="text-primary font-bold">Impacto Esperado:</span>{" "}
                   {activeAudience.results}
@@ -136,8 +136,8 @@ export function AudienceSection() {
             </div>
 
             {/* Right Card: Exact Deliverables & Direct CTA */}
-            <div className="lg:col-span-5 border border-primary/40 bg-card p-8 sm:p-10 flex flex-col justify-between space-y-8 shadow-[0_16px_40px_-16px_rgba(153,86,246,0.15)] relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-3xl pointer-events-none" />
+            <div className="lg:col-span-5 border border-primary/40 bg-card p-8 sm:p-10 flex flex-col justify-between space-y-8 shadow-lg shadow-stone-900/5 dark:shadow-[0_16px_40px_-16px_rgba(153,86,246,0.15)] relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-3xl pointer-events-none opacity-40 dark:opacity-100" />
 
               <div className="space-y-6 relative z-10">
                 <div className="space-y-1 border-b border-border/80 pb-5">

@@ -78,7 +78,7 @@ export function HeroSection() {
           <button
             type="button"
             onClick={() => scrollTo("branding-section")}
-            className="px-4 py-2 text-xs font-mono font-bold border border-border bg-card hover:border-primary/50 text-foreground transition-all flex items-center gap-2 cursor-pointer"
+            className="px-4 py-2 text-xs font-mono font-bold border border-border bg-card hover:border-primary/50 text-foreground transition-all flex items-center gap-2 cursor-pointer shadow-xs hover:shadow-sm"
           >
             <Palette className="size-3.5 text-primary" />
             <span>01. Identidade Visual</span>
@@ -86,7 +86,7 @@ export function HeroSection() {
           <button
             type="button"
             onClick={() => scrollTo("website-section")}
-            className="px-4 py-2 text-xs font-mono font-bold border border-border bg-card hover:border-primary/50 text-foreground transition-all flex items-center gap-2 cursor-pointer"
+            className="px-4 py-2 text-xs font-mono font-bold border border-border bg-card hover:border-primary/50 text-foreground transition-all flex items-center gap-2 cursor-pointer shadow-xs hover:shadow-sm"
           >
             <Layout className="size-3.5 text-primary" />
             <span>02. Mockups & Website</span>
@@ -94,7 +94,7 @@ export function HeroSection() {
           <button
             type="button"
             onClick={() => scrollTo("para-quem")}
-            className="px-4 py-2 text-xs font-mono font-bold border border-border bg-card hover:border-primary/50 text-foreground transition-all flex items-center gap-2 cursor-pointer"
+            className="px-4 py-2 text-xs font-mono font-bold border border-border bg-card hover:border-primary/50 text-foreground transition-all flex items-center gap-2 cursor-pointer shadow-xs hover:shadow-sm"
           >
             <Users className="size-3.5 text-primary" />
             <span>03. Para Quem É</span>
@@ -102,7 +102,7 @@ export function HeroSection() {
           <button
             type="button"
             onClick={() => scrollTo("precos")}
-            className="px-4 py-2 text-xs font-mono font-bold border border-primary/40 bg-primary/10 text-primary transition-all flex items-center gap-2 cursor-pointer"
+            className="px-4 py-2 text-xs font-mono font-bold border border-primary/40 bg-primary/10 text-primary transition-all flex items-center gap-2 cursor-pointer shadow-xs hover:bg-primary/15"
           >
             <ShieldCheck className="size-3.5" />
             <span>132.514,00 Kz (Pacote Base)</span>
