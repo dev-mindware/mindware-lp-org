@@ -15,7 +15,7 @@ import { WHATSAPP_URL } from "@/constants/site";
 export const metadata: Metadata = {
   title: "Desenvolvimento de Websites e Branding em Angola | Mindware",
   description:
-    "Criação de websites profissionais de alta conversão, lojas virtuais, branding e identidade visual completa em Luanda, Angola. Pacote chave-na-mão por 152.514,00 Kz com domínio próprio e e-mails corporativos incluídos.",
+    "Criação de websites profissionais de alta conversão, lojas virtuais, branding e identidade visual completa em Luanda, Angola. Pacote chave-na-mão a partir de 132.514,00 Kz com opções de e-mail corporativo e domínio próprio.",
   keywords: [
     "desenvolvimento de website",
     "desenvolvimento de website Angola",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Desenvolvimento de Websites e Branding em Angola | Mindware",
     description:
-      "Websites profissionais de alta performance, branding estratégico e infraestrutura cloud para empresas em Angola. Pacote tudo-em-um por 152.514,00 Kz.",
+      "Websites profissionais de alta performance, branding estratégico e infraestrutura cloud para empresas em Angola. Pacote base por 132.514,00 Kz com add-ons de email corporativo e domínio.",
     url: "https://mindware.ao/service",
     images: [
       {
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Desenvolvimento de Websites e Branding em Angola | Mindware",
     description:
-      "Criação de websites profissionais, branding e email corporativo com domínio incluído por 152.514,00 Kz.",
+      "Criação de websites profissionais e branding estratégico a partir de 132.514,00 Kz. Add-ons de email profissional e domínio próprio disponíveis.",
     images: ["/og-image.png"],
   },
 };
@@ -76,15 +76,15 @@ export default function ServicePage() {
           name: "Angola",
         },
         description:
-          "Pacote integrado chave-na-mão de presença digital: criação de logotipo e manual de identidade visual, desenvolvimento de website profissional responsivo até 5 secções, domínio e alojamento cloud por 1 ano, e contas de email corporativo.",
+          "Pacote integrado de presença digital: criação de logotipo e manual de identidade visual, desenvolvimento de website profissional responsivo até 5 secções, alojamento cloud por 1 ano, certificado SSL e integração WhatsApp, com add-ons de domínio próprio e contas de e-mail corporativo.",
         offers: {
           "@type": "Offer",
-          price: "152514.00",
+          price: "132514.00",
           priceCurrency: "AOA",
           availability: "https://schema.org/InStock",
           url: "https://mindware.ao/service",
           description:
-            "Pacote tudo-em-um de Identidade Visual + Website Profissional + Hospedagem e Domínio 1 Ano.",
+            "Pacote base de Identidade Visual + Website Profissional + Hospedagem Cloud 1 Ano.",
         },
         hasOfferCatalog: {
           "@type": "OfferCatalog",
@@ -106,10 +106,10 @@ export default function ServicePage() {
         mainEntity: [
           {
             "@type": "Question",
-            name: "O que está incluído no plano de 152.514,00 Kz?",
+            name: "O que está incluído no plano base de 132.514,00 Kz?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "O valor cobre identidade visual completa, website responsivo até 5 secções, registo de domínio próprio por 1 ano, alojamento cloud por 1 ano, e-mails corporativos, SEO Google e integração com WhatsApp.",
+              text: "O valor cobre identidade visual completa, website responsivo até 5 secções, alojamento cloud de alta performance por 1 ano, certificado SSL, SEO Google e integração com WhatsApp. O domínio próprio e as contas de e-mail corporativo são contratados à parte conforme as necessidades da empresa.",
             },
           },
           {
@@ -117,7 +117,7 @@ export default function ServicePage() {
             name: "Qual é o prazo médio de entrega do website?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "O projeto completo é entregue entre 10 a 12 dias úteis, com validações em cada etapa.",
+              text: "O projeto completo tem um prazo médio de entrega de 28 a 31 dias, com validações interativas em cada etapa.",
             },
           },
           {

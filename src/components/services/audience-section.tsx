@@ -163,7 +163,7 @@ export function AudienceSection() {
 
               <div className="space-y-4 pt-6 border-t border-border relative z-10">
                 <div className="flex items-baseline justify-between gap-2">
-                  <span className="text-xs font-mono uppercase text-muted-foreground">Investimento Total</span>
+                  <span className="text-xs font-mono uppercase text-muted-foreground">Pacote Base</span>
                   <span className="text-xl font-black text-foreground whitespace-nowrap">132.514,00&nbsp;Kz</span>
                 </div>
 

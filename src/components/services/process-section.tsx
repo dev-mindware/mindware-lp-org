@@ -90,7 +90,7 @@ export function ProcessSection() {
             </p>
           </div>
           <div className="shrink-0 font-mono text-xs uppercase tracking-wider font-bold text-primary bg-primary/10 px-4 py-2">
-            Tempo Médio: 10 a 12 dias
+            Tempo Médio: 28 a 31 dias
           </div>
         </div>
       </SectionWrapper>

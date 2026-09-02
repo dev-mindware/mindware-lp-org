@@ -30,7 +30,7 @@ export const services = [
     features: [
       "Website Responsivo & Rápido",
       "SEO & Otimização Google",
-      "Domínio Gratuito (1 ano)",
+      "Hospedagem Cloud & SSL (1 ano)",
     ],
     highlight: true,
     link: "/service#website-section",
@@ -66,8 +66,8 @@ export const TARGET_AUDIENCES: AudienceProfile[] = [
     deliverables: [
       "Website corporativo de 5 secções otimizado para conversão B2B",
       "Manual completo de identidade visual & assets de marca",
-      "Domínio próprio + Hospedagem de alta disponibilidade (1 ano)",
-      "Contas de e-mail profissional configuradas para a equipa",
+      "Hospedagem cloud de alta performance (1 ano)",
+      "Prontidão para integração de e-mail corporativo e domínio próprio",
     ],
     results: "Elevação imediata do valor percebido da marca e aumento de orçamentos qualificados.",
   },
@@ -140,29 +140,29 @@ export const PROCESS_STEPS = [
   {
     step: "01",
     title: "Diagnóstico & Briefing",
-    duration: "Dia 1 - 2",
-    description: "Alinhamos os objetivos do seu negócio, público-alvo, referências visuais e estrutura essencial das páginas.",
+    duration: "Dia 1 - 4",
+    description: "Alinhamos os objetivos do seu negócio, público-alvo, referências visuais e arquitetura essencial das páginas.",
     icon: Zap,
   },
   {
     step: "02",
     title: "Identidade & Protótipo Visual",
-    duration: "Dia 3 - 5",
+    duration: "Dia 5 - 12",
     description: "Criamos a paleta estratégica, tipografia, refinamento de logo e o layout interativo para validação direta consigo.",
     icon: Palette,
   },
   {
     step: "03",
     title: "Engenharia Web & SEO",
-    duration: "Dia 6 - 9",
+    duration: "Dia 13 - 22",
     description: "Desenvolvemos o website com Next.js de alta performance, carregamento instantâneo, mobile-first e SEO Google configurado.",
     icon: Layout,
   },
   {
     step: "04",
-    title: "Domínio, E-mails & Lançamento",
-    duration: "Dia 10 - 12",
-    description: "Configuração do domínio próprio, contas de email institucional corporativo, testes de segurança e entrega com formação.",
+    title: "Testes, Segurança & Lançamento",
+    duration: "Dia 23 - 31",
+    description: "Testes rigorosos de segurança e responsividade, homologação final com o cliente e publicação oficial com formação.",
     icon: ShieldCheck,
   },
 ];
@@ -177,16 +177,12 @@ export const PACKAGE_INCLUDED = [
     desc: "Design exclusivo, arquitetura pensada para conversão, responsivo em mobile, tablet e desktop.",
   },
   {
-    title: "Domínio Próprio Incluído (1 Ano)",
-    desc: "Registo e gestão técnica do seu domínio exclusivo para garantir a autoridade da marca.",
-  },
-  {
     title: "Hospedagem Cloud de Alta Performance (1 Ano)",
     desc: "Servidores seguros, certificado SSL gratuito (HTTPS) e carregamento em milissegundos.",
   },
   {
-    title: "E-mails Corporativos (@suaempresa)",
-    desc: "Contas profissionais configuradas para transmitir máxima seriedade em propostas e correspondências.",
+    title: "Certificado de Segurança SSL (HTTPS Ativo)",
+    desc: "Navegação blindada e criptografada com garantia de segurança para todos os visitantes.",
   },
   {
     title: "SEO Google & Indexação Rápida",
@@ -197,8 +193,72 @@ export const PACKAGE_INCLUDED = [
     desc: "Botões de contacto inteligentes que enviam mensagens pré-formatadas para a sua equipa.",
   },
   {
-    title: "Suporte Técnico & Formação",
+    title: "Design Responsivo & Mobile-First",
+    desc: "Experiência perfeita e adaptada a smartphones, tablets e ecrãs de computadores.",
+  },
+  {
+    title: "Suporte Técnico & Formação de Gestão",
     desc: "Acompanhamento dedicado para tirar dúvidas e garantir que a sua presença online opera sem falhas.",
   },
 ];
+
+export interface ServiceAddon {
+  id: string;
+  name: string;
+  badge?: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular?: boolean;
+}
+
+export const EMAIL_ADDONS: ServiceAddon[] = [
+  {
+    id: "email-start",
+    name: "Email Start",
+    badge: "Essencial",
+    price: "14.989,00 Kz",
+    period: "/ 1 ano",
+    description: "Ideal para profissionais e pequenas empresas que precisam de um e-mail institucional corporativo fiável.",
+    features: [
+      "1 caixa de correio incluída",
+      "5 GB de armazenamento por caixa de correio",
+      "5 Regras de Encaminhamento",
+      "5 aliases de email",
+      "Webmail seguro + Acesso via telemóvel e PC (IMAP/SMTP)",
+    ],
+  },
+  {
+    id: "email-standard",
+    name: "Email Standard",
+    badge: "Recomendado",
+    price: "25.450,00 Kz",
+    period: "/ 1 ano",
+    popular: true,
+    description: "Para empresas com maior volume de correspondências, propostas comerciais e histórico de comunicações.",
+    features: [
+      "1 caixa de correio incluída",
+      "20 GB de armazenamento por caixa de correio",
+      "20 Regras de Encaminhamento",
+      "10 aliases de email",
+      "Webmail seguro de alta capacidade + Acesso telemóvel/PC",
+    ],
+  },
+];
+
+export const DOMAIN_ADDON: ServiceAddon = {
+  id: "dominio",
+  name: "Registo de Domínio",
+  badge: "Endereço Próprio",
+  price: "15.690,00 Kz",
+  period: "/ 1 ano",
+  description: "Registo e gestão técnica do seu domínio exclusivo (.ao, .com ou outros) com configuração de DNS incluída.",
+  features: [
+    "1 ano de registo e gestão técnica",
+    "Configuração de apontamento e zonas DNS",
+    "Prontidão para ligação com o website e e-mails",
+    "Proteção e acompanhamento de renovação",
+  ],
+};
 

@@ -20,8 +20,8 @@ export function WebsiteSection() {
     },
     {
       icon: Globe,
-      title: "Domínio & Alojamento",
-      text: "Domínio próprio e alojamento cloud de alta velocidade incluídos por 1 ano completo sem custos adicionais.",
+      title: "Hospedagem Cloud & Deploy",
+      text: "Infraestrutura cloud de alta velocidade e disponibilidade incluída por 1 ano completo, com prontidão imediata para domínio próprio.",
       stat: "1 Ano Incluído",
     },
     {

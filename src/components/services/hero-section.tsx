@@ -105,7 +105,7 @@ export function HeroSection() {
             className="px-4 py-2 text-xs font-mono font-bold border border-primary/40 bg-primary/10 text-primary transition-all flex items-center gap-2 cursor-pointer"
           >
             <ShieldCheck className="size-3.5" />
-            <span>132.514,00 Kz (Tudo Incluído)</span>
+            <span>132.514,00 Kz (Pacote Base)</span>
           </button>
         </motion.div>
 

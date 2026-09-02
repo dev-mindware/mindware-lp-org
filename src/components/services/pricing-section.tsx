@@ -2,20 +2,33 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle2, ChevronDown, ArrowRight, ShieldCheck, HelpCircle } from "lucide-react";
+import {
+  CheckCircle2,
+  ChevronDown,
+  ArrowRight,
+  ShieldCheck,
+  HelpCircle,
+  Mail,
+  MailCheck,
+  Globe,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { WHATSAPP_URL } from "@/constants/site";
-import { PACKAGE_INCLUDED } from "@/data/services";
+import { PACKAGE_INCLUDED, EMAIL_ADDONS, DOMAIN_ADDON } from "@/data/services";
 
 const FAQS = [
   {
     q: "O que está exatamente incluído nos 132.514,00 Kz?",
-    a: "O valor cobre o pacote tudo-em-um: criação da identidade visual completa (logo, manual, paleta, assets), desenvolvimento do website profissional (até 5 secções), registo de domínio próprio por 1 ano, alojamento cloud por 1 ano, contas de e-mail institucionais, SEO Google e integração direta com WhatsApp.",
+    a: "O valor cobre o pacote base de presença digital: criação da identidade visual completa (logotipo, manual de aplicação, paleta de cores estratégica e assets), desenvolvimento do website profissional (até 5 secções), alojamento cloud de alta performance por 1 ano, certificado de segurança SSL (HTTPS), otimização SEO Google e integração direta com WhatsApp. O domínio exclusivo e as contas de e-mail institucional são serviços complementares contratados à parte conforme a dimensão e necessidades da sua empresa.",
   },
   {
     q: "Qual é o prazo médio de entrega?",
-    a: "O projeto completo é entregue entre 10 a 12 dias úteis, com validações interativas em cada etapa (briefing, protótipo visual, desenvolvimento e lançamento).",
+    a: "O projeto completo tem um prazo médio de entrega de 28 a 31 dias, estruturado em ciclos com validações interativas em cada etapa (briefing, identidade visual, engenharia web, testes e lançamento oficial).",
+  },
+  {
+    q: "Como funciona a contratação do e-mail profissional e domínio?",
+    a: "Pode adicionar o registo de domínio próprio (15.690,00 Kz / 1 ano) e o plano de e-mail pretendido para a sua operação: Email Start (14.989,00 Kz / 1 ano com 5 GB) ou Email Standard (25.450,00 Kz / 1 ano com 20 GB). A Mindware encarrega-se de toda a configuração técnica de DNS, apontamentos e parametrização dos e-mails.",
   },
   {
     q: "Como funciona o processo de pagamento?",
@@ -58,7 +71,7 @@ export function PricingSection() {
           <div className="flex flex-wrap items-center justify-between gap-4 pb-8 border-b border-border">
             <div className="space-y-1">
               <span className="text-xs font-mono font-bold uppercase tracking-widest text-primary">
-                Identidade Visual + Website Profissional + Hospedagem + E-mails
+                Identidade Visual + Website Profissional + Hospedagem Cloud (1 Ano)
               </span>
               <h3 className="text-2xl sm:text-3xl font-black tracking-tight text-foreground">
                 Plano Presença Digital Completa
@@ -84,13 +97,13 @@ export function PricingSection() {
           <div className="py-12 border-b border-border flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="space-y-2 text-center lg:text-left">
               <span className="text-xs font-mono font-bold uppercase tracking-widest text-muted-foreground">
-                Investimento Único Chave-na-Mão
+                Investimento Pacote Base
               </span>
               <div className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-foreground tabular-nums whitespace-nowrap">
                 132.514,00&nbsp;<span className="text-2xl sm:text-3xl lg:text-4xl font-bold uppercase text-primary inline">Kz</span>
               </div>
               <p className="text-xs sm:text-sm text-muted-foreground">
-                Sem custos escondidos. Domínio, alojamento e suporte incluídos no primeiro ano.
+                Sem custos escondidos. Alojamento cloud e suporte técnico incluídos no 1º ano. Domínio e e-mails profissionais configuráveis à parte.
               </p>
             </div>
 
@@ -128,7 +141,7 @@ export function PricingSection() {
             <div className="flex items-center gap-2">
               <ShieldCheck className="size-5 text-primary" />
               <h4 className="text-sm font-mono font-bold uppercase tracking-wider text-foreground">
-                Tudo o que está incluído no pacote:
+                Tudo o que está incluído no pacote base:
               </h4>
             </div>
 
@@ -148,6 +161,190 @@ export function PricingSection() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* Add-ons Section: Email Profissional & Domínio */}
+        <div className="max-w-5xl mx-auto mb-24">
+          <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
+            <div className="inline-flex items-center gap-2 border border-primary/20 bg-primary/5 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-primary">
+              <Mail className="size-3.5" />
+              Complementos Opcionais
+            </div>
+            <h3 className="text-2xl sm:text-4xl font-black uppercase tracking-tight">
+              E-mails Profissionais & <span className="text-primary">Domínio Próprio</span>
+            </h3>
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+              Dê ainda mais credibilidade à sua operação com endereços @suaempresa e registo de domínio oficial configurado pela equipa técnica da Mindware.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+            {/* Domínio Card */}
+            <div className="flex flex-col justify-between border border-border bg-card p-6 sm:p-8 hover:border-primary/50 transition-all">
+              <div className="space-y-5">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-mono font-bold uppercase tracking-widest px-2.5 py-1 bg-muted text-muted-foreground">
+                    {DOMAIN_ADDON.badge}
+                  </span>
+                  <Globe className="size-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-black text-foreground">{DOMAIN_ADDON.name}</h4>
+                  <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                    {DOMAIN_ADDON.description}
+                  </p>
+                </div>
+                <div className="pt-2">
+                  <div className="text-2xl sm:text-3xl font-black text-foreground">
+                    {DOMAIN_ADDON.price}
+                  </div>
+                  <span className="text-xs font-mono text-muted-foreground">{DOMAIN_ADDON.period}</span>
+                </div>
+                <ul className="space-y-2.5 pt-4 border-t border-border">
+                  {DOMAIN_ADDON.features.map((feat, i) => (
+                    <li key={i} className="flex items-start gap-2.5 text-xs text-foreground">
+                      <CheckCircle2 className="size-3.5 text-primary shrink-0 mt-0.5" />
+                      <span>{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="pt-6 mt-6 border-t border-border">
+                <Link
+                  href={`${WHATSAPP_URL}?text=${encodeURIComponent(
+                    "Olá Mindware! Gostaria de incluir o Registo de Domínio (15.690,00 Kz / 1 ano) no meu projeto."
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full"
+                >
+                  <Button
+                    variant="outline"
+                    className="w-full font-bold text-xs uppercase tracking-wider border-border hover:border-primary hover:bg-primary/10 hover:text-primary"
+                  >
+                    Adicionar Domínio
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Email Start Card */}
+            <div className="flex flex-col justify-between border border-border bg-card p-6 sm:p-8 hover:border-primary/50 transition-all">
+              <div className="space-y-5">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-mono font-bold uppercase tracking-widest px-2.5 py-1 bg-muted text-muted-foreground">
+                    {EMAIL_ADDONS[0].badge}
+                  </span>
+                  <Mail className="size-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-black text-foreground">{EMAIL_ADDONS[0].name}</h4>
+                  <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                    {EMAIL_ADDONS[0].description}
+                  </p>
+                </div>
+                <div className="pt-2">
+                  <div className="text-2xl sm:text-3xl font-black text-foreground">
+                    {EMAIL_ADDONS[0].price}
+                  </div>
+                  <span className="text-xs font-mono text-muted-foreground">{EMAIL_ADDONS[0].period}</span>
+                </div>
+                <ul className="space-y-2.5 pt-4 border-t border-border">
+                  {EMAIL_ADDONS[0].features.map((feat, i) => (
+                    <li key={i} className="flex items-start gap-2.5 text-xs text-foreground">
+                      <CheckCircle2 className="size-3.5 text-primary shrink-0 mt-0.5" />
+                      <span>{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="pt-6 mt-6 border-t border-border">
+                <Link
+                  href={`${WHATSAPP_URL}?text=${encodeURIComponent(
+                    "Olá Mindware! Gostaria de subscrever o plano Email Start (14.989,00 Kz) para o meu domínio."
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full"
+                >
+                  <Button
+                    variant="outline"
+                    className="w-full font-bold text-xs uppercase tracking-wider border-border hover:border-primary hover:bg-primary/10 hover:text-primary"
+                  >
+                    Adicionar Email Start
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Email Standard Card (Highlighted) */}
+            <div className="flex flex-col justify-between border-2 border-primary/60 bg-card p-6 sm:p-8 relative shadow-[0_16px_36px_-16px_rgba(153,86,246,0.25)]">
+              <div className="absolute -top-3 right-6 bg-primary text-primary-foreground text-[10px] font-mono font-bold uppercase tracking-widest px-3 py-0.5">
+                Mais Escolhido
+              </div>
+              <div className="space-y-5">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-mono font-bold uppercase tracking-widest px-2.5 py-1 bg-primary/10 text-primary">
+                    {EMAIL_ADDONS[1].badge}
+                  </span>
+                  <MailCheck className="size-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-black text-foreground">{EMAIL_ADDONS[1].name}</h4>
+                  <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                    {EMAIL_ADDONS[1].description}
+                  </p>
+                </div>
+                <div className="pt-2">
+                  <div className="text-2xl sm:text-3xl font-black text-foreground">
+                    {EMAIL_ADDONS[1].price}
+                  </div>
+                  <span className="text-xs font-mono text-muted-foreground">{EMAIL_ADDONS[1].period}</span>
+                </div>
+                <ul className="space-y-2.5 pt-4 border-t border-border">
+                  {EMAIL_ADDONS[1].features.map((feat, i) => (
+                    <li key={i} className="flex items-start gap-2.5 text-xs text-foreground">
+                      <CheckCircle2 className="size-3.5 text-primary shrink-0 mt-0.5" />
+                      <span>{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="pt-6 mt-6 border-t border-border">
+                <Link
+                  href={`${WHATSAPP_URL}?text=${encodeURIComponent(
+                    "Olá Mindware! Gostaria de subscrever o plano Email Standard (25.450,00 Kz) para o meu domínio."
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full"
+                >
+                  <Button
+                    className="w-full font-bold text-xs uppercase tracking-wider bg-primary text-primary-foreground hover:bg-primary/90 shadow-md"
+                  >
+                    Adicionar Email Standard
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Helper Note about Extra Mailboxes */}
+          <div className="mt-6 p-4 border border-border/70 bg-muted/20 text-xs text-muted-foreground flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+            <span>
+              <strong className="text-foreground">Nota:</strong> Cada plano inclui 1 caixa de correio principal. Precisa de mais caixas para a sua equipa? Configuramos caixas adicionais sob medida no momento da ativação.
+            </span>
+            <Link
+              href={`${WHATSAPP_URL}?text=${encodeURIComponent(
+                "Olá Mindware! Gostaria de saber mais sobre caixas de email adicionais para a minha equipa."
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 text-primary font-bold hover:underline"
+            >
+              Falar com consultor &rarr;
+            </Link>
           </div>
         </div>
 
@@ -178,8 +375,9 @@ export function PricingSection() {
                   >
                     <span>{faq.q}</span>
                     <ChevronDown
-                      className={`size-4 shrink-0 text-muted-foreground transition-transform duration-300 ${isOpen ? "rotate-180 text-primary" : ""
-                        }`}
+                      className={`size-4 shrink-0 text-muted-foreground transition-transform duration-300 ${
+                        isOpen ? "rotate-180 text-primary" : ""
+                      }`}
                     />
                   </button>
 
