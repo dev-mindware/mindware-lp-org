@@ -4,7 +4,27 @@ export const FAQS: Faq[] = [
   {
     question: "Preciso de instalar alguma coisa?",
     answer:
-      "Não. O Mindgest funciona 100% no navegador — no computador, tablet ou telemóvel. Basta criar a sua conta e começar a facturar.",
+      "Não é obrigatório. O Mindgest funciona no navegador — no computador, tablet ou telemóvel. Se quiser vender também sem internet, pode instalar o Mindgest POS no seu computador Windows.",
+  },
+  {
+    question: "Posso facturar sem internet?",
+    answer:
+      "Sim. O Mindgest POS Offline é a aplicação para Windows que permite emitir facturas, recibos e outros documentos sem ligação à internet. As vendas ficam guardadas no computador e são sincronizadas com a sua conta Mindgest quando a internet voltar.",
+  },
+  {
+    question: "Como funciona o Mindgest POS Offline?",
+    answer:
+      "Instala o programa no computador do balcão, inicia sessão com a sua conta Mindgest e começa a vender. Os dados ficam guardados localmente, por isso uma falha de internet ou de energia não faz perder vendas.",
+  },
+  {
+    question: "Posso ter vários caixas ligados sem internet?",
+    answer:
+      "Sim. O Mindgest POS liga vários caixas a um computador principal através da rede local da loja, sem precisar de internet.",
+  },
+  {
+    question: "Onde descarrego o Mindgest POS?",
+    answer:
+      "Na secção «Descarregar» desta página. O instalador é para Windows e as novas versões são descarregadas automaticamente em segundo plano.",
   },
   {
     question: "Que documentos posso emitir?",

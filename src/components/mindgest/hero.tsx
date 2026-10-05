@@ -49,7 +49,8 @@ export function Hero() {
             style={{ animationDelay: "200ms" }}
           >
             O Mindgest acompanha o seu negócio inteiro, da primeira venda ao
-            relatório do fim do mês, em todas as suas lojas, num só lugar.
+            relatório do fim do mês, em todas as suas lojas, num só lugar. Online ou
+            offline: com o POS para Windows, facture mesmo sem internet.
           </p>
 
           <div
