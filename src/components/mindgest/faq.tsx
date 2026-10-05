@@ -13,7 +13,7 @@ export function Faq() {
         <Reveal>
           <SectionHeading
             align="center"
-            index="05"
+            index="08"
             label="Perguntas frequentes"
             title="Ainda com dúvidas?"
             description="Se a sua pergunta não estiver aqui, fale connosco — respondemos depressa."

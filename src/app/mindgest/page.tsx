@@ -10,6 +10,9 @@ import {
   HowItWorks,
   Marquee,
   MindIA,
+  PosDownload,
+  PosNetwork,
+  PosOffline,
   Pricing,
 } from "@/components/mindgest";
 
@@ -135,6 +138,9 @@ export default function MindgestPage() {
       <Marquee />
       <Features />
       <MindIA />
+      <PosOffline />
+      <PosNetwork />
+      <PosDownload />
       <HowItWorks />
       <Pricing />
       <Faq />
