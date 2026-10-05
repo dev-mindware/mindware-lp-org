@@ -14,7 +14,7 @@ export function Pricing() {
         <Reveal>
           <SectionHeading
             align="center"
-            index="04"
+            index="07"
             label="Planos"
             title={
               <>

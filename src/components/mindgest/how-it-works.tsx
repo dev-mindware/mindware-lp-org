@@ -32,7 +32,7 @@ export function HowItWorks() {
       <div className="mx-auto max-w-6xl px-6 sm:px-10">
         <Reveal>
           <SectionHeading
-            index="03"
+            index="06"
             label="Como funciona"
             align="center"
             title={
