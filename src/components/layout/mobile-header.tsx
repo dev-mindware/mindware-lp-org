@@ -36,7 +36,7 @@ export function MobileHeader({
         </SheetTrigger>
         <SheetContent
           side="right"
-          className="w-75 border-l border-border/50 bg-background/95 px-4 pt-4 backdrop-blur-xl sm:w-100"
+          className="w-[85vw] max-w-75 border-l border-border/50 bg-background/95 px-4 pt-4 backdrop-blur-xl sm:w-100"
         >
           <div className="flex h-full flex-col overflow-y-auto">
             <div className="mt-2 mb-8 flex items-center space-x-2">

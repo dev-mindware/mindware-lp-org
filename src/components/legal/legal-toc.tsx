@@ -94,7 +94,7 @@ function TocList({ sections, activeIndex, onNavigate }: TocListProps) {
               <span
                 aria-hidden="true"
                 className={cn(
-                  "pt-px text-[11px] font-black tracking-widest tabular-nums",
+                  "pt-px text-xs font-black tracking-widest tabular-nums",
                   isActive ? "text-primary" : "text-muted-foreground/50",
                 )}
               >
@@ -121,7 +121,7 @@ export function LegalToc({ title, sections }: LegalTocProps) {
       <div className="sticky top-28 border border-border/60 bg-card/50 backdrop-blur-xl">
         <div className="flex items-center gap-3 border-b border-border/60 px-6 py-5">
           <span aria-hidden="true" className="h-4 w-1 shrink-0 bg-primary" />
-          <h2 className="text-[10px] font-black tracking-[0.22em] text-foreground uppercase">
+          <h2 className="text-xs font-black tracking-[0.22em] text-foreground uppercase">
             {title}
           </h2>
         </div>
@@ -152,7 +152,7 @@ export function LegalTocMobile({ title, sections }: LegalTocProps) {
       >
         <span className="flex min-w-0 items-center gap-3">
           <span aria-hidden="true" className="h-4 w-1 shrink-0 bg-primary" />
-          <span className="text-[10px] font-black tracking-[0.25em] text-primary uppercase">
+          <span className="text-xs font-black tracking-[0.25em] text-primary uppercase">
             {formatIndex(activeIndex)}
           </span>
           <span className="truncate text-sm font-bold text-foreground">

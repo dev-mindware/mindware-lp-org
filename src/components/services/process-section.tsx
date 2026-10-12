@@ -50,7 +50,7 @@ export function ProcessSection() {
                     <span className="font-mono text-3xl font-black text-primary/80 group-hover:text-primary transition-colors">
                       {step.step}
                     </span>
-                    <span className="text-[11px] font-mono font-bold uppercase tracking-widest bg-stone-100 text-stone-700 dark:bg-muted dark:text-muted-foreground border border-border/50 px-2.5 py-1 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
+                    <span className="text-xs font-mono font-bold uppercase tracking-widest bg-stone-100 text-stone-700 dark:bg-muted dark:text-muted-foreground border border-border/50 px-2.5 py-1 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
                       {step.duration}
                     </span>
                   </div>

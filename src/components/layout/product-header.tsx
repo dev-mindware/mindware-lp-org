@@ -174,7 +174,7 @@ function ProductHeaderMobile({
           <SheetTitle className="sr-only">Menu — {product}</SheetTitle>
           <div className="flex h-full flex-col overflow-y-auto">
             <div className="mt-2 mb-8 px-4">
-              <span className="border border-primary/25 bg-primary/10 px-2.5 py-1 text-[10px] font-black tracking-[0.22em] text-primary uppercase">
+              <span className="border border-primary/25 bg-primary/10 px-2.5 py-1 text-xs font-black tracking-[0.22em] text-primary uppercase">
                 {product}
               </span>
             </div>

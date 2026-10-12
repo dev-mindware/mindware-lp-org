@@ -20,7 +20,7 @@ export function AffiliateHero() {
   return (
     <section
       id="affiliate-home"
-      className="relative z-10 min-h-screen overflow-hidden bg-transparent pt-28 pb-16 text-foreground"
+      className="relative z-10 min-h-dvh overflow-hidden bg-transparent pt-28 pb-16 text-foreground"
     >
       <div
         aria-hidden="true"

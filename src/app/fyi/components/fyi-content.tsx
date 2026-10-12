@@ -32,7 +32,7 @@ export function FYIContent() {
   };
 
   return (
-    <main className="min-h-screen bg-background text-foreground pt-32 pb-20 overflow-hidden relative">
+    <main className="min-h-dvh bg-background text-foreground pt-32 pb-20 overflow-hidden relative">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -162,7 +162,7 @@ export function FYIContent() {
 
                   {doc.elements && (
                     <div className="space-y-4 mb-10">
-                      <p className="text-[10px] uppercase font-black text-primary/60 tracking-[0.3em] mb-4">
+                      <p className="text-xs uppercase font-black text-primary/60 tracking-[0.3em] mb-4">
                         Elementos Essenciais:
                       </p>
                       <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3">
@@ -180,7 +180,7 @@ export function FYIContent() {
 
                   {doc.scenarios && (
                     <div className="space-y-6 mb-10">
-                      <p className="text-[10px] uppercase font-black text-primary/60 tracking-[0.3em] mb-4">
+                      <p className="text-xs uppercase font-black text-primary/60 tracking-[0.3em] mb-4">
                         Cenários de Aplicação:
                       </p>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -204,7 +204,7 @@ export function FYIContent() {
                   {doc.example && (
                     <div className="mt-8 bg-primary/5 p-8 border border-primary/10 italic text-base relative">
                       <div className="absolute top-0 left-0 w-1 h-full bg-primary" />
-                      <p className="font-bold text-primary mb-3 text-[10px] uppercase tracking-[0.4em]">
+                      <p className="font-bold text-primary mb-3 text-xs uppercase tracking-[0.4em]">
                         Exemplo Robusto:
                       </p>
                       <p className="text-muted-foreground leading-relaxed">
@@ -219,8 +219,8 @@ export function FYIContent() {
 
           {/* Comparison Table */}
           <div className="p-1 bg-linear-to-br from-primary/20 via-border to-primary/20 shadow-xl mb-24">
-            <div className="bg-card/80 dark:bg-card/40 backdrop-blur-3xl p-10 md:p-16 overflow-x-auto border border-border/50">
-              <h3 className="text-4xl font-black mb-12 text-center uppercase tracking-tighter drop-shadow-md">
+            <div className="bg-card/80 dark:bg-card/40 backdrop-blur-3xl p-4 sm:p-10 md:p-16 overflow-x-auto border border-border/50">
+              <h3 className="text-2xl sm:text-4xl font-black mb-8 sm:mb-12 text-center uppercase tracking-tighter drop-shadow-md">
                 Tabela <span className="text-primary italic">Comparativa</span>
               </h3>
               <table className="w-full min-w-[600px]">
@@ -257,7 +257,7 @@ export function FYIContent() {
                       </td>
                       <td className="py-7 px-4 text-center">
                         <span
-                          className={`px-4 py-1.5 text-[10px] font-black uppercase tracking-widest ${
+                          className={`px-4 py-1.5 text-xs font-black uppercase tracking-widest ${
                             row.fiscal === "Sim"
                               ? "bg-green-500/10 text-green-600 dark:text-green-500 border border-green-500/30"
                               : row.fiscal === "Não"

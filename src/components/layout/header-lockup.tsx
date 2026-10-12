@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 const BADGE_CLASS =
-  "shrink-0 border border-primary/25 bg-primary/10 px-2.5 py-1 text-[10px] font-black tracking-[0.22em] text-primary uppercase";
+  "shrink-0 border border-primary/25 bg-primary/10 px-2.5 py-1 text-xs font-black tracking-[0.22em] text-primary uppercase";
 
 export type HeaderLockupProps = {
   /**

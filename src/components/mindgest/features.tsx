@@ -121,7 +121,7 @@ export function Features() {
                       key={store.name}
                       className="border border-border bg-muted/40 p-4"
                     >
-                      <p className="truncate text-[11px] font-semibold text-muted-foreground">
+                      <p className="truncate text-xs font-semibold text-muted-foreground">
                         {store.name}
                       </p>
                       <p className="mt-1.5 text-sm font-black text-foreground">

@@ -64,7 +64,7 @@ function Block({ block }: { block: LegalBlock }) {
       return (
         <div className="border-l-2 border-primary bg-primary/5 p-6 md:p-8">
           {block.label && (
-            <p className="mb-3 text-[10px] font-black tracking-[0.3em] text-primary uppercase">
+            <p className="mb-3 text-xs font-black tracking-[0.3em] text-primary uppercase">
               {block.label}
             </p>
           )}
@@ -84,7 +84,7 @@ function Block({ block }: { block: LegalBlock }) {
                   <th
                     key={cell}
                     scope="col"
-                    className="px-5 py-4 text-[10px] font-black tracking-[0.2em] text-primary uppercase"
+                    className="px-5 py-4 text-xs font-black tracking-[0.2em] text-primary uppercase"
                   >
                     {cell}
                   </th>
@@ -123,7 +123,7 @@ export function LegalDocument({ doc, related = [] }: LegalDocumentProps) {
     doc;
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-background pt-32 pb-24 text-foreground">
+    <main className="relative min-h-dvh overflow-hidden bg-background pt-32 pb-24 text-foreground">
       {/* Atmosfera — mesmos blobs das restantes páginas interiores */}
       <div
         aria-hidden="true"
@@ -193,7 +193,7 @@ export function LegalDocument({ doc, related = [] }: LegalDocumentProps) {
 
             {related.length > 0 && (
               <div className="border-t border-border/60 pt-12">
-                <p className="mb-6 text-[10px] font-black tracking-[0.3em] text-primary uppercase">
+                <p className="mb-6 text-xs font-black tracking-[0.3em] text-primary uppercase">
                   Documentos relacionados
                 </p>
                 <div className="flex flex-wrap gap-4">

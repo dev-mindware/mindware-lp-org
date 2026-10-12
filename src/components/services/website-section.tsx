@@ -245,19 +245,19 @@ export function WebsiteSection() {
           {/* Quick Mockup Metrics Bar */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 pt-6 border-t border-border text-center">
             <div className="p-3 bg-card border border-border shadow-xs">
-              <span className="text-[10px] font-mono uppercase text-muted-foreground block">Velocidade</span>
+              <span className="text-xs font-mono uppercase text-muted-foreground block">Velocidade</span>
               <span className="text-sm font-black text-primary">Ultra Rápido</span>
             </div>
             <div className="p-3 bg-card border border-border shadow-xs">
-              <span className="text-[10px] font-mono uppercase text-muted-foreground block">Responsividade</span>
+              <span className="text-xs font-mono uppercase text-muted-foreground block">Responsividade</span>
               <span className="text-sm font-black text-foreground">100% Fluido</span>
             </div>
             <div className="p-3 bg-card border border-border shadow-xs">
-              <span className="text-[10px] font-mono uppercase text-muted-foreground block">SEO Google</span>
+              <span className="text-xs font-mono uppercase text-muted-foreground block">SEO Google</span>
               <span className="text-sm font-black text-primary">100 / 100</span>
             </div>
             <div className="p-3 bg-card border border-border shadow-xs">
-              <span className="text-[10px] font-mono uppercase text-muted-foreground block">Segurança</span>
+              <span className="text-xs font-mono uppercase text-muted-foreground block">Segurança</span>
               <span className="text-sm font-black text-foreground">SSL HTTPS</span>
             </div>
           </div>
@@ -280,7 +280,7 @@ export function WebsiteSection() {
                   <span className="flex size-12 items-center justify-center bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                     <feature.icon className="size-6" />
                   </span>
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider bg-stone-100 text-stone-700 dark:bg-muted dark:text-muted-foreground border border-border/50 px-2.5 py-1 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider bg-stone-100 text-stone-700 dark:bg-muted dark:text-muted-foreground border border-border/50 px-2.5 py-1 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
                     {feature.stat}
                   </span>
                 </div>

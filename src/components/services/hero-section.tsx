@@ -19,7 +19,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative z-10 pt-28 pb-20 overflow-hidden"
+      className="min-h-dvh flex items-center justify-center relative z-10 pt-28 pb-20 overflow-hidden"
     >
       <motion.div
         style={{ scale: heroScale, opacity: heroOpacity }}
@@ -150,7 +150,7 @@ export function HeroSection() {
           onClick={() => scrollTo("branding-section")}
           className="inline-flex flex-col items-center gap-2 text-muted-foreground cursor-pointer hover:text-primary transition-colors"
         >
-          <span className="text-[11px] uppercase tracking-widest font-mono font-bold">
+          <span className="text-xs uppercase tracking-widest font-mono font-bold">
             Explorar Solução
           </span>
           <ArrowDown className="size-4" />

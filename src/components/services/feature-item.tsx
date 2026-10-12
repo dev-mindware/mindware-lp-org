@@ -17,14 +17,14 @@ export function FeatureItem({ icon: Icon, title, description, delay = 0 }: Featu
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay }}
             viewport={{ once: true }}
-            className="flex gap-4 p-6 bg-card border border-border shadow-xs group cursor-default relative overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-md hover:-translate-y-0.5"
+            className="flex flex-col min-[420px]:flex-row gap-3 min-[420px]:gap-4 p-5 sm:p-6 bg-card border border-border shadow-xs group cursor-default relative overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-md hover:-translate-y-0.5"
         >
             <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="w-12 h-12 bg-primary/10 flex items-center justify-center shrink-0 text-primary relative z-10 group-hover:scale-110 transition-transform duration-300">
                 <Icon className="w-6 h-6" />
             </div>
-            <div className="relative z-10">
-                <h3 className="text-xl font-bold mb-2">{title}</h3>
+            <div className="relative z-10 min-w-0">
+                <h3 className="text-lg sm:text-xl font-bold mb-2">{title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{description}</p>
             </div>
         </motion.div>

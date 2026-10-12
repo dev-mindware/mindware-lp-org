@@ -7,7 +7,7 @@ export function DashboardShot() {
         <span className="size-2.5 bg-muted-foreground/30" />
         <span className="size-2.5 bg-muted-foreground/30" />
         <span className="size-2.5 bg-muted-foreground/30" />
-        <span className="mx-auto bg-muted px-6 py-1 text-[10px] font-medium text-muted-foreground">
+        <span className="mx-auto bg-muted px-6 py-1 text-xs font-medium text-muted-foreground">
           mindgest.mindware.ao
         </span>
         <span className="w-12" />

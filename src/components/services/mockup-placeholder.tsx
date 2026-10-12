@@ -19,7 +19,7 @@ export function MockupPlaceholder({ type = "desktop", children }: MockupPlacehol
                     <div className="w-3 h-3 bg-red-500/80" />
                     <div className="w-3 h-3 bg-yellow-500/80" />
                     <div className="w-3 h-3 bg-green-500/80" />
-                    <div className="ml-4 px-3 py-1 bg-background/50 text-[10px] text-muted-foreground font-mono">
+                    <div className="ml-4 px-3 py-1 bg-background/50 text-xs text-muted-foreground font-mono">
                         {type === "desktop" ? "service.mindware.ao" : "m.mindware.ao"}
                     </div>
                 </div>

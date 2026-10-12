@@ -36,10 +36,10 @@ export function SoftwareFrame({
           <span className="size-2.5 bg-red-500/70" />
           <span className="size-2.5 bg-yellow-500/70" />
           <span className="size-2.5 bg-green-500/70" />
-          <span className="ml-3 truncate bg-background/60 px-3 py-1 font-mono text-[10px] tracking-wider text-muted-foreground">
+          <span className="ml-3 truncate bg-background/60 px-3 py-1 font-mono text-xs tracking-wider text-muted-foreground">
             {urlDisplay}
           </span>
-          <span className="ml-auto hidden text-[10px] font-bold tracking-widest text-primary uppercase sm:inline">
+          <span className="ml-auto hidden text-xs font-bold tracking-widest text-primary uppercase sm:inline">
             {label}
           </span>
         </div>

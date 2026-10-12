@@ -109,14 +109,14 @@ export function BrandingSection() {
                     Estúdio de Marca Interativo
                   </span>
                 </div>
-                <span className="text-[11px] font-mono bg-primary/10 text-primary px-2.5 py-1 font-bold">
+                <span className="text-xs font-mono bg-primary/10 text-primary px-2.5 py-1 font-bold">
                   {selectedTheme.vibe}
                 </span>
               </div>
 
               {/* Live Theme Switcher */}
               <div className="mb-6 space-y-2">
-                <label className="text-[11px] font-mono text-muted-foreground uppercase tracking-wider block">
+                <label className="text-xs font-mono text-muted-foreground uppercase tracking-wider block">
                   Simule Variações de Identidade Visual:
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -141,7 +141,7 @@ export function BrandingSection() {
                           style={{ backgroundColor: theme.accent }}
                         />
                       </div>
-                      <span className="truncate block text-[11px]">{theme.name}</span>
+                      <span className="truncate block text-xs">{theme.name}</span>
                     </button>
                   ))}
                 </div>
@@ -172,7 +172,7 @@ export function BrandingSection() {
                         Brand Identity Core
                       </span>
                     </div>
-                    <span className="text-[10px] font-mono bg-white/20 px-2 py-0.5 backdrop-blur-md">
+                    <span className="text-xs font-mono bg-white/20 px-2 py-0.5 backdrop-blur-md">
                       Vector SVG • CMYK & RGB
                     </span>
                   </div>
@@ -188,58 +188,58 @@ export function BrandingSection() {
                 </div>
 
                 {/* Color Swatches Grid */}
-                <div className="grid grid-cols-4 gap-3 text-center">
+                <div className="grid grid-cols-2 min-[400px]:grid-cols-4 gap-3 text-center">
                   <div className="space-y-1">
                     <div
-                      className="h-12 border border-border flex items-center justify-center font-mono text-[10px] font-bold text-white shadow-inner"
+                      className="h-12 border border-border flex items-center justify-center font-mono text-xs font-bold text-white shadow-inner"
                       style={{ backgroundColor: selectedTheme.primary }}
                     >
                       Primary
                     </div>
-                    <span className="font-mono text-[10px] text-muted-foreground block">
+                    <span className="font-mono text-xs text-muted-foreground block">
                       {selectedTheme.primary}
                     </span>
                   </div>
 
                   <div className="space-y-1">
                     <div
-                      className="h-12 border border-border flex items-center justify-center font-mono text-[10px] font-bold text-white shadow-inner"
+                      className="h-12 border border-border flex items-center justify-center font-mono text-xs font-bold text-white shadow-inner"
                       style={{ backgroundColor: selectedTheme.accent }}
                     >
                       Accent
                     </div>
-                    <span className="font-mono text-[10px] text-muted-foreground block">
+                    <span className="font-mono text-xs text-muted-foreground block">
                       {selectedTheme.accent}
                     </span>
                   </div>
 
                   <div className="space-y-1">
                     <div
-                      className="h-12 border border-border flex items-center justify-center font-mono text-[10px] font-bold text-white shadow-inner"
+                      className="h-12 border border-border flex items-center justify-center font-mono text-xs font-bold text-white shadow-inner"
                       style={{ backgroundColor: selectedTheme.dark }}
                     >
                       Deep
                     </div>
-                    <span className="font-mono text-[10px] text-muted-foreground block">
+                    <span className="font-mono text-xs text-muted-foreground block">
                       {selectedTheme.dark}
                     </span>
                   </div>
 
                   <div className="space-y-1">
                     <div
-                      className="h-12 border border-border flex items-center justify-center font-mono text-[10px] font-bold text-foreground shadow-inner"
+                      className="h-12 border border-border flex items-center justify-center font-mono text-xs font-bold text-foreground shadow-inner"
                       style={{ backgroundColor: selectedTheme.light }}
                     >
                       Light
                     </div>
-                    <span className="font-mono text-[10px] text-muted-foreground block">
+                    <span className="font-mono text-xs text-muted-foreground block">
                       {selectedTheme.light}
                     </span>
                   </div>
                 </div>
 
                 {/* Deliverables Checklist for Branding */}
-                <div className="grid grid-cols-2 gap-2 text-[11px] font-medium text-muted-foreground border-t border-border pt-4">
+                <div className="grid grid-cols-2 gap-2 text-xs font-medium text-muted-foreground border-t border-border pt-4">
                   <div className="flex items-center gap-1.5 text-foreground">
                     <CheckCircle2 className="size-3 text-primary" />
                     <span>Logótipo Principal & Variações</span>

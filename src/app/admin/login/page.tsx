@@ -48,7 +48,7 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background px-4 relative flex-col">
+    <div className="min-h-dvh flex items-center justify-center bg-background px-4 relative flex-col">
       <Link
         href="/"
         className="absolute top-8 left-8 flex items-center space-x-2 text-foreground font-semibold"

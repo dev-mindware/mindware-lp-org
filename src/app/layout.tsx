@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -24,6 +24,16 @@ const satoshi = localFont({
   preload: true,
   adjustFontFallback: "Arial",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#faf8f5" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f0f0f" },
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mindware.ao"),
@@ -154,7 +164,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${satoshi.className} antialiased font-sans flex min-h-screen flex-col`}
+        className={`${satoshi.className} antialiased font-sans flex min-h-dvh flex-col`}
       >
         <ThemeProvider
           attribute="class"

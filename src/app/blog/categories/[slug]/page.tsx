@@ -27,7 +27,7 @@ export default async function CategoryPage({ params }: { params: Params }) {
   return (
     <>
       <SimpleHeader badge="Blog" />
-      <main className="min-h-screen pt-24 pb-20 bg-background">
+      <main className="min-h-dvh pt-24 pb-20 bg-background">
         <SectionWrapper className="container mx-auto px-4 space-y-12">
           <div className="space-y-6">
             <Link

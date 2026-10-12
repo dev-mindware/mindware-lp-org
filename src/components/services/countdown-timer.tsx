@@ -44,7 +44,7 @@ export function CountdownTimer({ targetDate }: CountdownTimerProps) {
                     <div className="w-14 h-14 md:w-16 md:h-16 bg-background/50 border border-white/10 flex items-center justify-center mb-1.5 backdrop-blur-sm">
                         <span className="text-xl md:text-2xl font-black">{unit.value.toString().padStart(2, '0')}</span>
                     </div>
-                    <span className="text-[9px] uppercase tracking-widest font-bold opacity-60">{unit.label}</span>
+                    <span className="text-xs uppercase tracking-widest font-bold opacity-60">{unit.label}</span>
                 </div>
             ))}
         </div>

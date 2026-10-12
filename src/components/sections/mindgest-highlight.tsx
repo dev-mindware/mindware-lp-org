@@ -83,7 +83,7 @@ export function MindgestHighlight() {
               <span className="size-3.5 bg-red-500/60" />
               <span className="size-3.5 bg-yellow-500/60" />
               <span className="size-3.5 bg-green-500/60" />
-              <span className="ml-5 border border-border bg-background/60 px-4 py-1.5 font-mono text-[11px] tracking-wider text-muted-foreground">
+              <span className="ml-5 border border-border bg-background/60 px-4 py-1.5 font-mono text-xs tracking-wider text-muted-foreground">
                 {mindgestHighlight.urlDisplay}
               </span>
             </div>

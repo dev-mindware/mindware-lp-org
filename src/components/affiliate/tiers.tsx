@@ -45,7 +45,7 @@ export function AffiliateTiers() {
                   }`}
                 >
                   {tier.highlighted ? (
-                    <span className="absolute -top-3 left-5 bg-primary px-3 py-1 text-[10px] font-black tracking-widest text-primary-foreground uppercase">
+                    <span className="absolute -top-3 left-5 bg-primary px-3 py-1 text-xs font-black tracking-widest text-primary-foreground uppercase">
                       Destaque
                     </span>
                   ) : null}

@@ -11,7 +11,7 @@ interface UnderDevelopmentProps {
 
 export function UnderDevelopment({ pageName }: UnderDevelopmentProps) {
   return (
-    <div className="min-h-screen bg-background flex flex-col items-center justify-center p-6 relative overflow-hidden">
+    <div className="min-h-dvh bg-background flex flex-col items-center justify-center p-6 relative overflow-hidden">
       <div className="absolute inset-0 z-0 flex justify-center items-center pointer-events-none opacity-[0.03] overflow-hidden">
         <span className="text-[12rem] md:text-[20rem] lg:text-[25rem] font-black uppercase text-center block w-full whitespace-nowrap leading-none tracking-tighter">
           {pageName}

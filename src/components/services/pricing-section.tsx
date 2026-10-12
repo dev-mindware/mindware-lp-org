@@ -78,16 +78,16 @@ export function PricingSection() {
               </h3>
             </div>
             <div className="flex flex-wrap items-center gap-2">
-              <span className="text-[11px] font-mono font-bold uppercase px-3 py-1 bg-primary/10 text-primary border border-primary/20">
+              <span className="text-xs font-mono font-bold uppercase px-3 py-1 bg-primary/10 text-primary border border-primary/20">
                 Empresas
               </span>
-              <span className="text-[11px] font-mono font-bold uppercase px-3 py-1 bg-primary/10 text-primary border border-primary/20">
+              <span className="text-xs font-mono font-bold uppercase px-3 py-1 bg-primary/10 text-primary border border-primary/20">
                 Profissionais
               </span>
-              <span className="text-[11px] font-mono font-bold uppercase px-3 py-1 bg-primary/10 text-primary border border-primary/20">
+              <span className="text-xs font-mono font-bold uppercase px-3 py-1 bg-primary/10 text-primary border border-primary/20">
                 Freelancers
               </span>
-              <span className="text-[11px] font-mono font-bold uppercase px-3 py-1 bg-primary/10 text-primary border border-primary/20">
+              <span className="text-xs font-mono font-bold uppercase px-3 py-1 bg-primary/10 text-primary border border-primary/20">
                 Negócios Locais
               </span>
             </div>
@@ -184,7 +184,7 @@ export function PricingSection() {
             <div className="flex flex-col justify-between border border-border bg-card p-6 sm:p-8 hover:border-primary/50 transition-all shadow-xs hover:shadow-md">
               <div className="space-y-5">
                 <div className="flex items-center justify-between">
-                  <span className="text-[11px] font-mono font-bold uppercase tracking-widest px-2.5 py-1 bg-stone-100 text-stone-700 dark:bg-muted dark:text-muted-foreground border border-border/50">
+                  <span className="text-xs font-mono font-bold uppercase tracking-widest px-2.5 py-1 bg-stone-100 text-stone-700 dark:bg-muted dark:text-muted-foreground border border-border/50">
                     {DOMAIN_ADDON.badge}
                   </span>
                   <Globe className="size-5 text-primary" />
@@ -233,7 +233,7 @@ export function PricingSection() {
             <div className="flex flex-col justify-between border border-border bg-card p-6 sm:p-8 hover:border-primary/50 transition-all shadow-xs hover:shadow-md">
               <div className="space-y-5">
                 <div className="flex items-center justify-between">
-                  <span className="text-[11px] font-mono font-bold uppercase tracking-widest px-2.5 py-1 bg-stone-100 text-stone-700 dark:bg-muted dark:text-muted-foreground border border-border/50">
+                  <span className="text-xs font-mono font-bold uppercase tracking-widest px-2.5 py-1 bg-stone-100 text-stone-700 dark:bg-muted dark:text-muted-foreground border border-border/50">
                     {EMAIL_ADDONS[0].badge}
                   </span>
                   <Mail className="size-5 text-primary" />
@@ -280,12 +280,12 @@ export function PricingSection() {
 
             {/* Email Standard Card (Highlighted) */}
             <div className="flex flex-col justify-between border-2 border-primary bg-card p-6 sm:p-8 relative shadow-lg shadow-stone-900/5 dark:shadow-[0_16px_36px_-16px_rgba(153,86,246,0.25)]">
-              <div className="absolute -top-3 right-6 bg-primary text-primary-foreground text-[10px] font-mono font-bold uppercase tracking-widest px-3 py-0.5">
+              <div className="absolute -top-3 right-6 bg-primary text-primary-foreground text-xs font-mono font-bold uppercase tracking-widest px-3 py-0.5">
                 Mais Escolhido
               </div>
               <div className="space-y-5">
                 <div className="flex items-center justify-between">
-                  <span className="text-[11px] font-mono font-bold uppercase tracking-widest px-2.5 py-1 bg-primary/10 text-primary">
+                  <span className="text-xs font-mono font-bold uppercase tracking-widest px-2.5 py-1 bg-primary/10 text-primary">
                     {EMAIL_ADDONS[1].badge}
                   </span>
                   <MailCheck className="size-5 text-primary" />
