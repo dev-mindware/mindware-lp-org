@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 import type { CharacterRig, QualityTier, SceneState } from "./types";
 import { INITIAL_STATE } from "./types";
 
@@ -281,6 +282,7 @@ export class AboutScene {
   private readonly scan = createScan();
   private readonly circuits: ReturnType<typeof createCircuits>;
   private character: CharacterRig | null = null;
+  private envMap: THREE.Texture | null = null;
   private frame = 0;
   private running = false;
   private width = 1;
@@ -324,6 +326,16 @@ export class AboutScene {
     this.character = rig;
     this.figure.add(rig.object);
     if (rig.lights) this.scene.add(rig.lights);
+    // reflexos suaves para os materiais PBR (plástico, fecho, cetim do durag)
+    if (!this.envMap) {
+      const pmrem = new THREE.PMREMGenerator(this.renderer);
+      const room = new RoomEnvironment();
+      this.envMap = pmrem.fromScene(room, 0.04).texture;
+      room.dispose();
+      pmrem.dispose();
+    }
+    this.scene.environment = this.envMap;
+    this.scene.environmentIntensity = 0.35;
   }
 
   get hasCharacter() {
@@ -440,6 +452,7 @@ export class AboutScene {
     this.onFrame = null;
     this.character?.dispose();
     this.character = null;
+    this.envMap?.dispose();
     this.glow.mesh.geometry.dispose();
     this.glow.material.dispose();
     this.beam.geometry.dispose();

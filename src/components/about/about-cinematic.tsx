@@ -10,7 +10,7 @@ import { WHATSAPP_URL } from "@/constants/site";
 import { ABOUT_HEADING, ABOUT_PILLARS, ABOUT_SIGNATURE, ABOUT_TAGS } from "./about-content";
 import { buildAboutTimeline, SCENES, sceneIndexAt } from "./about-timeline";
 import { detectQuality } from "./capabilities";
-import { CHARACTER_HEIGHT, CHARACTER_MODEL_URL, PORTRAIT_ASSETS, TWIN_ASSETS } from "./character-config";
+import { CHARACTER_HEIGHT, CHARACTER_MODEL_URL, CHARACTER_RENDERS } from "./character-config";
 import { SplitWords } from "./split-words";
 import type { AboutScene, AnchorScreen } from "./scene/about-scene";
 import { INITIAL_STATE } from "./scene/types";
@@ -107,9 +107,9 @@ export function AboutCinematic({ onUnsupported }: AboutCinematicProps) {
 
     // ── Cena 3D (carregada de forma progressiva) ─────────────────────────
     const boot = async () => {
-      const [{ AboutScene }, character] = await Promise.all([
+      const [{ AboutScene }, { createGlbCharacter }] = await Promise.all([
         import("./scene/about-scene"),
-        CHARACTER_MODEL_URL ? import("./scene/glb-character") : import("./scene/twin-character"),
+        import("./scene/glb-character"),
       ]);
       if (disposed) return;
       try {
@@ -126,25 +126,16 @@ export function AboutCinematic({ onUnsupported }: AboutCinematicProps) {
       if (visible) scene.start();
 
       try {
-        const rig =
-          "createGlbCharacter" in character && CHARACTER_MODEL_URL
-            ? await character.createGlbCharacter(CHARACTER_MODEL_URL, CHARACTER_HEIGHT, scene.renderer, abort.signal)
-            : "createTwinCharacter" in character
-              ? await character.createTwinCharacter(
-                  TWIN_ASSETS,
-                  { stride: quality === "high" ? 1 : 2, height: 2.8, depthScale: 0.16 },
-                  abort.signal,
-                )
-              : null;
-        if (disposed || !scene || !rig) {
-          rig?.dispose();
+        const rig = await createGlbCharacter(CHARACTER_MODEL_URL, CHARACTER_HEIGHT, scene.renderer, abort.signal);
+        if (disposed || !scene) {
+          rig.dispose();
           return;
         }
         scene.setCharacter(rig);
         setStatus("ready");
       } catch (error) {
         if (disposed || (error instanceof DOMException && error.name === "AbortError")) return;
-        console.warn("[about] personagem 3D indisponível — a usar retrato estático", error);
+        console.warn("[about] personagem 3D indisponível — a usar render estático", error);
         setStatus("failed");
       }
     };
@@ -266,15 +257,15 @@ export function AboutCinematic({ onUnsupported }: AboutCinematicProps) {
       >
         <canvas ref={canvasRef} aria-hidden="true" className="absolute inset-0 block size-full" />
 
-        {/* Retrato estático, visível apenas se a personagem 3D falhar */}
+        {/* Render estático, visível apenas se a personagem 3D falhar */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-x-0 bottom-0 hidden h-[78%] justify-center group-data-[status=failed]/stage:flex lg:justify-end lg:pr-[12%]"
         >
           <Image
-            src={PORTRAIT_ASSETS.front.src}
-            width={PORTRAIT_ASSETS.front.width}
-            height={PORTRAIT_ASSETS.front.height}
+            src={CHARACTER_RENDERS.front.src}
+            width={CHARACTER_RENDERS.front.width}
+            height={CHARACTER_RENDERS.front.height}
             alt=""
             sizes="(min-width: 1024px) 40vw, 90vw"
             className="h-full w-auto object-contain object-bottom opacity-90 drop-shadow-[0_0_48px_rgba(153,86,246,0.55)]"
@@ -397,7 +388,7 @@ export function AboutCinematic({ onUnsupported }: AboutCinematicProps) {
         <div
           data-el="orbit"
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 bottom-[7%] flex flex-col items-center gap-3 opacity-0"
+          className="pointer-events-none absolute inset-x-0 bottom-[4%] flex flex-col items-center gap-3 opacity-0 lg:right-auto lg:bottom-[9%] lg:left-[max(2.5rem,calc((100vw-72rem)/2))] lg:items-start"
         >
           <span
             data-el="rotation"

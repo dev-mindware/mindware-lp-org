@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
 import { WHATSAPP_URL } from "@/constants/site";
 import { ABOUT_HEADING, ABOUT_PILLARS, ABOUT_SIGNATURE } from "./about-content";
-import { PORTRAIT_ASSETS } from "./character-config";
+import { CHARACTER_RENDERS } from "./character-config";
 
 /**
  * Versão estática e acessível da secção About: usada com
@@ -67,22 +67,22 @@ export function AboutStatic() {
         </div>
 
         <Reveal delay={120}>
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-md">
+          <div className="mx-auto flex w-full max-w-lg items-end justify-center">
             <Image
-              src={PORTRAIT_ASSETS.front.src}
-              width={PORTRAIT_ASSETS.front.width}
-              height={PORTRAIT_ASSETS.front.height}
-              alt="Membro da equipa Mindware com o colete da marca e auscultadores ao pescoço"
-              sizes="(min-width: 1024px) 28rem, 90vw"
-              className="absolute inset-x-0 bottom-0 mx-auto h-full w-auto object-contain object-bottom drop-shadow-[0_0_40px_rgba(153,86,246,0.45)]"
+              src={CHARACTER_RENDERS.front.src}
+              width={CHARACTER_RENDERS.front.width}
+              height={CHARACTER_RENDERS.front.height}
+              alt="Personagem 3D da Mindware com o colete da marca, durag e auscultadores ao pescoço"
+              sizes="(min-width: 1024px) 14rem, 40vw"
+              className="h-auto w-[40%] object-contain drop-shadow-[0_0_40px_rgba(153,86,246,0.45)]"
             />
             <Image
-              src={PORTRAIT_ASSETS.back.src}
-              width={PORTRAIT_ASSETS.back.width}
-              height={PORTRAIT_ASSETS.back.height}
+              src={CHARACTER_RENDERS.back.src}
+              width={CHARACTER_RENDERS.back.width}
+              height={CHARACTER_RENDERS.back.height}
               alt="Costas do colete Mindware com o logótipo e a assinatura «A mente cria, o código segue.»"
-              sizes="(min-width: 1024px) 12rem, 40vw"
-              className="absolute right-0 bottom-0 w-[42%] border border-[#9956F6]/40 bg-[#171717] object-contain"
+              sizes="(min-width: 1024px) 18rem, 55vw"
+              className="h-auto w-[60%] object-contain drop-shadow-[0_0_32px_rgba(153,86,246,0.35)]"
             />
           </div>
         </Reveal>

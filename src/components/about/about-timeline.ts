@@ -41,10 +41,12 @@ export function buildAboutTimeline(root: HTMLElement, state: SceneState, wide: b
   const out = "power3.out";
 
   // ── Estado 3D ───────────────────────────────────────────────────────────
+  // progresso linear: controla a animação "Scroll" (poses da personagem)
+  tl.to(state, { progress: 1, duration: 100 }, 0);
   // Cena 01 — luz e presença
   tl.to(state, { glow: 1, duration: 12, ease: "power1.in" }, 0);
   tl.to(state, { particles: 0.75, duration: 12 }, 0);
-  tl.to(state, { assemble: 1, duration: 17, ease: "power1.inOut" }, 2);
+  tl.to(state, { assemble: 1, duration: 14, ease: "power1.inOut" }, 2);
   tl.to(state, { rim: 1.1, duration: 12 }, 3);
   tl.to(state, { exposure: 0.45, duration: 14 }, 6);
   tl.to(state, { key: 0.35, duration: 10 }, 9);
@@ -61,7 +63,7 @@ export function buildAboutTimeline(root: HTMLElement, state: SceneState, wide: b
   tl.to(state, { rotY: -0.2, duration: 18, ease: "sine.inOut" }, 22);
 
   // Cena 03 — rotação até às costas, a luz roxa acompanha
-  tl.to(state, { camZ: 5, camX: 0, camY: 0.3, lookX: 0, lookY: 0.12, duration: 6, ease }, 42);
+  tl.to(state, { camZ: 6, camX: 0, camY: 0.45, lookX: 0, lookY: 0.32, duration: 6, ease }, 42);
   tl.to(state, { ring: 1, duration: 4 }, 42);
   tl.to(state, { rotY: Math.PI, duration: 18, ease: "power1.inOut" }, 44);
   tl.to(state, { rim: 1.7, duration: 8 }, 44);

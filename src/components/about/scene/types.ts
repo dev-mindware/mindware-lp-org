@@ -6,6 +6,8 @@ import type * as THREE from "three";
  * reconstrói objectos quando o progresso muda.
  */
 export type SceneState = {
+  /** Progresso da secção (0–1): controla a animação "Scroll" da personagem */
+  progress: number;
   /** Câmara (posição relativa ao centro do modelo) */
   camX: number;
   camY: number;
@@ -16,7 +18,7 @@ export type SceneState = {
   rotY: number;
   /** Deslocamento lateral do modelo (cena 04 abre espaço para o texto) */
   figureX: number;
-  /** 0 → partículas dispersas, 1 → corpo montado */
+  /** 0 → personagem às escuras, 1 → totalmente revelada pela luz */
   assemble: number;
   /** Intensidades de luz */
   rim: number;
@@ -34,6 +36,7 @@ export type SceneState = {
 };
 
 export const INITIAL_STATE: SceneState = {
+  progress: 0,
   camX: 0,
   camY: 0.15,
   camZ: 7.5,
@@ -56,7 +59,7 @@ export type QualityTier = "high" | "low";
 
 export interface CharacterRig {
   object: THREE.Object3D;
-  kind: "twin" | "glb";
+  kind: "glb";
   /** Pontos de ancoragem em coordenadas locais, para etiquetas de interface */
   anchors: Record<string, THREE.Vector3>;
   pointCount?: number;
