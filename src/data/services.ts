@@ -7,6 +7,7 @@ export const SERVICE_NAV = [
   { name: "Para Quem É", hash: "para-quem" },
   { name: "Processo", hash: "processo" },
   { name: "Preço", hash: "precos" },
+  { name: "Orçamento", hash: "orcamento" },
 ];
 
 export const services = [

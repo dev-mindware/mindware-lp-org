@@ -8,3 +8,5 @@ export * from "./feature-item";
 export * from "./hero-section";
 export * from "./countdown-timer";
 export * from "./service-page-background";
+export * from "./lead-capture-form";
+export * from "./lead-capture-section";

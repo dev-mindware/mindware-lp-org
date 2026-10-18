@@ -7,6 +7,7 @@ import {
   WebsiteSection,
   AudienceSection,
   ProcessSection,
+  LeadCaptureSection,
   ServicePageBackground,
 } from "@/components/services";
 import { SERVICE_NAV, PACKAGE_INCLUDED } from "@/data/services";
@@ -146,7 +147,7 @@ export default function ServicePage() {
         product="Serviços"
         basePath="/service"
         items={SERVICE_NAV}
-        cta={{ label: "Pedir orçamento", href: WHATSAPP_URL }}
+        cta={{ label: "Pedir orçamento", href: "#orcamento" }}
       />
 
       <HeroSection />
@@ -155,6 +156,7 @@ export default function ServicePage() {
       <AudienceSection />
       <ProcessSection />
       <PricingSection />
+      <LeadCaptureSection />
       <Footer />
     </div>
   );

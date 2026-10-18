@@ -116,22 +116,14 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
         >
-          <Link
-            href={`${WHATSAPP_URL}?text=${encodeURIComponent(
-              "Olá Mindware! Gostaria de saber mais sobre o pacote de Presença Digital (132.514,00 Kz)."
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full sm:w-auto"
+          <Button
+            size="lg"
+            onClick={() => scrollTo("orcamento")}
+            className="w-full sm:w-auto px-8 py-6 text-base font-black bg-primary text-primary-foreground hover:bg-primary/90 shadow-xl hover:scale-105 transition-all flex items-center justify-center gap-2 cursor-pointer"
           >
-            <Button
-              size="lg"
-              className="w-full sm:w-auto px-8 py-6 text-base font-black bg-primary text-primary-foreground hover:bg-primary/90 shadow-xl hover:scale-105 transition-all flex items-center justify-center gap-2"
-            >
-              <span>Pedir Orçamento</span>
-              <ArrowRight className="size-4" />
-            </Button>
-          </Link>
+            <span>Pedir Orçamento</span>
+            <ArrowRight className="size-4" />
+          </Button>
 
           <Button
             variant="outline"

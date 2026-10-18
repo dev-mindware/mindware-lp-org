@@ -17,8 +17,10 @@
 /.next/
 /out/
 
-# agents
-
+# agents & graphify
+graphify-out/
+.graphify*
+.agents/
 # production
 /build
 
